@@ -14,6 +14,7 @@
 		8D069CDF2BED01F40023CD0E /* FastSwiftBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D069CDE2BED01F40023CD0E /* FastSwiftBasicTests.swift */; };
 		8D069CE92BED01F40023CD0E /* FastSwiftBasicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D069CE82BED01F40023CD0E /* FastSwiftBasicUITests.swift */; };
 		8D069CEB2BED01F40023CD0E /* FastSwiftBasicUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D069CEA2BED01F40023CD0E /* FastSwiftBasicUITestsLaunchTests.swift */; };
+		8D544F4A2BF3AC7E005B3976 /* VariableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D544F492BF3AC7E005B3976 /* VariableType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		8D069CE42BED01F40023CD0E /* FastSwiftBasicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FastSwiftBasicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D069CE82BED01F40023CD0E /* FastSwiftBasicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastSwiftBasicUITests.swift; sourceTree = "<group>"; };
 		8D069CEA2BED01F40023CD0E /* FastSwiftBasicUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastSwiftBasicUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8D544F492BF3AC7E005B3976 /* VariableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariableType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				8D069CCD2BED01F30023CD0E /* FastSwiftBasicApp.swift */,
 				8D069CCF2BED01F30023CD0E /* ContentView.swift */,
+				8D544F492BF3AC7E005B3976 /* VariableType.swift */,
 				8D069CD12BED01F40023CD0E /* Assets.xcassets */,
 				8D069CD32BED01F40023CD0E /* Preview Content */,
 			);
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D544F4A2BF3AC7E005B3976 /* VariableType.swift in Sources */,
 				8D069CD02BED01F30023CD0E /* ContentView.swift in Sources */,
 				8D069CCE2BED01F30023CD0E /* FastSwiftBasicApp.swift in Sources */,
 			);
