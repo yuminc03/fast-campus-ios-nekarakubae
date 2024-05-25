@@ -18,6 +18,7 @@
 		8DACE6B02BFE2782000117A7 /* MyCollections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DACE6AF2BFE2782000117A7 /* MyCollections.swift */; };
 		8DACE6B22BFE3322000117A7 /* Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DACE6B12BFE3322000117A7 /* Condition.swift */; };
 		8DC048B72C020EF200A620BC /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC048B62C020EF200A620BC /* Function.swift */; };
+		8DC048B92C02133500A620BC /* Half.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC048B82C02133500A620BC /* Half.swift */; };
 		8DC45E952BFF81D500C4DB1F /* Loop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC45E942BFF81D500C4DB1F /* Loop.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		8DACE6AF2BFE2782000117A7 /* MyCollections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollections.swift; sourceTree = "<group>"; };
 		8DACE6B12BFE3322000117A7 /* Condition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Condition.swift; sourceTree = "<group>"; };
 		8DC048B62C020EF200A620BC /* Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Function.swift; sourceTree = "<group>"; };
+		8DC048B82C02133500A620BC /* Half.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Half.swift; sourceTree = "<group>"; };
 		8DC45E942BFF81D500C4DB1F /* Loop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loop.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +115,7 @@
 				8DACE6B12BFE3322000117A7 /* Condition.swift */,
 				8DC45E942BFF81D500C4DB1F /* Loop.swift */,
 				8DC048B62C020EF200A620BC /* Function.swift */,
+				8DC048B82C02133500A620BC /* Half.swift */,
 			);
 			path = FastSwiftBasic;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DC048B92C02133500A620BC /* Half.swift in Sources */,
 				8D544F4A2BF3AC7E005B3976 /* VariableType.swift in Sources */,
 				8D069CD02BED01F30023CD0E /* ContentView.swift in Sources */,
 				8DC048B72C020EF200A620BC /* Function.swift in Sources */,
