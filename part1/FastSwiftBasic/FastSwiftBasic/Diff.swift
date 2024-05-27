@@ -10,10 +10,14 @@ import SwiftUI
 struct Diff: View {
   let myCar = Car(name: "리어카", owner: "yumin")
   @ObservedObject var myCarClass = CarClass(name: "리어카2", owner: "yumin2")
+  @State var name: String = ""
   
   var body: some View {
     VStack {
       Text("\(myCarClass.name)의 주인은 \(myCarClass.owner)입니다.")
+      
+      TextField("Placeholder", text: $name)
+      
       Button {
         let broCar = myCarClass
         broCar.name = "car"
