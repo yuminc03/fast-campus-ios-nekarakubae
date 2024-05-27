@@ -22,6 +22,7 @@
 		8DC048BB2C02F8CB00A620BC /* Elevator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC048BA2C02F8CB00A620BC /* Elevator.swift */; };
 		8DC048C82C03639700A620BC /* Diff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC048C72C03639700A620BC /* Diff.swift */; };
 		8DC45E952BFF81D500C4DB1F /* Loop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC45E942BFF81D500C4DB1F /* Loop.swift */; };
+		8DCAB73C2C04B99700E0B20F /* Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCAB73B2C04B99700E0B20F /* Choice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		8DC048BA2C02F8CB00A620BC /* Elevator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elevator.swift; sourceTree = "<group>"; };
 		8DC048C72C03639700A620BC /* Diff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diff.swift; sourceTree = "<group>"; };
 		8DC45E942BFF81D500C4DB1F /* Loop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loop.swift; sourceTree = "<group>"; };
+		8DCAB73B2C04B99700E0B20F /* Choice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				8DC048B82C02133500A620BC /* Half.swift */,
 				8DC048BA2C02F8CB00A620BC /* Elevator.swift */,
 				8DC048C72C03639700A620BC /* Diff.swift */,
+				8DCAB73B2C04B99700E0B20F /* Choice.swift */,
 			);
 			path = FastSwiftBasic;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			files = (
 				8DC048B92C02133500A620BC /* Half.swift in Sources */,
 				8D544F4A2BF3AC7E005B3976 /* VariableType.swift in Sources */,
+				8DCAB73C2C04B99700E0B20F /* Choice.swift in Sources */,
 				8D069CD02BED01F30023CD0E /* ContentView.swift in Sources */,
 				8DC048B72C020EF200A620BC /* Function.swift in Sources */,
 				8D069CCE2BED01F30023CD0E /* FastSwiftBasicApp.swift in Sources */,
