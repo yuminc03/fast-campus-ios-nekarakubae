@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct Choice: View {
+  enum Direction: String {
+    case east = "동"
+    case west = "서"
+    case south = "남"
+    case north = "북"
+  }
+  
   var direction: Direction = .east
   var member: Member = .yumin
   var menu: Menu = .steak(5)
@@ -26,13 +33,6 @@ enum Menu {
   case pasta
   case pizza
   case steak(Int)
-}
-
-enum Direction: String {
-  case east = "동"
-  case west = "서"
-  case south = "남"
-  case north = "북"
 }
 
 #Preview {
