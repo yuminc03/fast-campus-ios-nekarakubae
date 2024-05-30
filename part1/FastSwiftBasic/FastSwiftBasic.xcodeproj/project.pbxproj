@@ -14,6 +14,7 @@
 		8D069CDF2BED01F40023CD0E /* FastSwiftBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D069CDE2BED01F40023CD0E /* FastSwiftBasicTests.swift */; };
 		8D069CE92BED01F40023CD0E /* FastSwiftBasicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D069CE82BED01F40023CD0E /* FastSwiftBasicUITests.swift */; };
 		8D069CEB2BED01F40023CD0E /* FastSwiftBasicUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D069CEA2BED01F40023CD0E /* FastSwiftBasicUITestsLaunchTests.swift */; };
+		8D4D46002C08BB5D0093DAF0 /* MyCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D45FF2C08BB5D0093DAF0 /* MyCar.swift */; };
 		8D544F4A2BF3AC7E005B3976 /* VariableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D544F492BF3AC7E005B3976 /* VariableType.swift */; };
 		8D7BE47C2C06145200112B67 /* Nil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BE47B2C06145200112B67 /* Nil.swift */; };
 		8D7BE47E2C061B2700112B67 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BE47D2C061B2700112B67 /* Option.swift */; };
@@ -58,6 +59,7 @@
 		8D069CE42BED01F40023CD0E /* FastSwiftBasicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FastSwiftBasicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D069CE82BED01F40023CD0E /* FastSwiftBasicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastSwiftBasicUITests.swift; sourceTree = "<group>"; };
 		8D069CEA2BED01F40023CD0E /* FastSwiftBasicUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastSwiftBasicUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8D4D45FF2C08BB5D0093DAF0 /* MyCar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCar.swift; sourceTree = "<group>"; };
 		8D544F492BF3AC7E005B3976 /* VariableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariableType.swift; sourceTree = "<group>"; };
 		8D7BE47B2C06145200112B67 /* Nil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nil.swift; sourceTree = "<group>"; };
 		8D7BE47D2C061B2700112B67 /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				8D7BE47D2C061B2700112B67 /* Option.swift */,
 				8DFE30EE2C07626B00044273 /* Sample.swift */,
 				8DFE30F22C07673600044273 /* Exception.swift */,
+				8D4D45FF2C08BB5D0093DAF0 /* MyCar.swift */,
 				8D069CD12BED01F40023CD0E /* Assets.xcassets */,
 				8D069CD32BED01F40023CD0E /* Preview Content */,
 			);
@@ -309,6 +312,7 @@
 				8D069CCE2BED01F30023CD0E /* FastSwiftBasicApp.swift in Sources */,
 				8DC45E952BFF81D500C4DB1F /* Loop.swift in Sources */,
 				8DFE30F32C07673600044273 /* Exception.swift in Sources */,
+				8D4D46002C08BB5D0093DAF0 /* MyCar.swift in Sources */,
 				8D7BE47C2C06145200112B67 /* Nil.swift in Sources */,
 				8DFE30EF2C07626B00044273 /* Sample.swift in Sources */,
 				8DC048C82C03639700A620BC /* Diff.swift in Sources */,
