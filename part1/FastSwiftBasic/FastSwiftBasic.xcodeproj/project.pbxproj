@@ -18,6 +18,7 @@
 		8D544F4A2BF3AC7E005B3976 /* VariableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D544F492BF3AC7E005B3976 /* VariableType.swift */; };
 		8D7BE47C2C06145200112B67 /* Nil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BE47B2C06145200112B67 /* Nil.swift */; };
 		8D7BE47E2C061B2700112B67 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BE47D2C061B2700112B67 /* Option.swift */; };
+		8D889F592C0B51F600601CB1 /* MyGeneric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D889F582C0B51F600601CB1 /* MyGeneric.swift */; };
 		8DACE6B02BFE2782000117A7 /* MyCollections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DACE6AF2BFE2782000117A7 /* MyCollections.swift */; };
 		8DACE6B22BFE3322000117A7 /* Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DACE6B12BFE3322000117A7 /* Condition.swift */; };
 		8DC048B72C020EF200A620BC /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC048B62C020EF200A620BC /* Function.swift */; };
@@ -63,6 +64,7 @@
 		8D544F492BF3AC7E005B3976 /* VariableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariableType.swift; sourceTree = "<group>"; };
 		8D7BE47B2C06145200112B67 /* Nil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nil.swift; sourceTree = "<group>"; };
 		8D7BE47D2C061B2700112B67 /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		8D889F582C0B51F600601CB1 /* MyGeneric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGeneric.swift; sourceTree = "<group>"; };
 		8DACE6AF2BFE2782000117A7 /* MyCollections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollections.swift; sourceTree = "<group>"; };
 		8DACE6B12BFE3322000117A7 /* Condition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Condition.swift; sourceTree = "<group>"; };
 		8DC048B62C020EF200A620BC /* Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Function.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				8DFE30EE2C07626B00044273 /* Sample.swift */,
 				8DFE30F22C07673600044273 /* Exception.swift */,
 				8D4D45FF2C08BB5D0093DAF0 /* MyCar.swift */,
+				8D889F582C0B51F600601CB1 /* MyGeneric.swift */,
 				8D069CD12BED01F40023CD0E /* Assets.xcassets */,
 				8D069CD32BED01F40023CD0E /* Preview Content */,
 			);
@@ -319,6 +322,7 @@
 				8DACE6B02BFE2782000117A7 /* MyCollections.swift in Sources */,
 				8DACE6B22BFE3322000117A7 /* Condition.swift in Sources */,
 				8DC048BB2C02F8CB00A620BC /* Elevator.swift in Sources */,
+				8D889F592C0B51F600601CB1 /* MyGeneric.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
