@@ -17,6 +17,7 @@
 		8D889F842C0B64B500601CB1 /* WarmUpUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D889F832C0B64B500601CB1 /* WarmUpUITestsLaunchTests.swift */; };
 		8D8F3F272C1EA4760059C3C0 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F3F262C1EA4760059C3C0 /* Layout.swift */; };
 		8D8F3F2A2C1EA5E40059C3C0 /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F3F292C1EA5E40059C3C0 /* MyButton.swift */; };
+		8D8F3F2C2C1EA8420059C3C0 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F3F2B2C1EA8420059C3C0 /* Onboarding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		8D889F832C0B64B500601CB1 /* WarmUpUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarmUpUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8D8F3F262C1EA4760059C3C0 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		8D8F3F292C1EA5E40059C3C0 /* MyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
+		8D8F3F2B2C1EA8420059C3C0 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				8D4DAAE82C0DEF9F009AD794 /* SimpleView.swift */,
 				8D8F3F262C1EA4760059C3C0 /* Layout.swift */,
 				8D8F3F292C1EA5E40059C3C0 /* MyButton.swift */,
+				8D8F3F2B2C1EA8420059C3C0 /* Onboarding.swift */,
 			);
 			path = 01;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D8F3F2C2C1EA8420059C3C0 /* Onboarding.swift in Sources */,
 				8D889F692C0B64B400601CB1 /* ContentView.swift in Sources */,
 				8D8F3F272C1EA4760059C3C0 /* Layout.swift in Sources */,
 				8D8F3F2A2C1EA5E40059C3C0 /* MyButton.swift in Sources */,
