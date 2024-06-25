@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8D3FF94A2C245F80005CC85E /* ListLoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3FF9492C245F80005CC85E /* ListLoop.swift */; };
 		8D4DAAE92C0DEF9F009AD794 /* SimpleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4DAAE82C0DEF9F009AD794 /* SimpleView.swift */; };
+		8D742DF22C29A6DA00CCEF34 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D742DF12C29A6DA00CCEF34 /* Setting.swift */; };
 		8D889F672C0B64B400601CB1 /* WarmUpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D889F662C0B64B400601CB1 /* WarmUpApp.swift */; };
 		8D889F692C0B64B400601CB1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D889F682C0B64B400601CB1 /* ContentView.swift */; };
 		8D889F6B2C0B64B400601CB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D889F6A2C0B64B400601CB1 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		8D3FF9492C245F80005CC85E /* ListLoop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListLoop.swift; sourceTree = "<group>"; };
 		8D4DAAE82C0DEF9F009AD794 /* SimpleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleView.swift; sourceTree = "<group>"; };
+		8D742DF12C29A6DA00CCEF34 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		8D889F632C0B64B400601CB1 /* WarmUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WarmUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D889F662C0B64B400601CB1 /* WarmUpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarmUpApp.swift; sourceTree = "<group>"; };
 		8D889F682C0B64B400601CB1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				8D3FF9492C245F80005CC85E /* ListLoop.swift */,
+				8D742DF12C29A6DA00CCEF34 /* Setting.swift */,
 			);
 			path = 02;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				8D8F3F272C1EA4760059C3C0 /* Layout.swift in Sources */,
 				8D8F3F2A2C1EA5E40059C3C0 /* MyButton.swift in Sources */,
 				8D4DAAE92C0DEF9F009AD794 /* SimpleView.swift in Sources */,
+				8D742DF22C29A6DA00CCEF34 /* Setting.swift in Sources */,
 				8D889F672C0B64B400601CB1 /* WarmUpApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
