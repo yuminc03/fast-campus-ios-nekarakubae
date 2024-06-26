@@ -27,7 +27,7 @@ extension MyTableViewController: UITableViewDelegate, UITableViewDataSource {
     _ tableView: UITableView,
     numberOfRowsInSection section: Int
   ) -> Int {
-    return 5
+    return cellData.count
   }
   
   func tableView(
