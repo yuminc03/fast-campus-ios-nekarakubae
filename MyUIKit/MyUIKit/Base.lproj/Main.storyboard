@@ -16,35 +16,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1MI-Rr-V1q">
-                                <rect key="frame" x="175" y="261" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MJ5-na-n7n">
-                                <rect key="frame" x="175" y="334" width="49" height="31"/>
+                                <rect key="frame" x="174" y="554" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="B5Y-Et-R0B">
-                                <rect key="frame" x="33" y="411" width="332" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="B5Y-Et-R0B">
+                                <rect key="frame" x="18" y="423.66666666666669" width="357" height="31"/>
                             </slider>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="MPG-Lg-J1v">
                                 <rect key="frame" x="149" y="616" width="94" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stepper>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ikL-bW-Fpz">
-                                <rect key="frame" x="159" y="527" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ikL-bW-Fpz">
+                                <rect key="frame" x="20" y="482" width="353" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6PI-Oi-F8p"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="didTapMyButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hMu-nx-wdT"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1MI-Rr-V1q">
+                                <rect key="frame" x="20" y="245.66666666666663" width="353" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <constraints>
+                            <constraint firstItem="B5Y-Et-R0B" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="7jz-Q9-YbL"/>
+                            <constraint firstItem="B5Y-Et-R0B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="9aC-DS-ZLR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1MI-Rr-V1q" secondAttribute="trailing" constant="20" id="BW7-wW-ePi"/>
+                            <constraint firstItem="ikL-bW-Fpz" firstAttribute="top" secondItem="B5Y-Et-R0B" secondAttribute="bottom" constant="28.333333333333314" id="DPm-0U-C2J"/>
+                            <constraint firstItem="ikL-bW-Fpz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Eib-Hb-QCU"/>
+                            <constraint firstItem="B5Y-Et-R0B" firstAttribute="top" secondItem="1MI-Rr-V1q" secondAttribute="bottom" constant="157" id="KJk-xh-w6k"/>
+                            <constraint firstItem="1MI-Rr-V1q" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Mu1-D5-gx3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B5Y-Et-R0B" secondAttribute="trailing" constant="20" id="XX8-lW-4Ex"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ikL-bW-Fpz" secondAttribute="trailing" constant="20" id="d7b-Js-c3b"/>
+                            <constraint firstItem="1MI-Rr-V1q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fc8-ib-NJ5"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myButton" destination="ikL-bW-Fpz" id="lqL-JU-hvm"/>
+                        <outlet property="myLabel" destination="1MI-Rr-V1q" id="c0O-ix-c7y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -53,7 +73,7 @@
     </scenes>
     <resources>
         <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
