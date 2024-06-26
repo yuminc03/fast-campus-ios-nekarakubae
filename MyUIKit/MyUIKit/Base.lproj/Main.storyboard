@@ -77,13 +77,57 @@
                     <view key="view" contentMode="scaleToFill" id="slc-Xl-pUb">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wlO-xd-VzL">
+                                <rect key="frame" x="20" y="273" width="228" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="uPs-jp-Ex1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cX-2n-v38">
+                                <rect key="frame" x="298" y="273" width="75" height="50"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="D0J-e0-KSv"/>
+                                </constraints>
+                                <color key="tintColor" red="0.95294117649999999" green="0.97647058819999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="didTapButton:" destination="Doz-mR-HFw" eventType="touchUpInside" id="gN2-ly-AnJ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Nh-Rm-Zmh">
+                                <rect key="frame" x="20" y="423" width="353" height="21"/>
+                                <color key="backgroundColor" red="0.027450980390000001" green="0.82745098039999998" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Lp9-W6-ibA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0cX-2n-v38" firstAttribute="leading" secondItem="wlO-xd-VzL" secondAttribute="trailing" constant="50" id="M8h-7F-8Gi"/>
+                            <constraint firstItem="Lp9-W6-ibA" firstAttribute="trailing" secondItem="0cX-2n-v38" secondAttribute="trailing" constant="20" id="VqC-tJ-L0N"/>
+                            <constraint firstItem="6Nh-Rm-Zmh" firstAttribute="leading" secondItem="Lp9-W6-ibA" secondAttribute="leading" constant="20" id="ZdU-bS-2Qm"/>
+                            <constraint firstItem="Lp9-W6-ibA" firstAttribute="trailing" secondItem="6Nh-Rm-Zmh" secondAttribute="trailing" constant="20" id="aFx-oL-jv0"/>
+                            <constraint firstItem="0cX-2n-v38" firstAttribute="centerY" secondItem="wlO-xd-VzL" secondAttribute="centerY" id="hUh-96-D8X"/>
+                            <constraint firstItem="6Nh-Rm-Zmh" firstAttribute="top" secondItem="0cX-2n-v38" secondAttribute="bottom" constant="100" id="jAM-ur-pV2"/>
+                            <constraint firstItem="wlO-xd-VzL" firstAttribute="leading" secondItem="Lp9-W6-ibA" secondAttribute="leading" constant="20" id="m9R-0B-vKs"/>
+                            <constraint firstItem="wlO-xd-VzL" firstAttribute="top" secondItem="Lp9-W6-ibA" secondAttribute="top" constant="214" id="w8p-e3-QSL"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="helloLabel" destination="6Nh-Rm-Zmh" id="ac0-SN-MQj"/>
+                        <outlet property="nameTextField" destination="wlO-xd-VzL" id="Zgl-wY-LeJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ffw-Eu-qiQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="895" y="-35"/>
+            <point key="canvasLocation" x="895.41984732824426" y="-34.507042253521128"/>
         </scene>
     </scenes>
     <resources>
