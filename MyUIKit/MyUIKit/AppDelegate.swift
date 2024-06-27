@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  MyUIKit
 //
-//  Created by LS-NOTE-00106 on 6/25/24.
+//  Created by Yumin Chu on 6/25/24.
 //
 
 import UIKit

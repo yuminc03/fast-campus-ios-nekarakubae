@@ -2,12 +2,12 @@
 //  MyTableViewController.swift
 //  MyUIKit
 //
-//  Created by LS-NOTE-00106 on 6/26/24.
+//  Created by Yumin Chu on 6/26/24.
 //
 
 import UIKit
 
-class MyTableViewController: UIViewController {
+final class MyTableViewController: UIViewController {
   
   @IBOutlet weak var myTableView: UITableView!
   private let cellData = ["Hello TableView!", "This is UIKit", "Welcome", "I Need You", "I'm Fine"]

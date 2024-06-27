@@ -2,7 +2,7 @@
 //  MyViewController.swift
 //  MyUIKit
 //
-//  Created by LS-NOTE-00106 on 6/26/24.
+//  Created by Yumin Chu on 6/26/24.
 //
 
 import UIKit
@@ -12,7 +12,7 @@ protocol AdminDelegate {
   func doTask()
 }
 
-class MyViewController: UIViewController {
+final class MyViewController: UIViewController {
   
   @IBOutlet weak var helloLabel: UILabel!
   @IBOutlet weak var nameTextField: UITextField!

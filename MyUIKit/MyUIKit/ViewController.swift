@@ -2,12 +2,12 @@
 //  ViewController.swift
 //  MyUIKit
 //
-//  Created by LS-NOTE-00106 on 6/25/24.
+//  Created by Yumin Chu on 6/25/24.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
   @IBOutlet weak var myLabel: UILabel!
   @IBOutlet weak var myButton: UIButton!
