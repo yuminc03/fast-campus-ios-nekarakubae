@@ -41,4 +41,16 @@ extension MyTableViewController: UITableViewDelegate, UITableViewDataSource {
     cell.textLabel?.text = cellData[indexPath.row]
     return cell
   }
+  
+  func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+    return true
+  }
+  
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    if indexPath.row == 0 {
+      return 200
+    } else {
+      return 60
+    }
+  }
 }
