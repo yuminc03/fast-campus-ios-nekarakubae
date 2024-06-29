@@ -137,9 +137,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1i-rg-SDj">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1i-rg-SDj">
                                 <rect key="frame" x="159" y="173" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Button"/>
                                 <connections>
@@ -149,6 +148,10 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="i0s-Y0-vyX"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="C1i-rg-SDj" firstAttribute="centerX" secondItem="i0s-Y0-vyX" secondAttribute="centerX" id="MSn-u9-ept"/>
+                            <constraint firstItem="C1i-rg-SDj" firstAttribute="top" secondItem="i0s-Y0-vyX" secondAttribute="top" constant="70" id="Xpw-i5-fs4"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YaG-WK-DBN"/>
                 </viewController>
