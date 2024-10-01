@@ -15,6 +15,7 @@
 		8DB2440B2CAC2D4400D533C3 /* VoiceMemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB244092CAC2D4400D533C3 /* VoiceMemoUITestsLaunchTests.swift */; };
 		8DB2441F2CAC31B800D533C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DB2441E2CAC31B800D533C3 /* LaunchScreen.storyboard */; };
 		8DB244212CAC324F00D533C3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DB244202CAC324F00D533C3 /* Preview Assets.xcassets */; };
+		8DB2442A2CAC335B00D533C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB244292CAC335B00D533C3 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		8DB244092CAC2D4400D533C3 /* VoiceMemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8DB2441E2CAC31B800D533C3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DB244202CAC324F00D533C3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8DB244292CAC335B00D533C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DC8A2612CAAF3E10082FC67 /* VoiceMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoiceMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DC8A2712CAAF3E20082FC67 /* VoiceMemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoiceMemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DC8A27B2CAAF3E20082FC67 /* VoiceMemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoiceMemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				8DB244012CAC2D4400D533C3 /* VoiceMemoApp.swift */,
+				8DB244292CAC335B00D533C3 /* AppDelegate.swift */,
 				8DB244002CAC2D4400D533C3 /* ContentView.swift */,
 				8DB2441E2CAC31B800D533C3 /* LaunchScreen.storyboard */,
 			);
@@ -356,6 +359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DB2442A2CAC335B00D533C3 /* AppDelegate.swift in Sources */,
 				8DB244022CAC2D4400D533C3 /* ContentView.swift in Sources */,
 				8DB244032CAC2D4400D533C3 /* VoiceMemoApp.swift in Sources */,
 			);
