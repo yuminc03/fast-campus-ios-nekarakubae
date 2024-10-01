@@ -6,6 +6,17 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8DB244022CAC2D4400D533C3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB244002CAC2D4400D533C3 /* ContentView.swift */; };
+		8DB244032CAC2D4400D533C3 /* VoiceMemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB244012CAC2D4400D533C3 /* VoiceMemoApp.swift */; };
+		8DB244052CAC2D4400D533C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DB243FF2CAC2D4400D533C3 /* Assets.xcassets */; };
+		8DB244072CAC2D4400D533C3 /* VoiceMemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB244062CAC2D4400D533C3 /* VoiceMemoTests.swift */; };
+		8DB2440A2CAC2D4400D533C3 /* VoiceMemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB244082CAC2D4400D533C3 /* VoiceMemoUITests.swift */; };
+		8DB2440B2CAC2D4400D533C3 /* VoiceMemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB244092CAC2D4400D533C3 /* VoiceMemoUITestsLaunchTests.swift */; };
+		8DB2441F2CAC31B800D533C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DB2441E2CAC31B800D533C3 /* LaunchScreen.storyboard */; };
+		8DB244212CAC324F00D533C3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DB244202CAC324F00D533C3 /* Preview Assets.xcassets */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		8DC8A2722CAAF3E20082FC67 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,28 +35,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8DB243FF2CAC2D4400D533C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8DB244002CAC2D4400D533C3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8DB244012CAC2D4400D533C3 /* VoiceMemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMemoApp.swift; sourceTree = "<group>"; };
+		8DB244062CAC2D4400D533C3 /* VoiceMemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMemoTests.swift; sourceTree = "<group>"; };
+		8DB244082CAC2D4400D533C3 /* VoiceMemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMemoUITests.swift; sourceTree = "<group>"; };
+		8DB244092CAC2D4400D533C3 /* VoiceMemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8DB2441E2CAC31B800D533C3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8DB244202CAC324F00D533C3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8DC8A2612CAAF3E10082FC67 /* VoiceMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoiceMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DC8A2712CAAF3E20082FC67 /* VoiceMemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoiceMemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DC8A27B2CAAF3E20082FC67 /* VoiceMemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoiceMemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		8DC8A2632CAAF3E10082FC67 /* VoiceMemo */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = VoiceMemo;
-			sourceTree = "<group>";
-		};
-		8DC8A2742CAAF3E20082FC67 /* VoiceMemoTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = VoiceMemoTests;
-			sourceTree = "<group>";
-		};
-		8DC8A27E2CAAF3E20082FC67 /* VoiceMemoUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = VoiceMemoUITests;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		8DC8A25E2CAAF3E10082FC67 /* Frameworks */ = {
@@ -72,12 +73,137 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8DB2440D2CAC304500D533C3 /* VoiceMemo */ = {
+			isa = PBXGroup;
+			children = (
+				8DB244112CAC305B00D533C3 /* App */,
+				8DB244122CAC306200D533C3 /* Core */,
+				8DB244132CAC306800D533C3 /* Component */,
+				8DB244142CAC306F00D533C3 /* Feature */,
+				8DB244152CAC307400D533C3 /* Model */,
+				8DB244262CAC328C00D533C3 /* Preview Content */,
+				8DB243FF2CAC2D4400D533C3 /* Assets.xcassets */,
+			);
+			path = VoiceMemo;
+			sourceTree = "<group>";
+		};
+		8DB244112CAC305B00D533C3 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8DB244012CAC2D4400D533C3 /* VoiceMemoApp.swift */,
+				8DB244002CAC2D4400D533C3 /* ContentView.swift */,
+				8DB2441E2CAC31B800D533C3 /* LaunchScreen.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		8DB244122CAC306200D533C3 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				8DB244222CAC325600D533C3 /* Service */,
+				8DB244232CAC325B00D533C3 /* Extension */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		8DB244132CAC306800D533C3 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				8DB244242CAC326A00D533C3 /* CustomView */,
+				8DB244252CAC327100D533C3 /* NavigationBar */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		8DB244142CAC306F00D533C3 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				8DB244272CAC32AD00D533C3 /* Onboarding */,
+				8DB244282CAC32B700D533C3 /* Home */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		8DB244152CAC307400D533C3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8DB244162CAC309200D533C3 /* VoiceMemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				8DB244062CAC2D4400D533C3 /* VoiceMemoTests.swift */,
+			);
+			path = VoiceMemoTests;
+			sourceTree = "<group>";
+		};
+		8DB244172CAC30A700D533C3 /* VoiceMemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8DB244082CAC2D4400D533C3 /* VoiceMemoUITests.swift */,
+				8DB244092CAC2D4400D533C3 /* VoiceMemoUITestsLaunchTests.swift */,
+			);
+			path = VoiceMemoUITests;
+			sourceTree = "<group>";
+		};
+		8DB244222CAC325600D533C3 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		8DB244232CAC325B00D533C3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		8DB244242CAC326A00D533C3 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		8DB244252CAC327100D533C3 /* NavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NavigationBar;
+			sourceTree = "<group>";
+		};
+		8DB244262CAC328C00D533C3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8DB244202CAC324F00D533C3 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8DB244272CAC32AD00D533C3 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		8DB244282CAC32B700D533C3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		8DC8A2582CAAF3E10082FC67 = {
 			isa = PBXGroup;
 			children = (
-				8DC8A2632CAAF3E10082FC67 /* VoiceMemo */,
-				8DC8A2742CAAF3E20082FC67 /* VoiceMemoTests */,
-				8DC8A27E2CAAF3E20082FC67 /* VoiceMemoUITests */,
+				8DB2440D2CAC304500D533C3 /* VoiceMemo */,
+				8DB244162CAC309200D533C3 /* VoiceMemoTests */,
+				8DB244172CAC30A700D533C3 /* VoiceMemoUITests */,
 				8DC8A2622CAAF3E10082FC67 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -107,9 +233,6 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				8DC8A2632CAAF3E10082FC67 /* VoiceMemo */,
-			);
 			name = VoiceMemo;
 			packageProductDependencies = (
 			);
@@ -130,9 +253,6 @@
 			dependencies = (
 				8DC8A2732CAAF3E20082FC67 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				8DC8A2742CAAF3E20082FC67 /* VoiceMemoTests */,
-			);
 			name = VoiceMemoTests;
 			packageProductDependencies = (
 			);
@@ -152,9 +272,6 @@
 			);
 			dependencies = (
 				8DC8A27D2CAAF3E20082FC67 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				8DC8A27E2CAAF3E20082FC67 /* VoiceMemoUITests */,
 			);
 			name = VoiceMemoUITests;
 			packageProductDependencies = (
@@ -212,6 +329,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DB2441F2CAC31B800D533C3 /* LaunchScreen.storyboard in Resources */,
+				8DB244212CAC324F00D533C3 /* Preview Assets.xcassets in Resources */,
+				8DB244052CAC2D4400D533C3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +356,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DB244022CAC2D4400D533C3 /* ContentView.swift in Sources */,
+				8DB244032CAC2D4400D533C3 /* VoiceMemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +365,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DB244072CAC2D4400D533C3 /* VoiceMemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +373,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DB2440A2CAC2D4400D533C3 /* VoiceMemoUITests.swift in Sources */,
+				8DB2440B2CAC2D4400D533C3 /* VoiceMemoUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,8 +527,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -431,8 +558,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
