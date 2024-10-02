@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8D1AD10F2CAD8FC500AEFDEE /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1AD10E2CAD8FC500AEFDEE /* Color+.swift */; };
 		8D1AD1122CAD924800AEFDEE /* OnboardingContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1AD1112CAD924800AEFDEE /* OnboardingContent.swift */; };
+		8D1AD1162CAD92E700AEFDEE /* OnboardingVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1AD1152CAD92E700AEFDEE /* OnboardingVM.swift */; };
+		8D1AD1182CAD943800AEFDEE /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1AD1172CAD943800AEFDEE /* OnboardingView.swift */; };
 		8DB244022CAC2D4400D533C3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB244002CAC2D4400D533C3 /* ContentView.swift */; };
 		8DB244032CAC2D4400D533C3 /* VoiceMemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB244012CAC2D4400D533C3 /* VoiceMemoApp.swift */; };
 		8DB244052CAC2D4400D533C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DB243FF2CAC2D4400D533C3 /* Assets.xcassets */; };
@@ -40,6 +42,8 @@
 /* Begin PBXFileReference section */
 		8D1AD10E2CAD8FC500AEFDEE /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		8D1AD1112CAD924800AEFDEE /* OnboardingContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContent.swift; sourceTree = "<group>"; };
+		8D1AD1152CAD92E700AEFDEE /* OnboardingVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVM.swift; sourceTree = "<group>"; };
+		8D1AD1172CAD943800AEFDEE /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		8DB243FF2CAC2D4400D533C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8DB244002CAC2D4400D533C3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8DB244012CAC2D4400D533C3 /* VoiceMemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMemoApp.swift; sourceTree = "<group>"; };
@@ -204,6 +208,8 @@
 		8DB244272CAC32AD00D533C3 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				8D1AD1152CAD92E700AEFDEE /* OnboardingVM.swift */,
+				8D1AD1172CAD943800AEFDEE /* OnboardingView.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -374,10 +380,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DB2442A2CAC335B00D533C3 /* AppDelegate.swift in Sources */,
+				8D1AD1162CAD92E700AEFDEE /* OnboardingVM.swift in Sources */,
 				8D1AD1122CAD924800AEFDEE /* OnboardingContent.swift in Sources */,
 				8D1AD10F2CAD8FC500AEFDEE /* Color+.swift in Sources */,
 				8DB244022CAC2D4400D533C3 /* ContentView.swift in Sources */,
 				8DB244032CAC2D4400D533C3 /* VoiceMemoApp.swift in Sources */,
+				8D1AD1182CAD943800AEFDEE /* OnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
