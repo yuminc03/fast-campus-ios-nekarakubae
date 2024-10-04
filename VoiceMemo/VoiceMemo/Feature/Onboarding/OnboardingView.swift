@@ -9,7 +9,7 @@ struct OnboardingView: View {
   }
 }
 
-// MARK: - OnboardingContentView
+// MARK: - 온보딩 Content View
 
 private struct OnboardingContentView: View {
   @ObservedObject private var vm: OnboardingVM
@@ -21,14 +21,17 @@ private struct OnboardingContentView: View {
   
   fileprivate var body: some View {
     VStack {
-      // 온보딩 셀리스트 뷰
       OnboardingCellListView(vm: vm)
-      // 시작 버튼 뷰
+      
+      Spacer()
+      
+      StartButton()
     }
+    .edgesIgnoringSafeArea(.top)
   }
 }
 
-// MARK: - OnboardingCellListView
+// MARK: - 온보딩 Cell List View
 
 private struct OnboardingCellListView: View {
   @ObservedObject private var vm: OnboardingVM
@@ -56,7 +59,7 @@ private struct OnboardingCellListView: View {
   }
 }
 
-// MARK: - OnboardingCellView
+// MARK: - 온보딩 Cell View
 
 private struct OnboardingCellView: View {
   private var onboardingContent: OnboardingContent
@@ -96,6 +99,28 @@ private struct OnboardingCellView: View {
     .shadow(radius: 10)
   }
 }
+
+// MARK: - 시작하기 Button
+
+private struct StartButton: View {
+  fileprivate var body: some View {
+    Button {
+      
+    } label: {
+      HStack {
+        Text("시작하기")
+          .font(.system(size: 16, weight: .medium))
+          .foregroundColor(.customGreen)
+        
+        Image(.arrow)
+          .renderingMode(.template)
+          .foregroundColor(.customGreen)
+      }
+    }
+    .padding(.bottom, 50)
+  }
+}
+
 
 #Preview {
   OnboardingView()
