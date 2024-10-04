@@ -112,7 +112,7 @@ private struct StartButton: View {
           .font(.system(size: 16, weight: .medium))
           .foregroundColor(.customGreen)
         
-        Image(.arrow)
+        Image(.startHome)
           .renderingMode(.template)
           .foregroundColor(.customGreen)
       }
