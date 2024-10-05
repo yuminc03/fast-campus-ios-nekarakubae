@@ -28,6 +28,7 @@ private struct OnboardingContentView: View {
       StartButton()
     }
     .edgesIgnoringSafeArea(.top)
+    .background(.white)
   }
 }
 
