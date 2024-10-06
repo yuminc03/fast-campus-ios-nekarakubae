@@ -1,8 +1,3 @@
-//
-//  TimerView.swift
-//  voiceMemo
-//
-
 import SwiftUI
 
 struct TimerView: View {

@@ -1,8 +1,3 @@
-//
-//  VoiceRecorderView.swift
-//  voiceMemo
-//
-
 import SwiftUI
 
 struct VoiceRecorderView: View {

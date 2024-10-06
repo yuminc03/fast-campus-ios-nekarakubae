@@ -1,8 +1,3 @@
-//
-//  ToodoListView.swift
-//  voiceMemo
-//
-
 import SwiftUI
 
 struct TodoListView: View {

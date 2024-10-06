@@ -1,8 +1,3 @@
-//
-//  HomeView.swift
-//  voiceMemo
-//
-
 import SwiftUI
 
 struct HomeView: View {

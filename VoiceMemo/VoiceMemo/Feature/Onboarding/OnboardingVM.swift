@@ -13,6 +13,4 @@ final class OnboardingVM: ObservableObject {
   ) {
     self.onboardingContents = onboardingContents
   }
-  
-  
 }

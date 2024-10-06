@@ -1,8 +1,3 @@
-//
-//  MemoListView.swift
-//  voiceMemo
-//
-
 import SwiftUI
 
 struct MemoListView: View {

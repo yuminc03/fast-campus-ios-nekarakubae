@@ -1,8 +1,3 @@
-//
-//  SettingView.swift
-//  voiceMemo
-//
-
 import SwiftUI
 
 struct SettingView: View {
