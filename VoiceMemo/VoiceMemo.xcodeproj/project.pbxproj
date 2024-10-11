@@ -38,6 +38,7 @@
 		8DB2441F2CAC31B800D533C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DB2441E2CAC31B800D533C3 /* LaunchScreen.storyboard */; };
 		8DB244212CAC324F00D533C3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DB244202CAC324F00D533C3 /* Preview Assets.xcassets */; };
 		8DB2442A2CAC335B00D533C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB244292CAC335B00D533C3 /* AppDelegate.swift */; };
+		8DCE5DC92CB964CB005E316D /* NavigationButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCE5DC82CB964CB005E316D /* NavigationButtonType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		8DC8A2612CAAF3E10082FC67 /* VoiceMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoiceMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DC8A2712CAAF3E20082FC67 /* VoiceMemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoiceMemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DC8A27B2CAAF3E20082FC67 /* VoiceMemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoiceMemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DCE5DC82CB964CB005E316D /* NavigationButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButtonType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,6 +320,7 @@
 		8DB244252CAC327100D533C3 /* NavigationBar */ = {
 			isa = PBXGroup;
 			children = (
+				8DCE5DC82CB964CB005E316D /* NavigationButtonType.swift */,
 			);
 			path = NavigationBar;
 			sourceTree = "<group>";
@@ -520,6 +523,7 @@
 				8D1345AC2CB17E4C008FEC45 /* HomeView.swift in Sources */,
 				8D1345AD2CB17E4C008FEC45 /* TimerView.swift in Sources */,
 				8D1345AE2CB17E4C008FEC45 /* TodoListVM.swift in Sources */,
+				8DCE5DC92CB964CB005E316D /* NavigationButtonType.swift in Sources */,
 				8D1345882CB17CBC008FEC45 /* PathModel.swift in Sources */,
 				8D1AD1182CAD943800AEFDEE /* OnboardingView.swift in Sources */,
 			);
