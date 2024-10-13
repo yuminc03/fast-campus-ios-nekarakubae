@@ -44,13 +44,15 @@ struct CustomNavigationBar: View {
         }
       }
     }
+    .padding(.horizontal, 20)
+    .frame(height: 20)
   }
 }
 
 #Preview {
   CustomNavigationBar(
     isDisplayLeftButton: true,
-    isDisplayRightButton: false,
+    isDisplayRightButton: true,
     leftButtonAction: { },
     rightButtonAction: { },
     rightButtonType: .close
