@@ -15,9 +15,9 @@ final class TodoListVM: ObservableObject {
   }
   
   init(
-    todos: [Todo],
+    todos: [Todo] = [],
     isEditTodoMode: Bool = false,
-    removeTodos: [Todo],
+    removeTodos: [Todo] = [],
     isDisplayRemoveTodoAlert: Bool = false
   ) {
     self.todos = todos
