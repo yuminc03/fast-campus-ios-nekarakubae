@@ -108,8 +108,8 @@ private struct TodoListContentView: View {
           .fill(Color.customGray0)
           .frame(height: 1)
         
-        ForEach(todoListVM.todos, id: \.self) { todo in
-          
+        ForEach(todoListVM.todos, id: \.self) {
+          TodoCellView(todo: $0)
         }
       }
     }
