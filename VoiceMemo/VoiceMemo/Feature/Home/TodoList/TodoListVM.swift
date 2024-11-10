@@ -6,7 +6,7 @@ final class TodoListVM: ObservableObject {
   @Published var removeTodos: [Todo]
   @Published var isDisplayRemoveTodoAlert: Bool
   
-  var removeTdosCount: Int {
+  var removeTodosCount: Int {
     return removeTodos.count
   }
   
