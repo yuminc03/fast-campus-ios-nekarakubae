@@ -34,6 +34,18 @@ struct TodoListView: View {
         .padding(.trailing, 20)
         .padding(.bottom, 50)
     }
+    .alert(
+      "To do list \(todoListVM.removeTodosCount)개 삭제하시겠습니까?",
+      isPresented: $todoListVM.isDisplayRemoveTodoAlert
+    ) {
+      Button("삭제", role: .destructive) {
+        todoListVM.didTapRemoveButton()
+      }
+      
+      Button("취소", role: .cancel) {
+        
+      }
+    }
   }
 }
 
