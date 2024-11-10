@@ -29,6 +29,10 @@ struct TodoListView: View {
           TodoListContentView()
         }
       }
+      
+      WriteTodoButtonView()
+        .padding(.trailing, 20)
+        .padding(.bottom, 50)
     }
   }
 }
@@ -163,6 +167,28 @@ private struct TodoCellView: View {
     Rectangle()
       .fill(Color.customGray0)
       .frame(height: 1)
+  }
+}
+
+// MARK: - Todo 작성 버튼 View
+
+private struct WriteTodoButtonView: View {
+  @EnvironmentObject private var pathModel: PathModel
+  
+  fileprivate var body: some View {
+    VStack {
+      Spacer()
+      
+      HStack {
+        Spacer()
+        
+        Button {
+          pathModel.paths.append(.todo)
+        } label: {
+          Image(.writeBtn)
+        }
+      }
+    }
   }
 }
 
