@@ -8,11 +8,11 @@ struct CustomNavigationBar: View {
   private let rightButtonType: NavigationButtonType
   
   init(
-    isDisplayLeftButton: Bool,
-    isDisplayRightButton: Bool,
-    leftButtonAction: @escaping () -> Void,
-    rightButtonAction: @escaping () -> Void,
-    rightButtonType: NavigationButtonType
+    isDisplayLeftButton: Bool = true,
+    isDisplayRightButton: Bool = true,
+    leftButtonAction: @escaping () -> Void = {},
+    rightButtonAction: @escaping () -> Void = {},
+    rightButtonType: NavigationButtonType = .edit
   ) {
     self.isDisplayLeftButton = isDisplayLeftButton
     self.isDisplayRightButton = isDisplayRightButton
