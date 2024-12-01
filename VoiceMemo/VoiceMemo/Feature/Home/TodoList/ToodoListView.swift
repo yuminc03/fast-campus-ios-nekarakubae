@@ -155,6 +155,7 @@ private struct TodoCellView: View {
           Text(todo.title)
             .font(.system(size: 16))
             .foregroundColor(todo.selected ? .customIconGray : .customBlack)
+            .strikethrough(todo.selected)
           
           Text(todo.convertedDayAndTime)
             .font(.system(size: 16))
