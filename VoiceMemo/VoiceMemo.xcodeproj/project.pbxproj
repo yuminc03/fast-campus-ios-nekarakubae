@@ -266,8 +266,8 @@
 		8DB244142CAC306F00D533C3 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				8D13459F2CB17E4C008FEC45 /* Home */,
 				8DB244272CAC32AD00D533C3 /* Onboarding */,
+				8D13459F2CB17E4C008FEC45 /* Home */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
