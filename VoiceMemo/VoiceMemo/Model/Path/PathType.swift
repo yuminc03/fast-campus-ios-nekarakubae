@@ -3,5 +3,5 @@
 enum PathType: Hashable {
   case home
   case todo
-  case memo
+  case memo(isCreatMode: Bool, memo: Memo?)
 }

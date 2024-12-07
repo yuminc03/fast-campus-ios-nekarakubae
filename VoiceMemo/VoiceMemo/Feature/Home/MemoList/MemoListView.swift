@@ -137,7 +137,7 @@ private struct MemoCell: View {
   
   var body: some View {
     Button {
-      // TODO: - path 관련 메모 작업 후 구현 필요함
+      pathModel.paths.append(.memo(isCreatMode: false, memo: memo))
     } label: {
       VStack(spacing: 10) {
         HStack {
@@ -163,16 +163,18 @@ private struct MemoCell: View {
             }
           }
         }
+        .padding(.horizontal, 30)
+        .padding(.top, 10)
+        
+        Rectangle()
+          .fill(.customGray0)
+          .frame(height: 1)
       }
-      .padding(.horizontal, 30)
-      .padding(.top, 10)
-      
-      Rectangle()
-        .fill(.customGray0)
-        .frame(height: 1)
     }
   }
 }
+
+// MARK: - Write Memo Button
 
 private struct WriteMemoButton: View {
   @EnvironmentObject private var pathModel: PathModel
@@ -184,7 +186,7 @@ private struct WriteMemoButton: View {
         Spacer()
         
         Button {
-          // TODO: - 메모 View 작업 후 구현
+          pathModel.paths.append(.memo(isCreatMode: true, memo: nil))
         } label: {
           Image(.writeBtn)
         }

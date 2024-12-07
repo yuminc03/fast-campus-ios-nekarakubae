@@ -2,8 +2,8 @@ import Foundation
 
 struct Memo: Hashable {
   let id = UUID()
-  let title: String
-  let content: String
+  var title: String
+  var content: String
   let date: Date
   
   var convertedDate: String {

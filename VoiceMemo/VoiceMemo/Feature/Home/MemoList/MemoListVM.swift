@@ -51,7 +51,7 @@ extension MemoListVM {
       if removeMemos.isEmpty {
         isEditMemoMode = false
       } else {
-        // 삭제 alert 상태값 변경을 위한 메서드 호출
+        setIsDisplayRemoveMemoAlert(true)
       }
     } else {
       isEditMemoMode = true
