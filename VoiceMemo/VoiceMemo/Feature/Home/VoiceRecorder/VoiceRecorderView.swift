@@ -8,7 +8,7 @@ struct VoiceRecorderView: View {
       VStack {
         Title()
         
-        if vm.recordedFiles?.isEmpty ?? false {
+        if vm.recordedFiles.isEmpty {
           AnnouncementView()
         } else {
           VoiceRecorderList(vm: vm)

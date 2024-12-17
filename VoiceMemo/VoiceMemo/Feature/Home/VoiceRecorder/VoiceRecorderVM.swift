@@ -17,7 +17,7 @@ final class VoiceRecorderVM: NSObject, ObservableObject, AVAudioPlayerDelegate {
   private var progressTimer: Timer?
   
   /// 음성 메모된 파일
-  var recordedFiles: [URL]?
+  var recordedFiles: [URL]
   
   /// 현재 선택된 음성메모 파일
   @Published var selectedRecordFile: URL?
@@ -59,7 +59,7 @@ extension VoiceRecorderVM {
   
   func removeSelectedVoiceRecord() {
     guard let fileToRemove = selectedRecordFile,
-          let indexToRemove = recordedFiles?.firstIndex(of: fileToRemove)
+          let indexToRemove = recordedFiles.firstIndex(of: fileToRemove)
     else {
       displayAlert(message: "선택된 음성메모 파일을 찾을 수 없습니다.")
       return
@@ -67,7 +67,7 @@ extension VoiceRecorderVM {
     
     do {
       try FileManager.default.removeItem(at: fileToRemove)
-      recordedFiles?.remove(at: indexToRemove)
+      recordedFiles.remove(at: indexToRemove)
       selectedRecordFile = nil
       stopPlaying()
       displayAlert(message: "선택된 음성메모 파일을 성공적으로 삭제했습니다.")
@@ -111,7 +111,7 @@ extension VoiceRecorderVM {
   }
   
   private func startRecording() {
-    let fileURL = getDocumentsDirectory().appendingPathComponent("새로운 녹음 \((recordedFiles?.count ?? 0) + 1)")
+    let fileURL = getDocumentsDirectory().appendingPathComponent("새로운 녹음 \(recordedFiles.count + 1)")
     let settings = [
       AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
       AVSampleRateKey: 12000,
@@ -130,7 +130,7 @@ extension VoiceRecorderVM {
   
   private func stopRecording() {
     audioRecorder?.stop()
-    recordedFiles?.append(audioRecorder?.url ?? .userDirectory)
+    recordedFiles.append(audioRecorder?.url ?? .userDirectory)
     isRecording = false
   }
   
