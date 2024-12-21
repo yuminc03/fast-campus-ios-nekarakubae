@@ -44,6 +44,7 @@
 		8DCE5DCB2CB96521005E316D /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCE5DCA2CB96521005E316D /* CustomNavigationBar.swift */; };
 		8DEC06C02D0EAD65009BB596 /* Double+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEC06BF2D0EAD61009BB596 /* Double+.swift */; };
 		8DFB79302D16FDE700B86C23 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFB792F2D16FDE300B86C23 /* Time.swift */; };
+		8DFB79322D16FE9600B86C23 /* Int+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFB79312D16FE9500B86C23 /* Int+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 		8DCE5DCA2CB96521005E316D /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		8DEC06BF2D0EAD61009BB596 /* Double+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+.swift"; sourceTree = "<group>"; };
 		8DFB792F2D16FDE300B86C23 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		8DFB79312D16FE9500B86C23 /* Int+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,6 +319,7 @@
 		8DB244232CAC325B00D533C3 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				8DFB79312D16FE9500B86C23 /* Int+.swift */,
 				8D1AD10E2CAD8FC500AEFDEE /* Color+.swift */,
 				8D1529F32CB41FFA00D6B788 /* Date+.swift */,
 				8DEC06BF2D0EAD61009BB596 /* Double+.swift */,
@@ -566,6 +569,7 @@
 				8D1345AB2CB17E4C008FEC45 /* TimerVM.swift in Sources */,
 				8D1345AC2CB17E4C008FEC45 /* HomeView.swift in Sources */,
 				8D1345AD2CB17E4C008FEC45 /* TimerView.swift in Sources */,
+				8DFB79322D16FE9600B86C23 /* Int+.swift in Sources */,
 				8D1345AE2CB17E4C008FEC45 /* TodoListVM.swift in Sources */,
 				8DCE5DC92CB964CB005E316D /* NavigationButtonType.swift in Sources */,
 				8D1345882CB17CBC008FEC45 /* PathModel.swift in Sources */,
