@@ -1,9 +1,9 @@
 import Foundation
 
 struct Time {
-  let hours: Int
-  let minutes: Int
-  let seconds: Int
+  var hours: Int
+  var minutes: Int
+  var seconds: Int
   
   var convertedSeconds: Int {
     return (hours * 3600) + (minutes * 60) + seconds
