@@ -6,11 +6,16 @@ struct SettingView: View {
       Title()
       
       Spacer()
-        .frame(height: 30)
+        .frame(height: 35)
       
       TotalTabCount()
       
-      // Tab Move View
+      Spacer()
+        .frame(height: 40)
+      
+      TotalTabMoveView()
+      
+      Spacer()
     }
   }
 }
@@ -83,6 +88,26 @@ private struct TotalTabMoveView: View {
       Rectangle()
         .fill(.customGray1)
         .frame(height: 1)
+      
+      TabMoveView(title: "To do List") {
+        
+      }
+      
+      TabMoveView(title: "메모장") {
+        
+      }
+      
+      TabMoveView(title: "음성메모") {
+        
+      }
+      
+      TabMoveView(title: "타이머") {
+        
+      }
+      
+      Rectangle()
+        .fill(.customGray1)
+        .frame(height: 1)
     }
   }
 }
@@ -99,11 +124,18 @@ private struct TabMoveView: View {
   }
   
   fileprivate var body: some View {
-    Button {
-      
-    } label: {
-      
+    Button(action: tabAction) {
+      HStack {
+        Text(title)
+          .font(.system(size: 14))
+          .foregroundColor(.customBlack)
+        
+        Spacer()
+        
+        Image(.arrowRight)
+      }
     }
+    .padding(20)
   }
 }
 
