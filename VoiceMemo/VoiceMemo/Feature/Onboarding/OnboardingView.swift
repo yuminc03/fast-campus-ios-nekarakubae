@@ -8,17 +8,15 @@ struct OnboardingView: View {
   
   var body: some View {
     NavigationStack(path: $pathModel.paths) {
-//      TodoListView()
-//        .environmentObject(todoListVM)
-//      OnboardingContentView(vm: vm)
-      
-      MemoListView()
+      OnboardingContentView(vm: vm)
         .environmentObject(memoListVM)
         .navigationDestination(for: PathType.self) { path in
           switch path {
           case .home:
             HomeView()
               .navigationBarBackButtonHidden()
+              .environmentObject(TodoListVM())
+              .environmentObject(MemoListVM())
             
           case .todo:
             TodoView()
