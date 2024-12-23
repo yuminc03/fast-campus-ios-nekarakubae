@@ -71,6 +71,7 @@ private extension TimerVM {
         timeRemaining -= 1
       } else {
         stopTimer()
+        isDisplaySetTimeView = true
         notificationService.sendNotification()
         
         if let task = backgroundTaskID {
