@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05EE47512D193A7B007F2894 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EE47502D193A78007F2894 /* NotificationService.swift */; };
 		8D1345862CB17C6D008FEC45 /* PathType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1345852CB17C6D008FEC45 /* PathType.swift */; };
 		8D1345882CB17CBC008FEC45 /* PathModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1345872CB17CBC008FEC45 /* PathModel.swift */; };
 		8D1345A02CB17E4C008FEC45 /* MemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1345892CB17E4C008FEC45 /* MemoView.swift */; };
@@ -65,6 +66,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05EE47502D193A78007F2894 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		8D1345852CB17C6D008FEC45 /* PathType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathType.swift; sourceTree = "<group>"; };
 		8D1345872CB17CBC008FEC45 /* PathModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathModel.swift; sourceTree = "<group>"; };
 		8D1345892CB17E4C008FEC45 /* MemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoView.swift; sourceTree = "<group>"; };
@@ -133,6 +135,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05EE474F2D193A73007F2894 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				05EE47502D193A78007F2894 /* NotificationService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		8D1345842CB17C5D008FEC45 /* Path */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,7 +266,7 @@
 		8DB244122CAC306200D533C3 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				8DB244222CAC325600D533C3 /* Service */,
+				05EE474F2D193A73007F2894 /* Service */,
 				8DB244232CAC325B00D533C3 /* Extension */,
 			);
 			path = Core;
@@ -307,13 +317,6 @@
 				8DB244092CAC2D4400D533C3 /* VoiceMemoUITestsLaunchTests.swift */,
 			);
 			path = VoiceMemoUITests;
-			sourceTree = "<group>";
-		};
-		8DB244222CAC325600D533C3 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Service;
 			sourceTree = "<group>";
 		};
 		8DB244232CAC325B00D533C3 /* Extension */ = {
@@ -543,6 +546,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DFB79302D16FDE700B86C23 /* Time.swift in Sources */,
+				05EE47512D193A7B007F2894 /* NotificationService.swift in Sources */,
 				8D1345862CB17C6D008FEC45 /* PathType.swift in Sources */,
 				8DB2442A2CAC335B00D533C3 /* AppDelegate.swift in Sources */,
 				8D1529F42CB41FFA00D6B788 /* Date+.swift in Sources */,
@@ -737,7 +741,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VoiceMemo/Preview Content\"";
-				DEVELOPMENT_TEAM = GMHUACJXLZ;
+				DEVELOPMENT_TEAM = 322DZR4792;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "음성녹음을 위해서 마이크를 사용합니다.";
@@ -770,7 +774,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VoiceMemo/Preview Content\"";
-				DEVELOPMENT_TEAM = GMHUACJXLZ;
+				DEVELOPMENT_TEAM = 322DZR4792;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "음성녹음을 위해서 마이크를 사용합니다.";
