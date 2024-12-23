@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct SettingView: View {
+  @EnvironmentObject private var homeVM: HomeVM
+  
   var body: some View {
     VStack {
       Title()
@@ -39,19 +41,21 @@ private struct Title: View {
 // MARK: - 전체 Tab 설정된 Count
 
 private struct TotalTabCount: View {
+  @EnvironmentObject private var homeVM: HomeVM
+  
   fileprivate var body: some View {
     HStack {
-      TabCount(title: "To do", count: 0)
+      TabCount(title: "To do", count: homeVM.todosCount)
       
       Spacer()
         .frame(width: 70)
       
-      TabCount(title: "메모", count: 0)
+      TabCount(title: "메모", count: homeVM.memosCount)
       
       Spacer()
         .frame(width: 70)
       
-      TabCount(title: "음성메모", count: 0)
+      TabCount(title: "음성메모", count: homeVM.voiceRecorderCount)
     }
   }
 }
@@ -83,6 +87,8 @@ private struct TabCount: View {
 // MARK: - 전체 Tab 이동 View
 
 private struct TotalTabMoveView: View {
+  @EnvironmentObject private var homeVM: HomeVM
+  
   fileprivate var body: some View {
     VStack {
       Rectangle()
@@ -90,19 +96,19 @@ private struct TotalTabMoveView: View {
         .frame(height: 1)
       
       TabMoveView(title: "To do List") {
-        
+        homeVM.changeSelectedTab(.todoList)
       }
       
       TabMoveView(title: "메모장") {
-        
+        homeVM.changeSelectedTab(.memo)
       }
       
       TabMoveView(title: "음성메모") {
-        
+        homeVM.changeSelectedTab(.voiceRecorder)
       }
       
       TabMoveView(title: "타이머") {
-        
+        homeVM.changeSelectedTab(.timer)
       }
       
       Rectangle()
@@ -142,5 +148,6 @@ private struct TabMoveView: View {
 struct SettingView_Previews: PreviewProvider {
   static var previews: some View {
     SettingView()
+      .environmentObject(HomeVM())
   }
 }
