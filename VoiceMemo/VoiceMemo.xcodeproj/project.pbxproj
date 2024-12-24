@@ -224,10 +224,10 @@
 				8D13459E2CB17E4C008FEC45 /* HomeVM.swift */,
 				8D13459D2CB17E4C008FEC45 /* HomeView.swift */,
 				8D13458E2CB17E4C008FEC45 /* MemoList */,
-				8D1345902CB17E4C008FEC45 /* Setting */,
-				8D1345932CB17E4C008FEC45 /* Timer */,
 				8D1345992CB17E4C008FEC45 /* TodoList */,
 				8D13459C2CB17E4C008FEC45 /* VoiceRecorder */,
+				8D1345932CB17E4C008FEC45 /* Timer */,
+				8D1345902CB17E4C008FEC45 /* Setting */,
 			);
 			path = Home;
 			sourceTree = "<group>";

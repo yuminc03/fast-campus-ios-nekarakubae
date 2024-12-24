@@ -37,7 +37,7 @@ struct HomeView: View {
           }
           .tag(Tab.setting)
       }
-      .environmentObject(HomeVM())
+      .environmentObject(vm)
       
       SeparatorLine()
     }

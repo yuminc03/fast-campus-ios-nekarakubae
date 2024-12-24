@@ -3,6 +3,7 @@ import SwiftUI
 struct TodoListView: View {
   @EnvironmentObject private var pathModel: PathModel
   @EnvironmentObject private var todoListVM: TodoListVM
+  @EnvironmentObject private var homeVM: HomeVM
   
   var body: some View {
     ZStack {
@@ -42,14 +43,16 @@ struct TodoListView: View {
         todoListVM.didTapRemoveButton()
       }
       
-      Button("취소", role: .cancel) {
-        
-      }
+      Button("취소", role: .cancel) { }
+    }
+    .onChange(of: todoListVM.todos) {
+      homeVM.setTodosCount($0.count)
     }
   }
 }
 
 private extension TodoListView {
+  // 이렇게 view를 만들 수도 있음
 //  var TitleView: some View {
 //    Text("Title")
 //  }
