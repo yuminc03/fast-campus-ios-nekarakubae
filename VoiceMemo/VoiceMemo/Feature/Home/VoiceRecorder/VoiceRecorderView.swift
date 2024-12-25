@@ -262,9 +262,14 @@ private struct ProgressBar: View {
 
 private struct RecordButton: View {
   @ObservedObject private var vm: VoiceRecorderVM
+  @State private var isAnimation: Bool
   
-  fileprivate init(vm: VoiceRecorderVM) {
+  fileprivate init(
+    vm: VoiceRecorderVM,
+    isAnimation: Bool = false
+  ) {
     self.vm = vm
+    self.isAnimation = isAnimation
   }
   
   fileprivate var body: some View {
@@ -279,6 +284,15 @@ private struct RecordButton: View {
         } label: {
           if vm.isRecording {
             Image(.micRecording)
+              .scaleEffect(isAnimation ? 1.5 : 1)
+              .onAppear {
+                withAnimation(.spring().repeatForever()) {
+                  isAnimation.toggle()
+                }
+              }
+              .onDisappear {
+                isAnimation = false
+              }
           } else {
             Image(.mic)
           }
