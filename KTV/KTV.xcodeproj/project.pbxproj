@@ -22,6 +22,8 @@
 		8DAE60312D252A6D00FF03BD /* HomeVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAE602E2D252A6D00FF03BD /* HomeVideoCell.swift */; };
 		8DAE60332D25602B00FF03BD /* HomeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAE60322D25602700FF03BD /* HomeSection.swift */; };
 		8DAE60352D256B9800FF03BD /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAE60342D256B9400FF03BD /* TabBarController.swift */; };
+		8DAE60382D25736700FF03BD /* HomeHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DAE60372D25736700FF03BD /* HomeHeaderCell.xib */; };
+		8DAE60392D25736700FF03BD /* HomeHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAE60362D25736700FF03BD /* HomeHeaderCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		8DAE602F2D252A6D00FF03BD /* HomeVideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVideoCell.xib; sourceTree = "<group>"; };
 		8DAE60322D25602700FF03BD /* HomeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSection.swift; sourceTree = "<group>"; };
 		8DAE60342D256B9400FF03BD /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		8DAE60362D25736700FF03BD /* HomeHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderCell.swift; sourceTree = "<group>"; };
+		8DAE60372D25736700FF03BD /* HomeHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +169,8 @@
 			children = (
 				8DAE602E2D252A6D00FF03BD /* HomeVideoCell.swift */,
 				8DAE602F2D252A6D00FF03BD /* HomeVideoCell.xib */,
+				8DAE60362D25736700FF03BD /* HomeHeaderCell.swift */,
+				8DAE60372D25736700FF03BD /* HomeHeaderCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -285,6 +291,7 @@
 				8D3636EB2D252755001B465F /* LaunchScreen.storyboard in Resources */,
 				8DAE60302D252A6D00FF03BD /* HomeVideoCell.xib in Resources */,
 				8D3636EC2D252755001B465F /* Main.storyboard in Resources */,
+				8DAE60382D25736700FF03BD /* HomeHeaderCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D3636ED2D252755001B465F /* AppDelegate.swift in Sources */,
+				8DAE60392D25736700FF03BD /* HomeHeaderCell.swift in Sources */,
 				8D3636F82D2527EA001B465F /* HomeVC.swift in Sources */,
 				8DAE60332D25602B00FF03BD /* HomeSection.swift in Sources */,
 				8D3636EE2D252755001B465F /* LoginVC.swift in Sources */,
