@@ -21,6 +21,7 @@
 		8DAE60302D252A6D00FF03BD /* HomeVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DAE602F2D252A6D00FF03BD /* HomeVideoCell.xib */; };
 		8DAE60312D252A6D00FF03BD /* HomeVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAE602E2D252A6D00FF03BD /* HomeVideoCell.swift */; };
 		8DAE60332D25602B00FF03BD /* HomeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAE60322D25602700FF03BD /* HomeSection.swift */; };
+		8DAE60352D256B9800FF03BD /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAE60342D256B9400FF03BD /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		8DAE602E2D252A6D00FF03BD /* HomeVideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVideoCell.swift; sourceTree = "<group>"; };
 		8DAE602F2D252A6D00FF03BD /* HomeVideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVideoCell.xib; sourceTree = "<group>"; };
 		8DAE60322D25602700FF03BD /* HomeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSection.swift; sourceTree = "<group>"; };
+		8DAE60342D256B9400FF03BD /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 				8DAE602B2D2529E000FF03BD /* Cell */,
 				8D3636F72D2527E8001B465F /* HomeVC.swift */,
 				8DAE60322D25602700FF03BD /* HomeSection.swift */,
+				8DAE60342D256B9400FF03BD /* TabBarController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				8D3636F82D2527EA001B465F /* HomeVC.swift in Sources */,
 				8DAE60332D25602B00FF03BD /* HomeSection.swift in Sources */,
 				8D3636EE2D252755001B465F /* LoginVC.swift in Sources */,
+				8DAE60352D256B9800FF03BD /* TabBarController.swift in Sources */,
 				8DAE60312D252A6D00FF03BD /* HomeVideoCell.swift in Sources */,
 				8D3636EF2D252755001B465F /* SceneDelegate.swift in Sources */,
 			);

@@ -56,7 +56,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="-34"/>
+            <point key="canvasLocation" x="176" y="-13"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="M2K-UQ-Aq4">
@@ -124,7 +124,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="ws0-CE-MwB">
             <objects>
-                <tabBarController storyboardIdentifier="tabBar" id="Etg-uX-n3j" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar" id="Etg-uX-n3j" customClass="TabBarController" customModule="KTV" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yWk-7D-O04">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
