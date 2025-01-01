@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  KTV
-//
-//  Created by LS-NOTE-00106 on 12/26/24.
-//
-
 import UIKit
 
 @main

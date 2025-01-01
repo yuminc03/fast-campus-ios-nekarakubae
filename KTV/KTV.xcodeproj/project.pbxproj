@@ -6,6 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8D3636DC2D25274B001B465F /* KTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3636DA2D25274B001B465F /* KTVTests.swift */; };
+		8D3636E82D252755001B465F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D3636DE2D252755001B465F /* Assets.xcassets */; };
+		8D3636E92D252755001B465F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D3636DF2D252755001B465F /* Colors.xcassets */; };
+		8D3636EB2D252755001B465F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D3636E22D252755001B465F /* LaunchScreen.storyboard */; };
+		8D3636EC2D252755001B465F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D3636E52D252755001B465F /* Main.storyboard */; };
+		8D3636ED2D252755001B465F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3636DD2D252755001B465F /* AppDelegate.swift */; };
+		8D3636EE2D252755001B465F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3636E32D252755001B465F /* LoginVC.swift */; };
+		8D3636EF2D252755001B465F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3636E62D252755001B465F /* SceneDelegate.swift */; };
+		8D3636F32D252758001B465F /* KTVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3636F02D252758001B465F /* KTVUITests.swift */; };
+		8D3636F42D252758001B465F /* KTVUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3636F12D252758001B465F /* KTVUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		05FBBC492D1D3D300051BAF9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,38 +40,18 @@
 		05FBBC322D1D3D2E0051BAF9 /* KTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05FBBC482D1D3D300051BAF9 /* KTVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KTVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05FBBC522D1D3D300051BAF9 /* KTVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KTVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D3636DA2D25274B001B465F /* KTVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVTests.swift; sourceTree = "<group>"; };
+		8D3636DD2D252755001B465F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8D3636DE2D252755001B465F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8D3636DF2D252755001B465F /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		8D3636E02D252755001B465F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D3636E12D252755001B465F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8D3636E32D252755001B465F /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		8D3636E42D252755001B465F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8D3636E62D252755001B465F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8D3636F02D252758001B465F /* KTVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVUITests.swift; sourceTree = "<group>"; };
+		8D3636F12D252758001B465F /* KTVUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		05FBBC5A2D1D3D300051BAF9 /* Exceptions for "KTV" folder in "KTV" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 05FBBC312D1D3D2E0051BAF9 /* KTV */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		05FBBC342D1D3D2E0051BAF9 /* KTV */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				05FBBC5A2D1D3D300051BAF9 /* Exceptions for "KTV" folder in "KTV" target */,
-			);
-			path = KTV;
-			sourceTree = "<group>";
-		};
-		05FBBC4B2D1D3D300051BAF9 /* KTVTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = KTVTests;
-			sourceTree = "<group>";
-		};
-		05FBBC552D1D3D300051BAF9 /* KTVUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = KTVUITests;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		05FBBC2F2D1D3D2E0051BAF9 /* Frameworks */ = {
@@ -88,9 +81,9 @@
 		05FBBC292D1D3D2E0051BAF9 = {
 			isa = PBXGroup;
 			children = (
-				05FBBC342D1D3D2E0051BAF9 /* KTV */,
-				05FBBC4B2D1D3D300051BAF9 /* KTVTests */,
-				05FBBC552D1D3D300051BAF9 /* KTVUITests */,
+				8D3636E72D252755001B465F /* KTV */,
+				8D3636DB2D25274B001B465F /* KTVTests */,
+				8D3636F22D252758001B465F /* KTVUITests */,
 				05FBBC332D1D3D2E0051BAF9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,6 +96,38 @@
 				05FBBC522D1D3D300051BAF9 /* KTVUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8D3636DB2D25274B001B465F /* KTVTests */ = {
+			isa = PBXGroup;
+			children = (
+				8D3636DA2D25274B001B465F /* KTVTests.swift */,
+			);
+			path = KTVTests;
+			sourceTree = "<group>";
+		};
+		8D3636E72D252755001B465F /* KTV */ = {
+			isa = PBXGroup;
+			children = (
+				8D3636DD2D252755001B465F /* AppDelegate.swift */,
+				8D3636DE2D252755001B465F /* Assets.xcassets */,
+				8D3636DF2D252755001B465F /* Colors.xcassets */,
+				8D3636E02D252755001B465F /* Info.plist */,
+				8D3636E22D252755001B465F /* LaunchScreen.storyboard */,
+				8D3636E32D252755001B465F /* LoginVC.swift */,
+				8D3636E52D252755001B465F /* Main.storyboard */,
+				8D3636E62D252755001B465F /* SceneDelegate.swift */,
+			);
+			path = KTV;
+			sourceTree = "<group>";
+		};
+		8D3636F22D252758001B465F /* KTVUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8D3636F02D252758001B465F /* KTVUITests.swift */,
+				8D3636F12D252758001B465F /* KTVUITestsLaunchTests.swift */,
+			);
+			path = KTVUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,9 +144,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				05FBBC342D1D3D2E0051BAF9 /* KTV */,
 			);
 			name = KTV;
 			packageProductDependencies = (
@@ -143,9 +165,6 @@
 			dependencies = (
 				05FBBC4A2D1D3D300051BAF9 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				05FBBC4B2D1D3D300051BAF9 /* KTVTests */,
-			);
 			name = KTVTests;
 			packageProductDependencies = (
 			);
@@ -165,9 +184,6 @@
 			);
 			dependencies = (
 				05FBBC542D1D3D300051BAF9 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				05FBBC552D1D3D300051BAF9 /* KTVUITests */,
 			);
 			name = KTVUITests;
 			packageProductDependencies = (
@@ -225,6 +241,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D3636E82D252755001B465F /* Assets.xcassets in Resources */,
+				8D3636E92D252755001B465F /* Colors.xcassets in Resources */,
+				8D3636EB2D252755001B465F /* LaunchScreen.storyboard in Resources */,
+				8D3636EC2D252755001B465F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +269,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D3636ED2D252755001B465F /* AppDelegate.swift in Sources */,
+				8D3636EE2D252755001B465F /* LoginVC.swift in Sources */,
+				8D3636EF2D252755001B465F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D3636DC2D25274B001B465F /* KTVTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +287,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D3636F32D252758001B465F /* KTVUITests.swift in Sources */,
+				8D3636F42D252758001B465F /* KTVUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +306,25 @@
 			targetProxy = 05FBBC532D1D3D300051BAF9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8D3636E22D252755001B465F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D3636E12D252755001B465F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8D3636E52D252755001B465F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D3636E42D252755001B465F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		05FBBC5C2D1D3D300051BAF9 /* Debug */ = {
