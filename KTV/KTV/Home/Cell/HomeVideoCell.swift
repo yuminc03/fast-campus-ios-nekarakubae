@@ -3,7 +3,7 @@ import UIKit
 final class HomeVideoCell: UITableViewCell {
   
   static let id = "HomeVideoCell"
-  static let height: CGFloat = 321
+  static let height: CGFloat = 320
   
   @IBOutlet weak var containerView: UIView!
   @IBOutlet weak var thumbnailImageView: UIImageView!
