@@ -18,6 +18,8 @@
 		8D3636F32D252758001B465F /* KTVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3636F02D252758001B465F /* KTVUITests.swift */; };
 		8D3636F42D252758001B465F /* KTVUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3636F12D252758001B465F /* KTVUITestsLaunchTests.swift */; };
 		8D3636F82D2527EA001B465F /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3636F72D2527E8001B465F /* HomeVC.swift */; };
+		8DAE60302D252A6D00FF03BD /* HomeVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DAE602F2D252A6D00FF03BD /* HomeVideoCell.xib */; };
+		8DAE60312D252A6D00FF03BD /* HomeVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAE602E2D252A6D00FF03BD /* HomeVideoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		8D3636F02D252758001B465F /* KTVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVUITests.swift; sourceTree = "<group>"; };
 		8D3636F12D252758001B465F /* KTVUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8D3636F72D2527E8001B465F /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		8DAE602E2D252A6D00FF03BD /* HomeVideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVideoCell.swift; sourceTree = "<group>"; };
+		8DAE602F2D252A6D00FF03BD /* HomeVideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVideoCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +152,15 @@
 				8D3636F72D2527E8001B465F /* HomeVC.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		8DAE602B2D2529E000FF03BD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8DAE602E2D252A6D00FF03BD /* HomeVideoCell.swift */,
+				8DAE602F2D252A6D00FF03BD /* HomeVideoCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +277,7 @@
 				8D3636E82D252755001B465F /* Assets.xcassets in Resources */,
 				8D3636E92D252755001B465F /* Colors.xcassets in Resources */,
 				8D3636EB2D252755001B465F /* LaunchScreen.storyboard in Resources */,
+				8DAE60302D252A6D00FF03BD /* HomeVideoCell.xib in Resources */,
 				8D3636EC2D252755001B465F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,6 +306,7 @@
 				8D3636ED2D252755001B465F /* AppDelegate.swift in Sources */,
 				8D3636F82D2527EA001B465F /* HomeVC.swift in Sources */,
 				8D3636EE2D252755001B465F /* LoginVC.swift in Sources */,
+				8DAE60312D252A6D00FF03BD /* HomeVideoCell.swift in Sources */,
 				8D3636EF2D252755001B465F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
