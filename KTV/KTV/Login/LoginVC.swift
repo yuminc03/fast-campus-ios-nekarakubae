@@ -17,7 +17,7 @@ final class LoginVC: UIViewController {
   }
   
   @IBAction func didTapLoginButton(_ sender: Any) {
-    
+    view.window?.rootViewController = storyboard?.instantiateViewController(withIdentifier: "tabBar")
   }
 }
 

@@ -17,6 +17,7 @@
 		8D3636EF2D252755001B465F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3636E62D252755001B465F /* SceneDelegate.swift */; };
 		8D3636F32D252758001B465F /* KTVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3636F02D252758001B465F /* KTVUITests.swift */; };
 		8D3636F42D252758001B465F /* KTVUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3636F12D252758001B465F /* KTVUITestsLaunchTests.swift */; };
+		8D3636F82D2527EA001B465F /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3636F72D2527E8001B465F /* HomeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		8D3636E62D252755001B465F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8D3636F02D252758001B465F /* KTVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVUITests.swift; sourceTree = "<group>"; };
 		8D3636F12D252758001B465F /* KTVUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8D3636F72D2527E8001B465F /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,12 +111,13 @@
 		8D3636E72D252755001B465F /* KTV */ = {
 			isa = PBXGroup;
 			children = (
+				8D3636F62D2527E1001B465F /* Home */,
+				8D3636F52D2527DC001B465F /* Login */,
 				8D3636DD2D252755001B465F /* AppDelegate.swift */,
 				8D3636DE2D252755001B465F /* Assets.xcassets */,
 				8D3636DF2D252755001B465F /* Colors.xcassets */,
 				8D3636E02D252755001B465F /* Info.plist */,
 				8D3636E22D252755001B465F /* LaunchScreen.storyboard */,
-				8D3636E32D252755001B465F /* LoginVC.swift */,
 				8D3636E52D252755001B465F /* Main.storyboard */,
 				8D3636E62D252755001B465F /* SceneDelegate.swift */,
 			);
@@ -128,6 +131,23 @@
 				8D3636F12D252758001B465F /* KTVUITestsLaunchTests.swift */,
 			);
 			path = KTVUITests;
+			sourceTree = "<group>";
+		};
+		8D3636F52D2527DC001B465F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				8D3636E32D252755001B465F /* LoginVC.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		8D3636F62D2527E1001B465F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8DAE602B2D2529E000FF03BD /* Cell */,
+				8D3636F72D2527E8001B465F /* HomeVC.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D3636ED2D252755001B465F /* AppDelegate.swift in Sources */,
+				8D3636F82D2527EA001B465F /* HomeVC.swift in Sources */,
 				8D3636EE2D252755001B465F /* LoginVC.swift in Sources */,
 				8D3636EF2D252755001B465F /* SceneDelegate.swift in Sources */,
 			);
