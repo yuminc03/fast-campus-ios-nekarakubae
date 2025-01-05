@@ -22,6 +22,10 @@
 		8D7B43C42D2822080044ACD2 /* HomeRankingContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7B43C12D2822080044ACD2 /* HomeRankingContainerCell.swift */; };
 		8D7B43CB2D2825000044ACD2 /* HomeRankingItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D7B43CA2D2825000044ACD2 /* HomeRankingItemCell.xib */; };
 		8D7B43CC2D2825000044ACD2 /* HomeRankingItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7B43C92D2825000044ACD2 /* HomeRankingItemCell.swift */; };
+		8D7B43CF2D282A310044ACD2 /* HomeRecentWatchContainerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D7B43CE2D282A310044ACD2 /* HomeRecentWatchContainerCell.xib */; };
+		8D7B43D02D282A310044ACD2 /* HomeRecentWatchContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7B43CD2D282A310044ACD2 /* HomeRecentWatchContainerCell.swift */; };
+		8D7B43D32D282BBD0044ACD2 /* HomeRecentWatchItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D7B43D22D282BBD0044ACD2 /* HomeRecentWatchItemCell.xib */; };
+		8D7B43D42D282BBD0044ACD2 /* HomeRecentWatchItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7B43D12D282BBD0044ACD2 /* HomeRecentWatchItemCell.swift */; };
 		8DAA54A12D2575A5008BF9FA /* HomeRecommendContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAA549F2D2575A5008BF9FA /* HomeRecommendContainerCell.swift */; };
 		8DAA54A22D2575A5008BF9FA /* HomeRecommendContainerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DAA54A02D2575A5008BF9FA /* HomeRecommendContainerCell.xib */; };
 		8DAA54A52D257892008BF9FA /* HomeRecommendItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAA54A32D257892008BF9FA /* HomeRecommendItemCell.swift */; };
@@ -73,6 +77,10 @@
 		8D7B43C22D2822080044ACD2 /* HomeRankingContainerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeRankingContainerCell.xib; sourceTree = "<group>"; };
 		8D7B43C92D2825000044ACD2 /* HomeRankingItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRankingItemCell.swift; sourceTree = "<group>"; };
 		8D7B43CA2D2825000044ACD2 /* HomeRankingItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeRankingItemCell.xib; sourceTree = "<group>"; };
+		8D7B43CD2D282A310044ACD2 /* HomeRecentWatchContainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRecentWatchContainerCell.swift; sourceTree = "<group>"; };
+		8D7B43CE2D282A310044ACD2 /* HomeRecentWatchContainerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeRecentWatchContainerCell.xib; sourceTree = "<group>"; };
+		8D7B43D12D282BBD0044ACD2 /* HomeRecentWatchItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRecentWatchItemCell.swift; sourceTree = "<group>"; };
+		8D7B43D22D282BBD0044ACD2 /* HomeRecentWatchItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeRecentWatchItemCell.xib; sourceTree = "<group>"; };
 		8DAA549F2D2575A5008BF9FA /* HomeRecommendContainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRecommendContainerCell.swift; sourceTree = "<group>"; };
 		8DAA54A02D2575A5008BF9FA /* HomeRecommendContainerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeRecommendContainerCell.xib; sourceTree = "<group>"; };
 		8DAA54A32D257892008BF9FA /* HomeRecommendItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRecommendItemCell.swift; sourceTree = "<group>"; };
@@ -201,6 +209,10 @@
 				8D7B43C22D2822080044ACD2 /* HomeRankingContainerCell.xib */,
 				8D7B43C92D2825000044ACD2 /* HomeRankingItemCell.swift */,
 				8D7B43CA2D2825000044ACD2 /* HomeRankingItemCell.xib */,
+				8D7B43CD2D282A310044ACD2 /* HomeRecentWatchContainerCell.swift */,
+				8D7B43CE2D282A310044ACD2 /* HomeRecentWatchContainerCell.xib */,
+				8D7B43D12D282BBD0044ACD2 /* HomeRecentWatchItemCell.swift */,
+				8D7B43D22D282BBD0044ACD2 /* HomeRecentWatchItemCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -322,8 +334,10 @@
 				8DAA54AA2D257EEA008BF9FA /* HomeFooterCell.xib in Resources */,
 				8D7B43CB2D2825000044ACD2 /* HomeRankingItemCell.xib in Resources */,
 				8D3636EB2D252755001B465F /* LaunchScreen.storyboard in Resources */,
+				8D7B43CF2D282A310044ACD2 /* HomeRecentWatchContainerCell.xib in Resources */,
 				8DAA54A62D257892008BF9FA /* HomeRecommendItemCell.xib in Resources */,
 				8DAE60302D252A6D00FF03BD /* HomeVideoCell.xib in Resources */,
+				8D7B43D32D282BBD0044ACD2 /* HomeRecentWatchItemCell.xib in Resources */,
 				8D3636EC2D252755001B465F /* Main.storyboard in Resources */,
 				8DAE60382D25736700FF03BD /* HomeHeaderCell.xib in Resources */,
 				8D7B43C32D2822080044ACD2 /* HomeRankingContainerCell.xib in Resources */,
@@ -352,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D3636ED2D252755001B465F /* AppDelegate.swift in Sources */,
+				8D7B43D02D282A310044ACD2 /* HomeRecentWatchContainerCell.swift in Sources */,
 				8DAA54A92D257EEA008BF9FA /* HomeFooterCell.swift in Sources */,
 				8D7B43CC2D2825000044ACD2 /* HomeRankingItemCell.swift in Sources */,
 				8DAA54A12D2575A5008BF9FA /* HomeRecommendContainerCell.swift in Sources */,
@@ -359,6 +374,7 @@
 				8DAA54A52D257892008BF9FA /* HomeRecommendItemCell.swift in Sources */,
 				8DAE60392D25736700FF03BD /* HomeHeaderCell.swift in Sources */,
 				8D3636F82D2527EA001B465F /* HomeVC.swift in Sources */,
+				8D7B43D42D282BBD0044ACD2 /* HomeRecentWatchItemCell.swift in Sources */,
 				8DAE60332D25602B00FF03BD /* HomeSection.swift in Sources */,
 				8D3636EE2D252755001B465F /* LoginVC.swift in Sources */,
 				8DAE60352D256B9800FF03BD /* TabBarController.swift in Sources */,
