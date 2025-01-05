@@ -19,20 +19,20 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g2V-nL-elc">
-                        <rect key="frame" x="33" y="0.0" width="255" height="430"/>
+                        <rect key="frame" x="16" y="0.0" width="288" height="430"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="추천" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpq-TD-NfU">
-                                <rect key="frame" x="14" y="24" width="227" height="21"/>
+                                <rect key="frame" x="14" y="24" width="260" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" name="main-wh"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="oC7-NW-9O9">
-                                <rect key="frame" x="26" y="78" width="203" height="307"/>
+                                <rect key="frame" x="26" y="78" width="236" height="307"/>
                                 <color key="backgroundColor" name="bk-origin"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYX-Zb-e7O">
-                                <rect key="frame" x="0.0" y="385" width="255" height="28"/>
+                                <rect key="frame" x="0.0" y="385" width="288" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="XY2-is-liK"/>
                                 </constraints>
@@ -60,10 +60,10 @@
                 </subviews>
                 <color key="backgroundColor" name="bg"/>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="g2V-nL-elc" secondAttribute="trailing" constant="16" id="2Is-wp-xoy"/>
+                    <constraint firstItem="g2V-nL-elc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="1dF-7f-c2z"/>
                     <constraint firstItem="g2V-nL-elc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="8mu-HZ-KpJ"/>
-                    <constraint firstItem="g2V-nL-elc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="17" id="LXd-vc-2DE"/>
                     <constraint firstAttribute="bottom" secondItem="g2V-nL-elc" secondAttribute="bottom" constant="51" id="PQU-rV-wAo"/>
+                    <constraint firstAttribute="trailing" secondItem="g2V-nL-elc" secondAttribute="trailing" constant="16" id="cEY-p5-6yT"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
