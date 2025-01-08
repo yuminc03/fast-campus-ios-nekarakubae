@@ -153,7 +153,7 @@
             <connections>
                 <outlet property="channelImageView" destination="rvb-mN-dun" id="LW5-FX-bEv"/>
                 <outlet property="channelSubTitleLabel" destination="FwK-yu-jm4" id="bGz-fQ-AtM"/>
-                <outlet property="channelTitleLabel" destination="HI2-Xo-itv" id="DJR-3h-uEa"/>
+                <outlet property="channelTitleLabel" destination="Ujb-D8-hFT" id="B4b-qd-gve"/>
                 <outlet property="containerView" destination="tOr-gW-Pz6" id="osp-gu-t2b"/>
                 <outlet property="hotImageView" destination="zdx-l8-W4U" id="2W8-Lq-RSM"/>
                 <outlet property="subTitleLabel" destination="Pzv-Ol-ExV" id="0DF-Ol-ONn"/>
