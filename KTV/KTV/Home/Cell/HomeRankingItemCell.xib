@@ -58,6 +58,7 @@
             </constraints>
             <connections>
                 <outlet property="numberLabel" destination="Bm6-ja-fdw" id="JTW-X9-Z9X"/>
+                <outlet property="thumbnailImageView" destination="xP3-zL-Ptq" id="Yg9-I8-Luw"/>
             </connections>
             <point key="canvasLocation" x="13.740458015267174" y="-11.619718309859156"/>
         </collectionViewCell>
