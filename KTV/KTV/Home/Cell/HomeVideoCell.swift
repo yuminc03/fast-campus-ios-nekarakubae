@@ -26,10 +26,20 @@ final class HomeVideoCell: UITableViewCell {
     containerView.layer.borderWidth = 1
   }
   
-  override func setSelected(_ selected: Bool, animated: Bool) {
-    super.setSelected(selected, animated: animated)
+  override func prepareForReuse() {
+    super.prepareForReuse()
     
-    // Configure the view for the selected state
+    thumbnailTask?.cancel()
+    thumbnailTask = nil
+    channelThumbnailTask?.cancel()
+    channelThumbnailTask = nil
+    
+    thumbnailImageView.image = nil
+    titleLabel.text = nil
+    subTitleLabel.text = nil
+    channelTitleLabel.text = nil
+    channelImageView.image = nil
+    channelSubTitleLabel.text = nil
   }
   
   func setData(_ data: Home.Video) {
@@ -38,19 +48,7 @@ final class HomeVideoCell: UITableViewCell {
     channelTitleLabel.text = data.channel
     channelSubTitleLabel.text = data.channelDescription
     hotImageView.isHidden = data.isHot == false
-    thumbnailTask = .init(operation: {
-      guard let responseData = try? await URLSession.shared.data(for: .init(url: data.imageURL)).0 else {
-        return
-      }
-      
-      thumbnailImageView.image = UIImage(data: responseData)
-    })
-    channelThumbnailTask = .init(operation: {
-      guard let responseData = try? await URLSession.shared.data(for: .init(url: data.channelThumbnailURL)).0 else {
-        return
-      }
-      
-      channelImageView.image = UIImage(data: responseData)
-    })
+    thumbnailTask = thumbnailImageView.loadImage(url: data.imageURL)
+    channelThumbnailTask = channelImageView.loadImage(url: data.channelThumbnailURL)
   }
 }
