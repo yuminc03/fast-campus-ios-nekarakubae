@@ -18,6 +18,7 @@
 		8D3636F32D252758001B465F /* KTVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3636F02D252758001B465F /* KTVUITests.swift */; };
 		8D3636F42D252758001B465F /* KTVUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3636F12D252758001B465F /* KTVUITestsLaunchTests.swift */; };
 		8D3636F82D2527EA001B465F /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3636F72D2527E8001B465F /* HomeVC.swift */; };
+		8D6A97742D30095700B3DA3B /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6A97732D30094D00B3DA3B /* UIImageView+.swift */; };
 		8D7B43C32D2822080044ACD2 /* HomeRankingContainerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D7B43C22D2822080044ACD2 /* HomeRankingContainerCell.xib */; };
 		8D7B43C42D2822080044ACD2 /* HomeRankingContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7B43C12D2822080044ACD2 /* HomeRankingContainerCell.swift */; };
 		8D7B43CB2D2825000044ACD2 /* HomeRankingItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D7B43CA2D2825000044ACD2 /* HomeRankingItemCell.xib */; };
@@ -80,6 +81,7 @@
 		8D3636F02D252758001B465F /* KTVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVUITests.swift; sourceTree = "<group>"; };
 		8D3636F12D252758001B465F /* KTVUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8D3636F72D2527E8001B465F /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		8D6A97732D30094D00B3DA3B /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		8D7B43C12D2822080044ACD2 /* HomeRankingContainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRankingContainerCell.swift; sourceTree = "<group>"; };
 		8D7B43C22D2822080044ACD2 /* HomeRankingContainerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeRankingContainerCell.xib; sourceTree = "<group>"; };
 		8D7B43C92D2825000044ACD2 /* HomeRankingItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRankingItemCell.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				8DAE60342D256B9400FF03BD /* TabBarController.swift */,
+				8D6A97722D30094000B3DA3B /* Util */,
 				8D902BCE2D2EA2B500F4AD80 /* Model */,
 				8D3636F62D2527E1001B465F /* Home */,
 				8D902BC82D2EA26300F4AD80 /* JSON */,
@@ -206,6 +209,14 @@
 				8DAE60322D25602700FF03BD /* HomeSection.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		8D6A97722D30094000B3DA3B /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				8D6A97732D30094D00B3DA3B /* UIImageView+.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		8D902BC82D2EA26300F4AD80 /* JSON */ = {
@@ -407,6 +418,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D6A97742D30095700B3DA3B /* UIImageView+.swift in Sources */,
 				8D3636ED2D252755001B465F /* AppDelegate.swift in Sources */,
 				8D7B43D02D282A310044ACD2 /* HomeRecentWatchContainerCell.swift in Sources */,
 				8DAA54A92D257EEA008BF9FA /* HomeFooterCell.swift in Sources */,
