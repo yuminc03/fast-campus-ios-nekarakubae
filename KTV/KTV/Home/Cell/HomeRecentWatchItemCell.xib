@@ -87,7 +87,10 @@
             </constraints>
             <size key="customSize" width="151" height="199"/>
             <connections>
+                <outlet property="dateLabel" destination="7Os-Xw-bRw" id="u1c-uL-r6f"/>
+                <outlet property="subtitleLabel" destination="fpa-fD-cPv" id="o2n-V9-ca6"/>
                 <outlet property="thumbnailImageView" destination="urv-Hz-9Uc" id="4xP-Fg-JdN"/>
+                <outlet property="titleLabel" destination="0Lm-mZ-yFI" id="tV3-cL-ujj"/>
             </connections>
             <point key="canvasLocation" x="52.671755725190835" y="39.7887323943662"/>
         </collectionViewCell>
