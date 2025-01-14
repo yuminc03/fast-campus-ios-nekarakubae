@@ -2,7 +2,7 @@ import Foundation
 
 struct Home: Decodable {
   let videos: [Video]
-  let ranking: [Ranking]
+  let rankings: [Ranking]
   let recents: [Recent]
   let recommends: [Recommend]
 }

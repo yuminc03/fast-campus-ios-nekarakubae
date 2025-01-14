@@ -4,10 +4,13 @@ final class HomeVC: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
   
+  private let vm = HomeVM()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
     setupUI()
+    bind()
   }
   
   override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -47,6 +50,15 @@ final class HomeVC: UIViewController {
       forCellReuseIdentifier: "empty"
     )
   }
+  
+  private func bind() {
+    vm.dataChanged = { [weak self] in
+      self?.tableView.isHidden = false
+      self?.tableView.reloadData()
+    }
+    
+    vm.requestData()
+  }
 }
 
 // MARK: - UITableViewDelegate
@@ -81,7 +93,7 @@ extension HomeVC: UITableViewDelegate {
 
 extension HomeVC: UITableViewDataSource {
   func numberOfSections(in tableView: UITableView) -> Int {
-    HomeSection.allCases.count
+    return HomeSection.allCases.count
   }
   
   func tableView(
