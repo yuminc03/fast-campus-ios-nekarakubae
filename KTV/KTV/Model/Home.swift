@@ -4,7 +4,7 @@ struct Home {
   let videos: [Video]
   let ranking: [Ranking]
   let recents: [Recent]
-  let recommends: [VideoListItem]
+  let recommends: [Recommend]
   
   struct Video {
     let videoID: Int
@@ -27,5 +27,13 @@ struct Home {
     let timeStamp: Double
     let title: String
     let channel: String
+  }
+  
+  struct Recommend {
+    let imageURL: URL
+    let title: String
+    let playtime: Double
+    let channel: String
+    let videoID: Int
   }
 }
