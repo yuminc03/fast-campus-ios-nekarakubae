@@ -14,6 +14,8 @@ final class HomeRecommendContainerCell: UITableViewCell {
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var foldButton: UIButton!
   
+  private var recommends: [Home.Recommend]?
+  
   weak var delegate: HomeRecommendContainerCellDelegate?
   static var height: CGFloat {
     let top: CGFloat = 84 - 6 // 첫번째 cell에서 bottom까지의 거리 - cell의 상단 여백
@@ -32,6 +34,11 @@ final class HomeRecommendContainerCell: UITableViewCell {
     super.setSelected(selected, animated: animated)
     
     // Configure the view for the selected state
+  }
+  
+  func setData(_ data: [Home.Recommend]) {
+    recommends = data
+    tableView.reloadData()
   }
   
   @IBAction func didTapFoldButton(_ sender: Any) {
@@ -61,7 +68,18 @@ extension HomeRecommendContainerCell: UITableViewDelegate {
 
 extension HomeRecommendContainerCell: UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-      return tableView.dequeueReusableCell(withIdentifier: HomeRecommendItemCell.id, for: indexPath)
+    guard let cell = tableView.dequeueReusableCell(
+      withIdentifier: HomeRecommendItemCell.id,
+      for: indexPath
+    ) as? HomeRecommendItemCell else {
+      return UITableViewCell()
+    }
+    
+    if let data = recommends?[indexPath.row] {
+      cell.setData(data, rank: indexPath.row + 1)
+    }
+    
+    return cell
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
