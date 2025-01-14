@@ -134,24 +134,60 @@ extension HomeVC: UITableViewDataSource {
       )
       
     case .video:
-      return tableView.dequeueReusableCell(withIdentifier: HomeVideoCell.id, for: indexPath)
+      guard let cell = tableView.dequeueReusableCell(
+        withIdentifier: HomeVideoCell.id,
+        for: indexPath
+      ) as? HomeVideoCell else {
+        return UITableViewCell()
+      }
+      
+      if let data = vm.home?.videos[indexPath.row] {
+        cell.setData(data)
+      }
+      
+      return cell
       
     case .ranking:
-      return tableView.dequeueReusableCell(withIdentifier: HomeRankingContainerCell.id, for: indexPath)
+      let cell = tableView.dequeueReusableCell(
+        withIdentifier: HomeRankingContainerCell.id,
+        for: indexPath
+      )
+      
+      if let cell = cell as? HomeRankingContainerCell, let data = vm.home?.rankings {
+        cell.setData(data)
+        cell.delegate = self
+      }
+      
+      return cell
       
     case .recentWatch:
-      return tableView.dequeueReusableCell(
+      guard let cell = tableView.dequeueReusableCell(
         withIdentifier: HomeRecentWatchContainerCell.id,
         for: indexPath
-      )
+      ) as? HomeRecentWatchContainerCell else {
+        return UITableViewCell()
+      }
+      
+      if let data = vm.home?.recents {
+        cell.delegate = self
+        cell.setData(data)
+      }
+      
+      return cell
       
     case .recommend:
-      let cell = tableView.dequeueReusableCell(
+      guard let cell = tableView.dequeueReusableCell(
         withIdentifier: HomeRecommendContainerCell.id,
         for: indexPath
-      )
+      ) as? HomeRecommendContainerCell else {
+        return UITableViewCell()
+      }
       
-      (cell as? HomeRecommendContainerCell)?.delegate = self
+      if let data = vm.home?.recommends {
+        cell.delegate = self
+        cell.setData(data)
+      }
+      
       return cell
       
     case .footer:
@@ -171,5 +207,23 @@ extension HomeVC: HomeRecommendContainerCellDelegate {
     didSelectItemAt index: Int
   ) {
     print("home recommend cell did select item at \(index)")
+  }
+}
+
+extension HomeVC: HomeRankingContainerCellDeleate {
+  func homeRankingContainerCell(
+    _ cell: HomeRankingContainerCell,
+    didSelectItemAt index: Int
+  ) {
+    print("home ranking did select at: \(index)")
+  }
+}
+
+extension HomeVC: HomeRecentWatchContainerCellDelegate {
+  func homeRecentWatchContainerCell(
+    _ cell: HomeRecentWatchContainerCell,
+    didSelectItemAt index: Int
+  ) {
+    print("home recent watch did select at: \(index)")
   }
 }
