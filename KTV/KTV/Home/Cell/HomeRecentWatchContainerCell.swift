@@ -1,11 +1,10 @@
 import UIKit
 
 protocol HomeRecentWatchContainerCellDelegate: AnyObject {
-    
-    func homeRecentWatchContainerCell(
-      _ cell: HomeRecentWatchContainerCell,
-      didSelectItemAt index: Int
-    )
+  func homeRecentWatchContainerCell(
+    _ cell: HomeRecentWatchContainerCell,
+    didSelectItemAt index: Int
+  )
 }
 
 final class HomeRecentWatchContainerCell: UITableViewCell {
@@ -19,6 +18,15 @@ final class HomeRecentWatchContainerCell: UITableViewCell {
   override func awakeFromNib() {
     super.awakeFromNib()
     
+    setupUI()
+  }
+  
+  func setData(_ data: [Home.Recent]) {
+    recents = data
+    collectionView.reloadData()
+  }
+  
+  private func setupUI() {
     collectionView.layer.cornerRadius = 10
     collectionView.layer.borderWidth = 1
     collectionView.layer.borderColor = UIColor(resource: .strokeLight).cgColor
@@ -30,17 +38,17 @@ final class HomeRecentWatchContainerCell: UITableViewCell {
     collectionView.delegate = self
     collectionView.dataSource = self
   }
-  
-  func setData(_ data: [Home.Recent]) {
-    recents = data
-    collectionView.reloadData()
-  }
 }
 
 // MARK: - UICollectionViewDelegate
 
 extension HomeRecentWatchContainerCell: UICollectionViewDelegate {
-  
+  func collectionView(
+    _ collectionView: UICollectionView,
+    didSelectItemAt indexPath: IndexPath
+  ) {
+    delegate?.homeRecentWatchContainerCell(self, didSelectItemAt: indexPath.item)
+  }
 }
 
 // MARK: - UICollectionViewDataSource
@@ -69,12 +77,5 @@ extension HomeRecentWatchContainerCell: UICollectionViewDataSource {
     }
     
     return cell
-  }
-  
-  func collectionView(
-    _ collectionView: UICollectionView,
-    didSelectItemAt indexPath: IndexPath
-  ) {
-    delegate?.homeRecentWatchContainerCell(self, didSelectItemAt: indexPath.item)
   }
 }

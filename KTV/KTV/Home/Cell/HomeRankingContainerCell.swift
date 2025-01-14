@@ -20,6 +20,15 @@ final class HomeRankingContainerCell: UITableViewCell {
   override func awakeFromNib() {
     super.awakeFromNib()
     
+    setupUI()
+  }
+  
+  func setData(_ data: [Home.Ranking]) {
+    rankings = data
+    collectionView.reloadData()
+  }
+  
+  private func setupUI() {
     collectionView.register(
       UINib(nibName: HomeRankingItemCell.id, bundle: nil),
       forCellWithReuseIdentifier: HomeRankingItemCell.id
@@ -27,11 +36,6 @@ final class HomeRankingContainerCell: UITableViewCell {
     
     collectionView.delegate = self
     collectionView.dataSource = self
-  }
-  
-  func setData(_ data: [Home.Ranking]) {
-    rankings = data
-    collectionView.reloadData()
   }
 }
 

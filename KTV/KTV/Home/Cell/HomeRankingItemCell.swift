@@ -11,7 +11,7 @@ final class HomeRankingItemCell: UICollectionViewCell {
   override func awakeFromNib() {
     super.awakeFromNib()
     
-    layer.cornerRadius = 10
+    setupUI()
   }
   
   override func prepareForReuse() {
@@ -26,5 +26,9 @@ final class HomeRankingItemCell: UICollectionViewCell {
   func setData(_ data: Home.Ranking, rank: Int) {
     numberLabel.text = "\(rank)"
     imageTask = thumbnailImageView.loadImage(url: data.imageURL)
+  }
+  
+  private func setupUI() {
+    layer.cornerRadius = 10
   }
 }

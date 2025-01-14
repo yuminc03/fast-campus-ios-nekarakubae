@@ -21,9 +21,7 @@ final class HomeVideoCell: UITableViewCell {
   override func awakeFromNib() {
     super.awakeFromNib()
     
-    containerView.layer.cornerRadius = 10
-    containerView.layer.borderColor = UIColor(resource: .strokeLight).cgColor
-    containerView.layer.borderWidth = 1
+    setupUI()
   }
   
   override func prepareForReuse() {
@@ -50,5 +48,11 @@ final class HomeVideoCell: UITableViewCell {
     hotImageView.isHidden = data.isHot == false
     thumbnailTask = thumbnailImageView.loadImage(url: data.imageURL)
     channelThumbnailTask = channelImageView.loadImage(url: data.channelThumbnailURL)
+  }
+  
+  private func setupUI() {
+    containerView.layer.cornerRadius = 10
+    containerView.layer.borderColor = UIColor(resource: .strokeLight).cgColor
+    containerView.layer.borderWidth = 1
   }
 }

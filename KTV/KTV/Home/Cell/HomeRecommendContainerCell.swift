@@ -9,6 +9,12 @@ protocol HomeRecommendContainerCellDelegate: AnyObject {
 
 final class HomeRecommendContainerCell: UITableViewCell {
   static let id = "HomeRecommendContainerCell"
+  
+  @IBOutlet weak var containerView: UIView!
+  @IBOutlet weak var tableView: UITableView!
+  @IBOutlet weak var foldButton: UIButton!
+  
+  weak var delegate: HomeRecommendContainerCellDelegate?
   static var height: CGFloat {
     let top: CGFloat = 84 - 6 // 첫번째 cell에서 bottom까지의 거리 - cell의 상단 여백
     let bottom: CGFloat = 68 - 6 // 마지막 cell첫번째 bottom까지의 거리 - cell의 하단 여백
@@ -16,15 +22,23 @@ final class HomeRecommendContainerCell: UITableViewCell {
     return HomeRecommendItemCell.height * 5 + top + bottom + footerInset
   }
   
-  @IBOutlet weak var containerView: UIView!
-  @IBOutlet weak var tableView: UITableView!
-  @IBOutlet weak var foldButton: UIButton!
-  
-  weak var delegate: HomeRecommendContainerCellDelegate?
-  
   override func awakeFromNib() {
     super.awakeFromNib()
     
+    setupUI()
+  }
+  
+  override func setSelected(_ selected: Bool, animated: Bool) {
+    super.setSelected(selected, animated: animated)
+    
+    // Configure the view for the selected state
+  }
+  
+  @IBAction func didTapFoldButton(_ sender: Any) {
+    
+  }
+  
+  private func setupUI() {
     containerView.layer.cornerRadius = 10
     containerView.layer.borderWidth = 1
     containerView.layer.borderColor = UIColor(resource: .strokeLight).cgColor
@@ -36,16 +50,6 @@ final class HomeRecommendContainerCell: UITableViewCell {
       UINib(nibName: HomeRecommendItemCell.id, bundle: .main),
       forCellReuseIdentifier: HomeRecommendItemCell.id
     )
-  }
-  
-  override func setSelected(_ selected: Bool, animated: Bool) {
-    super.setSelected(selected, animated: animated)
-    
-    // Configure the view for the selected state
-  }
-  
-  @IBAction func didTapFoldButton(_ sender: Any) {
-    
   }
 }
 
