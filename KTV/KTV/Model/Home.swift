@@ -1,12 +1,14 @@
 import Foundation
 
-struct Home {
+struct Home: Decodable {
   let videos: [Video]
   let ranking: [Ranking]
   let recents: [Recent]
   let recommends: [Recommend]
-  
-  struct Video {
+}
+
+extension Home {
+  struct Video: Decodable {
     let videoID: Int
     let isHot: Bool
     let title: String
@@ -17,19 +19,19 @@ struct Home {
     let channelDescription: String
   }
   
-  struct Ranking {
+  struct Ranking: Decodable {
     let imageURL: URL
     let videoID: Int
   }
   
-  struct Recent {
+  struct Recent: Decodable {
     let imageURL: URL
     let timeStamp: Double
     let title: String
     let channel: String
   }
   
-  struct Recommend {
+  struct Recommend: Decodable {
     let imageURL: URL
     let title: String
     let playtime: Double

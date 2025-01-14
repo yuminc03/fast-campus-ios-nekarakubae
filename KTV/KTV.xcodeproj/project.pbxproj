@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05D18FC52D3630DB00C06092 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D18FC42D3630D600C06092 /* HomeVM.swift */; };
+		05D18FC72D36317A00C06092 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D18FC62D36317700C06092 /* DataLoader.swift */; };
+		05D18FCA2D3632D500C06092 /* URLDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D18FC92D3632D300C06092 /* URLDefines.swift */; };
 		8D3636DC2D25274B001B465F /* KTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3636DA2D25274B001B465F /* KTVTests.swift */; };
 		8D3636E82D252755001B465F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D3636DE2D252755001B465F /* Assets.xcassets */; };
 		8D3636E92D252755001B465F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D3636DF2D252755001B465F /* Colors.xcassets */; };
@@ -66,6 +69,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05D18FC42D3630D600C06092 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
+		05D18FC62D36317700C06092 /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
+		05D18FC92D3632D300C06092 /* URLDefines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLDefines.swift; sourceTree = "<group>"; };
 		05FBBC322D1D3D2E0051BAF9 /* KTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05FBBC482D1D3D300051BAF9 /* KTVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KTVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05FBBC522D1D3D300051BAF9 /* KTVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KTVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +142,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05D18FC82D3632C900C06092 /* URLDefines */ = {
+			isa = PBXGroup;
+			children = (
+				05D18FC92D3632D300C06092 /* URLDefines.swift */,
+			);
+			path = URLDefines;
+			sourceTree = "<group>";
+		};
 		05FBBC292D1D3D2E0051BAF9 = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +184,7 @@
 				8DAE60342D256B9400FF03BD /* TabBarController.swift */,
 				8D6A97722D30094000B3DA3B /* Util */,
 				8D902BCE2D2EA2B500F4AD80 /* Model */,
+				05D18FC82D3632C900C06092 /* URLDefines */,
 				8D3636F62D2527E1001B465F /* Home */,
 				8D902BC82D2EA26300F4AD80 /* JSON */,
 				8D3636F52D2527DC001B465F /* Login */,
@@ -206,6 +221,7 @@
 			children = (
 				8DAE602B2D2529E000FF03BD /* Cell */,
 				8D3636F72D2527E8001B465F /* HomeVC.swift */,
+				05D18FC42D3630D600C06092 /* HomeVM.swift */,
 				8DAE60322D25602700FF03BD /* HomeSection.swift */,
 			);
 			path = Home;
@@ -214,6 +230,7 @@
 		8D6A97722D30094000B3DA3B /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				05D18FC62D36317700C06092 /* DataLoader.swift */,
 				8D6A97732D30094D00B3DA3B /* UIImageView+.swift */,
 			);
 			path = Util;
@@ -418,6 +435,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05D18FC72D36317A00C06092 /* DataLoader.swift in Sources */,
 				8D6A97742D30095700B3DA3B /* UIImageView+.swift in Sources */,
 				8D3636ED2D252755001B465F /* AppDelegate.swift in Sources */,
 				8D7B43D02D282A310044ACD2 /* HomeRecentWatchContainerCell.swift in Sources */,
@@ -425,6 +443,7 @@
 				8D7B43CC2D2825000044ACD2 /* HomeRankingItemCell.swift in Sources */,
 				8DAA54A12D2575A5008BF9FA /* HomeRecommendContainerCell.swift in Sources */,
 				8D7B43C42D2822080044ACD2 /* HomeRankingContainerCell.swift in Sources */,
+				05D18FCA2D3632D500C06092 /* URLDefines.swift in Sources */,
 				8DAA54A52D257892008BF9FA /* HomeRecommendItemCell.swift in Sources */,
 				8DAE60392D25736700FF03BD /* HomeHeaderCell.swift in Sources */,
 				8D3636F82D2527EA001B465F /* HomeVC.swift in Sources */,
@@ -435,6 +454,7 @@
 				8DAE60312D252A6D00FF03BD /* HomeVideoCell.swift in Sources */,
 				8D902BD02D2EA2C900F4AD80 /* Home.swift in Sources */,
 				8D902BD22D2EA39A00F4AD80 /* VideoListItem.swift in Sources */,
+				05D18FC52D3630DB00C06092 /* HomeVM.swift in Sources */,
 				8D3636EF2D252755001B465F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
