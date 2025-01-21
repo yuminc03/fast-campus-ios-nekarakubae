@@ -53,7 +53,7 @@ final class HomeRecommendItemCell: UITableViewCell {
     titleLabel.text = data.title
     descriptionLabel.text = data.channel
     playTimeLabel.text = Self.timeformatter.string(from: data.playtime)
-    imageTask = thumbnailImageView.loadImage(url: data.imageURL)
+    imageTask = thumbnailImageView.loadImage(url: data.imageUrl)
   }
   
   private func setupUI() {

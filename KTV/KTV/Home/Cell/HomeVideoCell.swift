@@ -46,7 +46,7 @@ final class HomeVideoCell: UITableViewCell {
     channelTitleLabel.text = data.channel
     channelSubTitleLabel.text = data.channelDescription
     hotImageView.isHidden = data.isHot == false
-    thumbnailTask = thumbnailImageView.loadImage(url: data.imageURL)
+    thumbnailTask = thumbnailImageView.loadImage(url: data.imageUrl)
     channelThumbnailTask = channelImageView.loadImage(url: data.channelThumbnailURL)
   }
   

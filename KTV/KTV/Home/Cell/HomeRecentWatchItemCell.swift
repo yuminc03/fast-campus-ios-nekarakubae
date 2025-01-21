@@ -38,7 +38,7 @@ final class HomeRecentWatchItemCell: UICollectionViewCell {
     subtitleLabel.text = data.channel
     dateLabel.text = Self.dateFormatter.string(from: .init(timeIntervalSince1970: data.timeStamp))
     
-    imageTask = thumbnailImageView.loadImage(url: data.imageURL)
+    imageTask = thumbnailImageView.loadImage(url: data.imageUrl)
   }
   
   private func setupUI() {

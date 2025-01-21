@@ -9,33 +9,33 @@ struct Home: Decodable {
 
 extension Home {
   struct Video: Decodable {
-    let videoID: Int
+    let videoId: Int
     let isHot: Bool
     let title: String
     let subtitle: String
-    let imageURL: URL
+    let imageUrl: URL
     let channel: String
     let channelThumbnailURL: URL
     let channelDescription: String
   }
   
   struct Ranking: Decodable {
-    let imageURL: URL
-    let videoID: Int
+    let imageUrl: URL
+    let videoId: Int
   }
   
   struct Recent: Decodable {
-    let imageURL: URL
+    let imageUrl: URL
     let timeStamp: Double
     let title: String
     let channel: String
   }
   
   struct Recommend: Decodable {
-    let imageURL: URL
+    let imageUrl: URL
     let title: String
     let playtime: Double
     let channel: String
-    let videoID: Int
+    let videoId: Int
   }
 }
