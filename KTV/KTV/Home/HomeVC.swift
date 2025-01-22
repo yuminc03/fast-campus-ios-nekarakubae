@@ -82,7 +82,7 @@ extension HomeVC: UITableViewDelegate {
       case .recentWatch:
         return HomeRecentWatchContainerCell.height
       case .recommend:
-          return HomeRecommendContainerCell.height
+        return HomeRecommendContainerCell.height(vm: vm.recommendVM)
       case .footer:
           return HomeFooterCell.height
       }
@@ -183,10 +183,8 @@ extension HomeVC: UITableViewDataSource {
         return UITableViewCell()
       }
       
-      if let data = vm.home?.recommends {
-        cell.delegate = self
-        cell.setData(data)
-      }
+      cell.delegate = self
+      cell.setVM(vm.recommendVM)
       
       return cell
       
@@ -207,6 +205,10 @@ extension HomeVC: HomeRecommendContainerCellDelegate {
     didSelectItemAt index: Int
   ) {
     print("home recommend cell did select item at \(index)")
+  }
+  
+  func homeRecommendContainerCellFoldChanged(cell: HomeRecommendContainerCell) {
+    tableView.reloadData()
   }
 }
 
