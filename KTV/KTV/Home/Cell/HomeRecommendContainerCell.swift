@@ -5,6 +5,8 @@ protocol HomeRecommendContainerCellDelegate: AnyObject {
     cell: HomeRecommendContainerCell,
     didSelectItemAt index: Int
   )
+  
+  func homeRecommendContainerCellFoldChanged(cell: HomeRecommendContainerCell)
 }
 
 final class HomeRecommendContainerCell: UITableViewCell {
@@ -14,14 +16,15 @@ final class HomeRecommendContainerCell: UITableViewCell {
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var foldButton: UIButton!
   
-  private var recommends: [Home.Recommend]?
+  private var vm: HomeRecommendVM?
   
   weak var delegate: HomeRecommendContainerCellDelegate?
-  static var height: CGFloat {
+  
+  static func height(vm: HomeRecommendVM) -> CGFloat {
     let top: CGFloat = 84 - 6 // 첫번째 cell에서 bottom까지의 거리 - cell의 상단 여백
     let bottom: CGFloat = 68 - 6 // 마지막 cell첫번째 bottom까지의 거리 - cell의 하단 여백
     let footerInset: CGFloat = 51 // container -> footer 까지의 여백
-    return HomeRecommendItemCell.height * 5 + top + bottom + footerInset
+    return HomeRecommendItemCell.height * CGFloat(vm.itemCount) + top + bottom + footerInset
   }
   
   override func awakeFromNib() {
@@ -36,13 +39,24 @@ final class HomeRecommendContainerCell: UITableViewCell {
     // Configure the view for the selected state
   }
   
-  func setData(_ data: [Home.Recommend]) {
-    recommends = data
-    tableView.reloadData()
+  @IBAction func didTapFoldButton(_ sender: Any) {
+    vm?.toggleFoldState()
+    delegate?.homeRecommendContainerCellFoldChanged(cell: self)
   }
   
-  @IBAction func didTapFoldButton(_ sender: Any) {
-    
+  func setVM(_ vm: HomeRecommendVM) {
+    self.vm = vm
+    setButtonImage(vm.isFolded)
+    tableView.reloadData()
+    vm.foldChanged = { [weak self] in
+      self?.tableView.reloadData()
+      self?.setButtonImage($0)
+    }
+  }
+  
+  private func setButtonImage(_ isFolded: Bool) {
+    let imageName = isFolded ? ImageResource.unfold : ImageResource.fold
+    foldButton.setImage(UIImage(resource: imageName), for: .normal)
   }
   
   private func setupUI() {
@@ -61,13 +75,19 @@ final class HomeRecommendContainerCell: UITableViewCell {
 }
 
 extension HomeRecommendContainerCell: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-    }
+  func tableView(
+    _ tableView: UITableView,
+    numberOfRowsInSection section: Int
+  ) -> Int {
+    return vm?.itemCount ?? 0
+  }
 }
 
 extension HomeRecommendContainerCell: UITableViewDataSource {
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+  func tableView(
+    _ tableView: UITableView,
+    cellForRowAt indexPath: IndexPath
+  ) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(
       withIdentifier: HomeRecommendItemCell.id,
       for: indexPath
@@ -75,14 +95,17 @@ extension HomeRecommendContainerCell: UITableViewDataSource {
       return UITableViewCell()
     }
     
-    if let data = recommends?[indexPath.row] {
+    if let data = vm?.recommends?[indexPath.row] {
       cell.setData(data, rank: indexPath.row + 1)
     }
     
     return cell
   }
   
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+  func tableView(
+    _ tableView: UITableView,
+    didSelectRowAt indexPath: IndexPath
+  ) {
     delegate?.homeRecommendContainerCell(cell: self, didSelectItemAt: indexPath.row)
   }
 }
