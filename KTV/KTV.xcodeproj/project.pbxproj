@@ -49,6 +49,7 @@
 		8DAE60352D256B9800FF03BD /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAE60342D256B9400FF03BD /* TabBarController.swift */; };
 		8DAE60382D25736700FF03BD /* HomeHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DAE60372D25736700FF03BD /* HomeHeaderCell.xib */; };
 		8DAE60392D25736700FF03BD /* HomeHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAE60362D25736700FF03BD /* HomeHeaderCell.swift */; };
+		8DD5096E2D41242600BE852A /* HomeRecommendVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5096D2D41242100BE852A /* HomeRecommendVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,7 @@
 		8DAE60342D256B9400FF03BD /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		8DAE60362D25736700FF03BD /* HomeHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderCell.swift; sourceTree = "<group>"; };
 		8DAE60372D25736700FF03BD /* HomeHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderCell.xib; sourceTree = "<group>"; };
+		8DD5096D2D41242100BE852A /* HomeRecommendVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRecommendVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +224,7 @@
 				8DAE602B2D2529E000FF03BD /* Cell */,
 				8D3636F72D2527E8001B465F /* HomeVC.swift */,
 				05D18FC42D3630D600C06092 /* HomeVM.swift */,
+				8DD5096D2D41242100BE852A /* HomeRecommendVM.swift */,
 				8DAE60322D25602700FF03BD /* HomeSection.swift */,
 			);
 			path = Home;
@@ -451,6 +454,7 @@
 				8DAE60332D25602B00FF03BD /* HomeSection.swift in Sources */,
 				8D3636EE2D252755001B465F /* LoginVC.swift in Sources */,
 				8DAE60352D256B9800FF03BD /* TabBarController.swift in Sources */,
+				8DD5096E2D41242600BE852A /* HomeRecommendVM.swift in Sources */,
 				8DAE60312D252A6D00FF03BD /* HomeVideoCell.swift in Sources */,
 				8D902BD02D2EA2C900F4AD80 /* Home.swift in Sources */,
 				8D902BD22D2EA39A00F4AD80 /* VideoListItem.swift in Sources */,
