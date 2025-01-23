@@ -1,6 +1,6 @@
 import UIKit
 
-final class HomeVideoCell: UITableViewCell {
+final class HomeVideoCell: UICollectionViewCell {
   
   static let id = "HomeVideoCell"
   static let height: CGFloat = 320
@@ -54,5 +54,7 @@ final class HomeVideoCell: UITableViewCell {
     containerView.layer.cornerRadius = 10
     containerView.layer.borderColor = UIColor(resource: .strokeLight).cgColor
     containerView.layer.borderWidth = 1
+    
+    channelImageView.layer.cornerRadius = 10
   }
 }
