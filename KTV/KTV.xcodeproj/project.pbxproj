@@ -50,6 +50,8 @@
 		8DAE60382D25736700FF03BD /* HomeHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DAE60372D25736700FF03BD /* HomeHeaderCell.xib */; };
 		8DAE60392D25736700FF03BD /* HomeHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAE60362D25736700FF03BD /* HomeHeaderCell.swift */; };
 		8DD5096E2D41242600BE852A /* HomeRecommendVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5096D2D41242100BE852A /* HomeRecommendVM.swift */; };
+		8DF5400E2D46821100339942 /* HomeRankingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF5400D2D46820300339942 /* HomeRankingHeaderView.swift */; };
+		8DF540122D46828B00339942 /* HomeRankingHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DF540112D46828B00339942 /* HomeRankingHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +119,8 @@
 		8DAE60362D25736700FF03BD /* HomeHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderCell.swift; sourceTree = "<group>"; };
 		8DAE60372D25736700FF03BD /* HomeHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderCell.xib; sourceTree = "<group>"; };
 		8DD5096D2D41242100BE852A /* HomeRecommendVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRecommendVM.swift; sourceTree = "<group>"; };
+		8DF5400D2D46820300339942 /* HomeRankingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRankingHeaderView.swift; sourceTree = "<group>"; };
+		8DF540112D46828B00339942 /* HomeRankingHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeRankingHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +271,8 @@
 				8DAE60372D25736700FF03BD /* HomeHeaderCell.xib */,
 				8DAE602E2D252A6D00FF03BD /* HomeVideoCell.swift */,
 				8DAE602F2D252A6D00FF03BD /* HomeVideoCell.xib */,
+				8DF5400D2D46820300339942 /* HomeRankingHeaderView.swift */,
+				8DF540112D46828B00339942 /* HomeRankingHeaderView.xib */,
 				8D7B43C12D2822080044ACD2 /* HomeRankingContainerCell.swift */,
 				8D7B43C22D2822080044ACD2 /* HomeRankingContainerCell.xib */,
 				8D7B43C92D2825000044ACD2 /* HomeRankingItemCell.swift */,
@@ -408,6 +414,7 @@
 				8D7B43D32D282BBD0044ACD2 /* HomeRecentWatchItemCell.xib in Resources */,
 				8D3636EC2D252755001B465F /* Main.storyboard in Resources */,
 				8DAE60382D25736700FF03BD /* HomeHeaderCell.xib in Resources */,
+				8DF540122D46828B00339942 /* HomeRankingHeaderView.xib in Resources */,
 				8D902BC92D2EA26300F4AD80 /* home.json in Resources */,
 				8D902BCA2D2EA26300F4AD80 /* bookmark.json in Resources */,
 				8D902BCB2D2EA26300F4AD80 /* favorite.json in Resources */,
@@ -453,6 +460,7 @@
 				8D7B43D42D282BBD0044ACD2 /* HomeRecentWatchItemCell.swift in Sources */,
 				8DAE60332D25602B00FF03BD /* HomeSection.swift in Sources */,
 				8D3636EE2D252755001B465F /* LoginVC.swift in Sources */,
+				8DF5400E2D46821100339942 /* HomeRankingHeaderView.swift in Sources */,
 				8DAE60352D256B9800FF03BD /* TabBarController.swift in Sources */,
 				8DD5096E2D41242600BE852A /* HomeRecommendVM.swift in Sources */,
 				8DAE60312D252A6D00FF03BD /* HomeVideoCell.swift in Sources */,
