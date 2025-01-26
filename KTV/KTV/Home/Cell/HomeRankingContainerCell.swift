@@ -7,10 +7,10 @@ protocol HomeRankingContainerCellDeleate: AnyObject {
   )
 }
 
-final class HomeRankingContainerCell: UITableViewCell {
+final class HomeRankingContainerCell: UICollectionViewCell {
   
   static let id = "HomeRankingContainerCell"
-  static let height: CGFloat = 349
+  static let height: CGFloat = 265
   @IBOutlet weak var collectionView: UICollectionView!
   
   private var rankings: [Home.Ranking]?
@@ -57,13 +57,13 @@ extension HomeRankingContainerCell: UICollectionViewDataSource {
     _ collectionView: UICollectionView,
     cellForItemAt indexPath: IndexPath
   ) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeRankingItemCell.id, for: indexPath)
-    
-    if let cell = cell as? HomeRankingItemCell,
-       let data = rankings?[indexPath.item]
-    {
-      cell.setData(data, rank: indexPath.item + 1)
+    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeRankingItemCell.id, for: indexPath) as? HomeRankingItemCell,
+          let data = rankings?[indexPath.item]
+    else {
+      return UICollectionViewCell()
     }
+    
+    cell.setData(data, rank: indexPath.item + 1)
     
     return cell
   }
