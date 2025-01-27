@@ -7,12 +7,13 @@ protocol HomeRecentWatchContainerCellDelegate: AnyObject {
   )
 }
 
-final class HomeRecentWatchContainerCell: UITableViewCell {
+final class HomeRecentWatchContainerCell: UICollectionViewCell {
   static let id = "HomeRecentWatchContainerCell"
-  static let height: CGFloat = 209
-  @IBOutlet weak var collectionView: UICollectionView!
-  weak var delegate: HomeRecentWatchContainerCellDelegate?
+  static let height: CGFloat = 189
   
+  @IBOutlet weak var collectionView: UICollectionView!
+  
+  weak var delegate: HomeRecentWatchContainerCellDelegate?
   private var recents: [Home.Recent]?
   
   override func awakeFromNib() {
