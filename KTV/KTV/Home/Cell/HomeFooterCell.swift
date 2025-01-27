@@ -1,6 +1,6 @@
 import UIKit
 
-final class HomeFooterCell: UITableViewCell {
+final class HomeFooterCell: UICollectionReusableView {
   
   static let height: CGFloat = 80
   static let id = "HomeFooterCell"
@@ -8,11 +8,4 @@ final class HomeFooterCell: UITableViewCell {
   override func awakeFromNib() {
     super.awakeFromNib()
   }
-  
-  override func setSelected(_ selected: Bool, animated: Bool) {
-    super.setSelected(selected, animated: animated)
-    
-    // Configure the view for the selected state
-  }
-  
 }
