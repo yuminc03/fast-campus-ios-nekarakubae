@@ -9,8 +9,14 @@ protocol HomeRecommendContainerCellDelegate: AnyObject {
   func homeRecommendContainerCellFoldChanged(cell: HomeRecommendContainerCell)
 }
 
-final class HomeRecommendContainerCell: UITableViewCell {
+final class HomeRecommendContainerCell: UICollectionViewCell {
   static let id = "HomeRecommendContainerCell"
+  
+  static func height(vm: HomeRecommendVM) -> CGFloat {
+    let top: CGFloat = 84 - 6 // 첫번째 cell에서 bottom까지의 거리 - cell의 상단 여백
+    let bottom: CGFloat = 68 - 6 // 마지막 cell첫번째 bottom까지의 거리 - cell의 하단 여백
+    return HomeRecommendItemCell.height * CGFloat(vm.itemCount) + top + bottom
+  }
   
   @IBOutlet weak var containerView: UIView!
   @IBOutlet weak var tableView: UITableView!
@@ -20,23 +26,10 @@ final class HomeRecommendContainerCell: UITableViewCell {
   
   weak var delegate: HomeRecommendContainerCellDelegate?
   
-  static func height(vm: HomeRecommendVM) -> CGFloat {
-    let top: CGFloat = 84 - 6 // 첫번째 cell에서 bottom까지의 거리 - cell의 상단 여백
-    let bottom: CGFloat = 68 - 6 // 마지막 cell첫번째 bottom까지의 거리 - cell의 하단 여백
-    let footerInset: CGFloat = 51 // container -> footer 까지의 여백
-    return HomeRecommendItemCell.height * CGFloat(vm.itemCount) + top + bottom + footerInset
-  }
-  
   override func awakeFromNib() {
     super.awakeFromNib()
     
     setupUI()
-  }
-  
-  override func setSelected(_ selected: Bool, animated: Bool) {
-    super.setSelected(selected, animated: animated)
-    
-    // Configure the view for the selected state
   }
   
   @IBAction func didTapFoldButton(_ sender: Any) {
