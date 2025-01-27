@@ -2,7 +2,7 @@ import UIKit
 
 final class HomeVC: UIViewController {
   
-  @IBOutlet weak var tableView: UITableView!
+  @IBOutlet weak var collectionView: UICollectionView!
   
   private let vm = HomeVM()
   
@@ -11,6 +11,8 @@ final class HomeVC: UIViewController {
     
     setupUI()
     bind()
+    
+    vm.requestData()
   }
   
   override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -18,181 +20,375 @@ final class HomeVC: UIViewController {
   }
   
   private func setupUI() {
-    tableView.delegate = self
-    tableView.dataSource = self
+    collectionView.delegate = self
+    collectionView.dataSource = self
+    collectionView.isHidden = true
     
-    tableView.register(
-      .init(nibName: HomeHeaderCell.id, bundle: nil),
-      forCellReuseIdentifier: HomeHeaderCell.id
+    collectionView.register(
+      .init(nibName: HomeHeaderView.id, bundle: nil),
+      forCellWithReuseIdentifier: HomeHeaderView.id
     )
-    tableView.register(
-      .init(nibName: HomeVideoCell.id, bundle: nil),
-      forCellReuseIdentifier: HomeVideoCell.id
+    
+    collectionView.register(
+      .init(nibName: HomeRankingHeaderView.id, bundle: nil),
+      forCellWithReuseIdentifier: HomeRankingHeaderView.id
     )
-    tableView.register(
+    
+    collectionView.register(
+      .init(nibName: HomeFooterView.id, bundle: nil),
+      forCellWithReuseIdentifier: HomeFooterView.id
+    )
+    
+    collectionView.register(
+      .init(nibName: HomeVideoCell.id, bundle: .main),
+      forCellWithReuseIdentifier: HomeVideoCell.id
+    )
+    
+    collectionView.register(
       UINib(nibName: HomeRecommendContainerCell.id, bundle: .main),
-      forCellReuseIdentifier: HomeRecommendContainerCell.id
+      forCellWithReuseIdentifier: HomeRecommendContainerCell.id
     )
-    tableView.register(
-      UINib(nibName: HomeFooterCell.id, bundle: .main),
-      forCellReuseIdentifier: HomeFooterCell.id
-    )
-    tableView.register(
+    
+    collectionView.register(
       UINib(nibName: HomeRankingContainerCell.id, bundle: nil),
-      forCellReuseIdentifier: HomeRankingContainerCell.id
+      forCellWithReuseIdentifier: HomeRankingContainerCell.id
     )
-    tableView.register(
-      UINib(nibName: HomeRecentWatchContainerCell.id, bundle: nil),
-      forCellReuseIdentifier: HomeRecentWatchContainerCell.id
+    
+    collectionView.register(
+      UINib(nibName: HomeRecentWatchContainerCell.id, bundle: .main),
+      forCellWithReuseIdentifier: HomeRecentWatchContainerCell.id
     )
-    tableView.register(
-      UITableViewCell.self,
-      forCellReuseIdentifier: "empty"
+    
+    collectionView.register(
+      UICollectionViewCell.self,
+      forCellWithReuseIdentifier: "empty"
     )
   }
   
   private func bind() {
     vm.dataChanged = { [weak self] in
-      self?.tableView.isHidden = false
-      self?.tableView.reloadData()
+      self?.collectionView.isHidden = false
+      self?.collectionView.reloadData()
     }
-    
-    vm.requestData()
+  }
+  
+  private func insetForSection(_ section: HomeSection) -> UIEdgeInsets {
+    switch section {
+    case .header, .footer:
+      return .zero
+      
+    case .video, .ranking, .recentWatch, .recommend:
+      return .init(top: 0, left: 21, bottom: 21, right: 21)
+    }
   }
 }
 
 // MARK: - UITableViewDelegate
 
-extension HomeVC: UITableViewDelegate {
-  func tableView(
-    _ tableView: UITableView,
-    heightForRowAt indexPath: IndexPath
-  ) -> CGFloat {
-      guard let section = HomeSection(rawValue: indexPath.section) else {
-          return 0
-      }
+extension HomeVC: UICollectionViewDelegateFlowLayout {
+  
+  func collectionView(
+    _ collectionView: UICollectionView,
+    layout collectionViewLayout: UICollectionViewLayout,
+    referenceSizeForHeaderInSection section: Int
+  ) -> CGSize {
+    guard let section = HomeSection(rawValue: section) else {
+      return .zero
+    }
     
-      switch section {
-      case .header:
-          return HomeHeaderCell.height
-      case .video:
-          return HomeVideoCell.height
-      case .ranking:
-        return HomeRankingContainerCell.height
-      case .recentWatch:
-        return HomeRecentWatchContainerCell.height
-      case .recommend:
-        return HomeRecommendContainerCell.height(vm: vm.recommendVM)
-      case .footer:
-          return HomeFooterCell.height
-      }
+    switch section {
+    case .header:
+      return .init(
+        width: collectionView.frame.width,
+        height: HomeHeaderView.height
+      )
+      
+    case .video:
+        return .zero
+      
+    case .ranking:
+      return .init(
+        width: collectionView.frame.width,
+        height: HomeRankingHeaderView.height
+      )
+      
+    case .recentWatch:
+      return .zero
+      
+    case .recommend:
+      return .zero
+      
+    case .footer:
+      return .zero
+    }
+  }
+  
+  func collectionView(
+    _ collectionView: UICollectionView,
+    layout collectionViewLayout: UICollectionViewLayout,
+    referenceSizeForFooterInSection section: Int
+  ) -> CGSize {
+    guard let section = HomeSection(rawValue: section) else {
+      return .zero
+    }
+    
+    switch section {
+    case .header:
+      return .zero
+      
+    case .video:
+        return .zero
+      
+    case .ranking:
+      return .zero
+      
+    case .recentWatch:
+      return .zero
+      
+    case .recommend:
+      return .zero
+      
+    case .footer:
+      return .init(
+        width: collectionView.frame.width,
+        height: HomeFooterView.height
+      )
+    }
+  }
+  
+  func collectionView(
+    _ collectionView: UICollectionView,
+    layout collectionViewLayout: UICollectionViewLayout,
+    insetForSectionAt section: Int
+  ) -> UIEdgeInsets {
+    guard let section = HomeSection(rawValue: section) else {
+      return .zero
+    }
+    
+    return insetForSection(section)
+  }
+  
+  func collectionView(
+    _ collectionView: UICollectionView,
+    layout collectionViewLayout: UICollectionViewLayout,
+    minimumLineSpacingForSectionAt section: Int
+  ) -> CGFloat {
+    guard let section = HomeSection(rawValue: section) else {
+      return 0
+    }
+    
+    switch section {
+    case .header, .footer:
+      return 0
+      
+    case .video, .ranking, .recentWatch, .recommend:
+      return 21
+    }
+  }
+  
+  func collectionView(
+    _ collectionView: UICollectionView,
+    layout collectionViewLayout: UICollectionViewLayout,
+    sizeForItemAt indexPath: IndexPath
+  ) -> CGSize {
+    guard let section = HomeSection(rawValue: indexPath.section) else {
+      return .zero
+    }
+    
+    let inset = insetForSection(section)
+    let width = collectionView.frame.width - inset.left - inset.right
+    
+    switch section {
+    case .header, .footer:
+      return .zero
+      
+    case .video:
+      return .init(
+        width: width,
+        height: HomeVideoCell.height
+      )
+      
+    case .ranking:
+      return .init(
+        width: width,
+        height: HomeRankingContainerCell.height
+      )
+      
+    case .recentWatch:
+      return .init(
+        width: width,
+        height: HomeRecentWatchContainerCell.height
+      )
+      
+    case .recommend:
+      return .init(
+        width: width,
+        height: HomeRecommendContainerCell.height(vm: vm.recommendVM)
+      )
+    }
   }
 }
 
 // MARK: - UITableViewDataSource
 
-extension HomeVC: UITableViewDataSource {
-  func numberOfSections(in tableView: UITableView) -> Int {
+extension HomeVC: UICollectionViewDataSource {
+  func numberOfSections(in collectionView: UICollectionView) -> Int {
     return HomeSection.allCases.count
   }
   
-  func tableView(
-    _ tableView: UITableView,
-    numberOfRowsInSection section: Int
-  ) -> Int {
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     guard let section = HomeSection(rawValue: section) else { return 0 }
     
     switch section {
     case .header:
-      return 1
+      return 0
+      
     case .video:
-      return 2
+      return vm.home?.videos.count ?? 0
+      
     case .ranking:
       return 1
+      
     case .recentWatch:
       return 1
+      
     case .recommend:
       return 1
+      
     case .footer:
-      return 1
+      return 0
     }
   }
   
-  func tableView(
-    _ tableView: UITableView,
-    cellForRowAt indexPath: IndexPath
-  ) -> UITableViewCell {
+  func collectionView(
+    _ collectionView: UICollectionView,
+    viewForSupplementaryElementOfKind kind: String,
+    at indexPath: IndexPath
+  ) -> UICollectionReusableView {
     guard let section = HomeSection(rawValue: indexPath.section) else {
-      return tableView.dequeueReusableCell(withIdentifier: "empty", for: indexPath)
+      return .init()
     }
     
     switch section {
     case .header:
-      return tableView.dequeueReusableCell(
-        withIdentifier: HomeHeaderCell.id,
+      return collectionView.dequeueReusableSupplementaryView(
+        ofKind: kind,
+        withReuseIdentifier: HomeHeaderView.id,
         for: indexPath
       )
       
     case .video:
-      guard let cell = tableView.dequeueReusableCell(
-        withIdentifier: HomeVideoCell.id,
+      return .init()
+      
+    case .ranking:
+      return collectionView.dequeueReusableSupplementaryView(
+        ofKind: kind,
+        withReuseIdentifier: HomeRankingHeaderView.id,
         for: indexPath
-      ) as? HomeVideoCell else {
-        return UITableViewCell()
+      )
+      
+    case .recentWatch:
+      return .init()
+      
+    case .recommend:
+      return .init()
+      
+    case .footer:
+      return collectionView.dequeueReusableSupplementaryView(
+        ofKind: kind,
+        withReuseIdentifier: HomeFooterView.id,
+        for: indexPath
+      )
+    }
+  }
+  
+  func collectionView(
+    _ collectionView: UICollectionView,
+    cellForItemAt indexPath: IndexPath
+  ) -> UICollectionViewCell {
+    guard let section = HomeSection(rawValue: indexPath.section) else {
+      return collectionView.dequeueReusableCell(
+        withReuseIdentifier: "empty",
+        for: indexPath
+      )
+    }
+    
+    switch section {
+    case .header, .footer:
+      return collectionView.dequeueReusableCell(
+        withReuseIdentifier: "empty",
+        for: indexPath
+      )
+      
+    case .video:
+      guard let cell = collectionView.dequeueReusableCell(
+        withReuseIdentifier: HomeVideoCell.id,
+        for: indexPath
+      ) as? HomeVideoCell,
+        let data = vm.home?.videos[indexPath.item]
+      else {
+        return collectionView.dequeueReusableCell(
+          withReuseIdentifier: "empty",
+          for: indexPath
+        )
       }
       
-      if let data = vm.home?.videos[indexPath.row] {
-        cell.setData(data)
-      }
+      cell.setData(data)
       
       return cell
       
     case .ranking:
-      let cell = tableView.dequeueReusableCell(
-        withIdentifier: HomeRankingContainerCell.id,
+      guard let cell = collectionView.dequeueReusableCell(
+        withReuseIdentifier: HomeRankingContainerCell.id,
         for: indexPath
-      )
-      
-      if let cell = cell as? HomeRankingContainerCell, let data = vm.home?.rankings {
-        cell.setData(data)
-        cell.delegate = self
+      ) as? HomeRankingContainerCell,
+        let data = vm.home?.rankings
+      else {
+        return collectionView.dequeueReusableCell(
+          withReuseIdentifier: "empty",
+          for: indexPath
+        )
       }
+      
+      cell.setData(data)
+      cell.delegate = self
       
       return cell
       
     case .recentWatch:
-      guard let cell = tableView.dequeueReusableCell(
-        withIdentifier: HomeRecentWatchContainerCell.id,
+      guard let cell = collectionView.dequeueReusableCell(
+        withReuseIdentifier: HomeRecentWatchContainerCell.id,
         for: indexPath
-      ) as? HomeRecentWatchContainerCell else {
-        return UITableViewCell()
+      ) as? HomeRecentWatchContainerCell,
+        let data = vm.home?.recents
+      else {
+        return collectionView.dequeueReusableCell(
+          withReuseIdentifier: "empty",
+          for: indexPath
+        )
       }
       
-      if let data = vm.home?.recents {
-        cell.delegate = self
-        cell.setData(data)
-      }
+      cell.setData(data)
+      cell.delegate = self
       
       return cell
       
     case .recommend:
-      guard let cell = tableView.dequeueReusableCell(
-        withIdentifier: HomeRecommendContainerCell.id,
+      guard let cell = collectionView.dequeueReusableCell(
+        withReuseIdentifier: HomeRecommendContainerCell.id,
         for: indexPath
-      ) as? HomeRecommendContainerCell else {
-        return UITableViewCell()
+      ) as? HomeRecommendContainerCell
+      else {
+        return collectionView.dequeueReusableCell(
+          withReuseIdentifier: "empty",
+          for: indexPath
+        )
       }
       
-      cell.delegate = self
       cell.setVM(vm.recommendVM)
+      cell.delegate = self
       
       return cell
-      
-    case .footer:
-      return tableView.dequeueReusableCell(
-        withIdentifier: HomeFooterCell.id,
-        for: indexPath
-      )
     }
   }
 }
@@ -208,7 +404,7 @@ extension HomeVC: HomeRecommendContainerCellDelegate {
   }
   
   func homeRecommendContainerCellFoldChanged(cell: HomeRecommendContainerCell) {
-    tableView.reloadData()
+    collectionView.collectionViewLayout.invalidateLayout()
   }
 }
 

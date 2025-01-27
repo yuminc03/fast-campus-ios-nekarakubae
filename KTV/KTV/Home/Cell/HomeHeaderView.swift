@@ -1,6 +1,6 @@
 import UIKit
 
-final class HomeHeaderCell: UICollectionReusableView {
+final class HomeHeaderView: UICollectionReusableView {
   
   static let height: CGFloat = 66
   static let id = "HomeHeaderCell"
