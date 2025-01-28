@@ -14,6 +14,11 @@ final class MyVC: UIViewController {
     setupUI()
   }
   
+  
+  @IBAction func didTapFavorite(_ sender: Any) {
+    performSegue(withIdentifier: "favorite", sender: nil)
+  }
+  
   private func setupUI() {
     profileImageView.layer.cornerRadius = 5
   }
