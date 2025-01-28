@@ -15,7 +15,7 @@ final class HomeRecommendContainerCell: UICollectionViewCell {
   static func height(vm: HomeRecommendVM) -> CGFloat {
     let top: CGFloat = 84 - 6 // 첫번째 cell에서 bottom까지의 거리 - cell의 상단 여백
     let bottom: CGFloat = 68 - 6 // 마지막 cell첫번째 bottom까지의 거리 - cell의 하단 여백
-    return HomeRecommendItemCell.height * CGFloat(vm.itemCount) + top + bottom
+    return VideoListItemCell.height * CGFloat(vm.itemCount) + top + bottom
   }
   
   @IBOutlet weak var containerView: UIView!
@@ -57,12 +57,12 @@ final class HomeRecommendContainerCell: UICollectionViewCell {
     containerView.layer.borderWidth = 1
     containerView.layer.borderColor = UIColor(resource: .strokeLight).cgColor
     
-    tableView.rowHeight = HomeRecommendItemCell.height
+    tableView.rowHeight = VideoListItemCell.height
     tableView.delegate = self
     tableView.dataSource = self
     tableView.register(
-      UINib(nibName: HomeRecommendItemCell.id, bundle: .main),
-      forCellReuseIdentifier: HomeRecommendItemCell.id
+      UINib(nibName: VideoListItemCell.id, bundle: .main),
+      forCellReuseIdentifier: VideoListItemCell.id
     )
   }
 }
@@ -82,9 +82,9 @@ extension HomeRecommendContainerCell: UITableViewDataSource {
     cellForRowAt indexPath: IndexPath
   ) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(
-      withIdentifier: HomeRecommendItemCell.id,
+      withIdentifier: VideoListItemCell.id,
       for: indexPath
-    ) as? HomeRecommendItemCell else {
+    ) as? VideoListItemCell else {
       return UITableViewCell()
     }
     

@@ -1,9 +1,9 @@
 import Foundation
 
-struct VideoListItem {
-  let imageURL: URL
+struct VideoListItem: Decodable {
+  let imageUrl: URL
   let title: String
   let playtime: Double
   let channel: String
-  let videoID: Int
+  let videoId: Int
 }

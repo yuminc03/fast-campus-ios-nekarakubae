@@ -193,6 +193,9 @@
                                 <state key="normal" title="좋아요한 영상" image="my_like">
                                     <color key="titleColor" name="main-wh"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapFavorite:" destination="swG-wN-H9h" eventType="touchUpInside" id="2d7-sx-fe6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="M4g-o7-yU7"/>
@@ -212,6 +215,7 @@
                     <navigationItem key="navigationItem" title="MY" id="MAW-2t-Xmo"/>
                     <connections>
                         <outlet property="profileImageView" destination="dlR-Zh-8Wp" id="DKJ-Pz-WFI"/>
+                        <segue destination="xrS-hb-YYQ" kind="show" identifier="favorite" id="gmY-9k-Ygn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BDc-su-LlL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -294,6 +298,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="odO-h0-dMV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2229.770992366412" y="517.6056338028169"/>
+        </scene>
+        <!--좋아요 한 영상-->
+        <scene sceneID="1NF-eV-PDP">
+            <objects>
+                <viewController id="xrS-hb-YYQ" customClass="FavoriteVC" customModule="KTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LQl-xX-8Gq">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="v9M-NO-6Wp">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" name="bg"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aZG-4E-mep"/>
+                        <color key="backgroundColor" name="bg"/>
+                        <constraints>
+                            <constraint firstItem="aZG-4E-mep" firstAttribute="trailing" secondItem="v9M-NO-6Wp" secondAttribute="trailing" id="0z5-oh-HdU"/>
+                            <constraint firstItem="v9M-NO-6Wp" firstAttribute="leading" secondItem="aZG-4E-mep" secondAttribute="leading" id="Cw2-Gz-cOs"/>
+                            <constraint firstItem="v9M-NO-6Wp" firstAttribute="top" secondItem="aZG-4E-mep" secondAttribute="top" id="lkT-zc-wH0"/>
+                            <constraint firstItem="aZG-4E-mep" firstAttribute="bottom" secondItem="v9M-NO-6Wp" secondAttribute="bottom" id="sMb-QX-2j4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="좋아요 한 영상" id="1Pw-cr-O2z"/>
+                    <connections>
+                        <outlet property="tableView" destination="v9M-NO-6Wp" id="oIx-eA-NBc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jUK-pN-3bD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4004" y="893"/>
         </scene>
     </scenes>
     <resources>

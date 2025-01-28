@@ -1,9 +1,10 @@
 import UIKit
 
-final class HomeRecommendItemCell: UITableViewCell {
+final class VideoListItemCell: UITableViewCell {
   static let height: CGFloat = 71
-  static let id = "HomeRecommendItemCell"
+  static let id = "VideoListItemCell"
   
+  @IBOutlet weak var contentLeadingConstraint: NSLayoutConstraint!
   @IBOutlet weak var thumbnailContainerView: UIView!
   @IBOutlet weak var thumbnailImageView: UIImageView!
   @IBOutlet weak var playTimeBGView: UIView!
@@ -44,7 +45,7 @@ final class HomeRecommendItemCell: UITableViewCell {
     rankLabel.text = nil
   }
   
-  func setData(_ data: Home.Recommend, rank: Int?) {
+  func setData(_ data: VideoListItem, rank: Int?) {
     rankLabel.isHidden = rank == nil
     if let rank {
       rankLabel.text = "\(rank)"
@@ -56,7 +57,13 @@ final class HomeRecommendItemCell: UITableViewCell {
     imageTask = thumbnailImageView.loadImage(url: data.imageUrl)
   }
   
+  func setLeading(_ leading: CGFloat) {
+      contentLeadingConstraint.constant = leading
+  }
+  
   private func setupUI() {
+    backgroundConfiguration = .clear()
+    
     thumbnailContainerView.layer.cornerRadius = 5
     rankLabel.layer.cornerRadius = 5
     rankLabel.clipsToBounds = true

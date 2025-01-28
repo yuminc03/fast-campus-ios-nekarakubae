@@ -8,7 +8,7 @@ final class HomeRecommendVM {
   }
   
   var foldChanged: ((Bool) -> Void)?
-  var recommends: [Home.Recommend]?
+  var recommends: [VideoListItem]?
   var itemCount: Int {
     let count = isFolded ? 5 : recommends?.count ?? 0
     return min(recommends?.count ?? 0, count)
