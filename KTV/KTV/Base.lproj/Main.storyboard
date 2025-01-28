@@ -178,7 +178,7 @@
                                     <color key="titleColor" name="main-wh"/>
                                 </state>
                                 <connections>
-                                    <action selector="didTapBookmark:" destination="swG-wN-H9h" eventType="touchUpInside" id="Ldo-hI-WUM"/>
+                                    <segue destination="Xtu-M0-Jjb" kind="show" id="lnf-Bs-6W5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8l2-UV-0gS">
@@ -193,9 +193,6 @@
                                 <state key="normal" title="좋아요한 영상" image="my_like">
                                     <color key="titleColor" name="main-wh"/>
                                 </state>
-                                <connections>
-                                    <action selector="didTapFavoirte:" destination="swG-wN-H9h" eventType="touchUpInside" id="9He-fD-WeX"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="M4g-o7-yU7"/>
@@ -220,6 +217,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BDc-su-LlL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3022" y="518"/>
+        </scene>
+        <!--찜한 채널-->
+        <scene sceneID="Nan-wo-auI">
+            <objects>
+                <viewController id="Xtu-M0-Jjb" customClass="BookmarkVC" customModule="KTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TIR-Ae-4lI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="e7M-6y-HBg">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" name="bg"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ALj-M4-jyK"/>
+                        <color key="backgroundColor" name="bg"/>
+                        <constraints>
+                            <constraint firstItem="e7M-6y-HBg" firstAttribute="leading" secondItem="ALj-M4-jyK" secondAttribute="leading" id="5Rp-dr-YWA"/>
+                            <constraint firstItem="ALj-M4-jyK" firstAttribute="bottom" secondItem="e7M-6y-HBg" secondAttribute="bottom" id="8TG-sh-2hU"/>
+                            <constraint firstItem="e7M-6y-HBg" firstAttribute="top" secondItem="ALj-M4-jyK" secondAttribute="top" id="Dku-yr-efj"/>
+                            <constraint firstItem="ALj-M4-jyK" firstAttribute="trailing" secondItem="e7M-6y-HBg" secondAttribute="trailing" id="G5M-e4-KAz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="찜한 채널" id="PTg-gm-Gkl"/>
+                    <connections>
+                        <outlet property="tableView" destination="e7M-6y-HBg" id="Xiy-yZ-mkT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bnh-0E-4Al" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4005" y="58"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ws0-CE-MwB">

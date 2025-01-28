@@ -14,14 +14,6 @@ final class MyVC: UIViewController {
     setupUI()
   }
   
-  @IBAction func didTapBookmark(_ sender: Any) {
-    
-  }
-  
-  @IBAction func didTapFavoirte(_ sender: Any) {
-    
-  }
-  
   private func setupUI() {
     profileImageView.layer.cornerRadius = 5
   }
