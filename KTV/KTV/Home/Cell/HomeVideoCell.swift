@@ -3,7 +3,7 @@ import UIKit
 final class HomeVideoCell: UICollectionViewCell {
   
   static let id = "HomeVideoCell"
-  static let height: CGFloat = 320
+  static let height: CGFloat = 300
   
   @IBOutlet weak var containerView: UIView!
   @IBOutlet weak var thumbnailImageView: UIImageView!
@@ -54,7 +54,5 @@ final class HomeVideoCell: UICollectionViewCell {
     containerView.layer.cornerRadius = 10
     containerView.layer.borderColor = UIColor(resource: .strokeLight).cgColor
     containerView.layer.borderWidth = 1
-    
-    channelImageView.layer.cornerRadius = 10
   }
 }
