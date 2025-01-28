@@ -54,5 +54,7 @@ final class HomeVideoCell: UICollectionViewCell {
     containerView.layer.cornerRadius = 10
     containerView.layer.borderColor = UIColor(resource: .strokeLight).cgColor
     containerView.layer.borderWidth = 1
+    
+    channelImageView.layer.cornerRadius = 20
   }
 }
