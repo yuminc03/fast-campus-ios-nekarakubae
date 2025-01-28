@@ -87,7 +87,7 @@
                 <constraint firstAttribute="bottom" secondItem="TnW-rT-dV9" secondAttribute="bottom" id="mS4-4J-lIo"/>
                 <constraint firstAttribute="trailing" secondItem="TnW-rT-dV9" secondAttribute="trailing" id="qKs-YN-qAr"/>
             </constraints>
-            <point key="canvasLocation" x="14.503816793893129" y="80.985915492957744"/>
+            <point key="canvasLocation" x="14.503816793893129" y="80.281690140845072"/>
         </collectionReusableView>
     </objects>
     <resources>

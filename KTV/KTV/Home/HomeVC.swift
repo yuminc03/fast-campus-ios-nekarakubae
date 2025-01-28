@@ -20,23 +20,22 @@ final class HomeVC: UIViewController {
   }
   
   private func setupUI() {
-    collectionView.delegate = self
-    collectionView.dataSource = self
-    collectionView.isHidden = true
-    
     collectionView.register(
       .init(nibName: HomeHeaderView.id, bundle: nil),
-      forCellWithReuseIdentifier: HomeHeaderView.id
+      forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+      withReuseIdentifier: HomeHeaderView.id
     )
     
     collectionView.register(
       .init(nibName: HomeRankingHeaderView.id, bundle: nil),
-      forCellWithReuseIdentifier: HomeRankingHeaderView.id
+      forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+      withReuseIdentifier: HomeRankingHeaderView.id
     )
     
     collectionView.register(
       .init(nibName: HomeFooterView.id, bundle: nil),
-      forCellWithReuseIdentifier: HomeFooterView.id
+      forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
+      withReuseIdentifier: HomeFooterView.id
     )
     
     collectionView.register(
@@ -63,6 +62,10 @@ final class HomeVC: UIViewController {
       UICollectionViewCell.self,
       forCellWithReuseIdentifier: "empty"
     )
+    
+    collectionView.delegate = self
+    collectionView.dataSource = self
+    collectionView.isHidden = true
   }
   
   private func bind() {
@@ -104,7 +107,7 @@ extension HomeVC: UICollectionViewDelegateFlowLayout {
       )
       
     case .video:
-        return .zero
+      return .zero
       
     case .ranking:
       return .init(
@@ -137,7 +140,7 @@ extension HomeVC: UICollectionViewDelegateFlowLayout {
       return .zero
       
     case .video:
-        return .zero
+      return .zero
       
     case .ranking:
       return .zero
@@ -321,72 +324,53 @@ extension HomeVC: UICollectionViewDataSource {
       )
       
     case .video:
-      guard let cell = collectionView.dequeueReusableCell(
+      let cell = collectionView.dequeueReusableCell(
         withReuseIdentifier: HomeVideoCell.id,
         for: indexPath
-      ) as? HomeVideoCell,
-        let data = vm.home?.videos[indexPath.item]
-      else {
-        return collectionView.dequeueReusableCell(
-          withReuseIdentifier: "empty",
-          for: indexPath
-        )
-      }
+      )
       
-      cell.setData(data)
+      if let cell = cell as? HomeVideoCell, let data = vm.home?.videos[indexPath.item] {
+        cell.setData(data)
+      }
       
       return cell
       
     case .ranking:
-      guard let cell = collectionView.dequeueReusableCell(
+      let cell = collectionView.dequeueReusableCell(
         withReuseIdentifier: HomeRankingContainerCell.id,
         for: indexPath
-      ) as? HomeRankingContainerCell,
-        let data = vm.home?.rankings
-      else {
-        return collectionView.dequeueReusableCell(
-          withReuseIdentifier: "empty",
-          for: indexPath
-        )
-      }
+      )
       
-      cell.setData(data)
-      cell.delegate = self
+      if let cell = cell as? HomeRankingContainerCell, let data = vm.home?.rankings {
+        cell.delegate = self
+        cell.setData(data)
+      }
       
       return cell
       
     case .recentWatch:
-      guard let cell = collectionView.dequeueReusableCell(
+      let cell = collectionView.dequeueReusableCell(
         withReuseIdentifier: HomeRecentWatchContainerCell.id,
         for: indexPath
-      ) as? HomeRecentWatchContainerCell,
-        let data = vm.home?.recents
-      else {
-        return collectionView.dequeueReusableCell(
-          withReuseIdentifier: "empty",
-          for: indexPath
-        )
-      }
+      )
       
-      cell.setData(data)
-      cell.delegate = self
+      if let cell = cell as? HomeRecentWatchContainerCell, let data = vm.home?.recents {
+        cell.delegate = self
+        cell.setData(data)
+      }
       
       return cell
       
     case .recommend:
-      guard let cell = collectionView.dequeueReusableCell(
+      let cell = collectionView.dequeueReusableCell(
         withReuseIdentifier: HomeRecommendContainerCell.id,
         for: indexPath
-      ) as? HomeRecommendContainerCell
-      else {
-        return collectionView.dequeueReusableCell(
-          withReuseIdentifier: "empty",
-          for: indexPath
-        )
-      }
+      )
       
-      cell.setVM(vm.recommendVM)
-      cell.delegate = self
+      if let cell = cell as? HomeRecommendContainerCell {
+        cell.delegate = self
+        cell.setVM(vm.recommendVM)
+      }
       
       return cell
     }
