@@ -30,7 +30,7 @@ final class HomeRankingContainerCell: UICollectionViewCell {
   
   private func setupUI() {
     collectionView.register(
-      UINib(nibName: HomeRankingItemCell.id, bundle: nil),
+      .init(nibName: HomeRankingItemCell.id, bundle: nil),
       forCellWithReuseIdentifier: HomeRankingItemCell.id
     )
     
@@ -49,7 +49,10 @@ extension HomeRankingContainerCell: UICollectionViewDelegate {
 }
 
 extension HomeRankingContainerCell: UICollectionViewDataSource {
-  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+  func collectionView(
+    _ collectionView: UICollectionView,
+    numberOfItemsInSection section: Int
+  ) -> Int {
     return rankings?.count ?? 0
   }
   
@@ -57,8 +60,11 @@ extension HomeRankingContainerCell: UICollectionViewDataSource {
     _ collectionView: UICollectionView,
     cellForItemAt indexPath: IndexPath
   ) -> UICollectionViewCell {
-    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeRankingItemCell.id, for: indexPath) as? HomeRankingItemCell,
-          let data = rankings?[indexPath.item]
+    guard let cell = collectionView.dequeueReusableCell(
+      withReuseIdentifier: HomeRankingItemCell.id,
+      for: indexPath
+    ) as? HomeRankingItemCell,
+      let data = rankings?[indexPath.item]
     else {
       return UICollectionViewCell()
     }
