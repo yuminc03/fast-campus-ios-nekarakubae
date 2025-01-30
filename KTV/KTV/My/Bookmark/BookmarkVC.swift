@@ -3,11 +3,12 @@ import UIKit
 final class BookmarkVC: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
+
+  private let vm = BookmarkVM()
+  
   override var preferredStatusBarStyle: UIStatusBarStyle {
     return .lightContent
   }
-  
-  private let vm = BookmarkVM()
   
   override func viewDidLoad() {
     super.viewDidLoad()
