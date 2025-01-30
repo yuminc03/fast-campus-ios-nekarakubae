@@ -43,6 +43,7 @@ final class VideoListItemCell: UITableViewCell {
     thumbnailImageView.image = nil
     playTimeLabel.text = nil
     rankLabel.text = nil
+    contentLeadingConstraint.constant = 0
   }
   
   func setData(_ data: VideoListItem, rank: Int?) {
