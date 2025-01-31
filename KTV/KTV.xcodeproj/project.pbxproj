@@ -10,6 +10,8 @@
 		05D18FC52D3630DB00C06092 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D18FC42D3630D600C06092 /* HomeVM.swift */; };
 		05D18FC72D36317A00C06092 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D18FC62D36317700C06092 /* DataLoader.swift */; };
 		05D18FCA2D3632D500C06092 /* URLDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D18FC92D3632D300C06092 /* URLDefines.swift */; };
+		05E0A3DA2D4C9FE700FB05BB /* VideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E0A3D82D4C9FE700FB05BB /* VideoVC.swift */; };
+		05E0A3DB2D4C9FE700FB05BB /* VideoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05E0A3D92D4C9FE700FB05BB /* VideoVC.xib */; };
 		8D3636DC2D25274B001B465F /* KTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3636DA2D25274B001B465F /* KTVTests.swift */; };
 		8D3636E82D252755001B465F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D3636DE2D252755001B465F /* Assets.xcassets */; };
 		8D3636E92D252755001B465F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D3636DF2D252755001B465F /* Colors.xcassets */; };
@@ -85,6 +87,8 @@
 		05D18FC42D3630D600C06092 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		05D18FC62D36317700C06092 /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		05D18FC92D3632D300C06092 /* URLDefines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLDefines.swift; sourceTree = "<group>"; };
+		05E0A3D82D4C9FE700FB05BB /* VideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoVC.swift; sourceTree = "<group>"; };
+		05E0A3D92D4C9FE700FB05BB /* VideoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoVC.xib; sourceTree = "<group>"; };
 		05FBBC322D1D3D2E0051BAF9 /* KTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05FBBC482D1D3D300051BAF9 /* KTVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KTVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05FBBC522D1D3D300051BAF9 /* KTVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KTVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,6 +180,15 @@
 			path = URLDefines;
 			sourceTree = "<group>";
 		};
+		05E0A3D72D4C9FD500FB05BB /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				05E0A3D82D4C9FE700FB05BB /* VideoVC.swift */,
+				05E0A3D92D4C9FE700FB05BB /* VideoVC.xib */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
 		05FBBC292D1D3D2E0051BAF9 = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +222,7 @@
 			children = (
 				8DAE60342D256B9400FF03BD /* TabBarController.swift */,
 				8D9AE6802D48BD4800168A2E /* NavigationController.swift */,
+				05E0A3D72D4C9FD500FB05BB /* Video */,
 				8D9AE66F2D48A55E00168A2E /* My */,
 				8D6A97722D30094000B3DA3B /* Util */,
 				8D902BCE2D2EA2B500F4AD80 /* Model */,
@@ -475,6 +489,7 @@
 				8D902BCB2D2EA26300F4AD80 /* favorite.json in Resources */,
 				8D902BCC2D2EA26300F4AD80 /* video.json in Resources */,
 				8D902BCD2D2EA26300F4AD80 /* live.json in Resources */,
+				05E0A3DB2D4C9FE700FB05BB /* VideoVC.xib in Resources */,
 				8D7B43C32D2822080044ACD2 /* HomeRankingContainerCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -527,6 +542,7 @@
 				8DAE60312D252A6D00FF03BD /* HomeVideoCell.swift in Sources */,
 				8D902BD02D2EA2C900F4AD80 /* Home.swift in Sources */,
 				8D9AE6712D48A76000168A2E /* BookmarkVC.swift in Sources */,
+				05E0A3DA2D4C9FE700FB05BB /* VideoVC.swift in Sources */,
 				8D902BD22D2EA39A00F4AD80 /* VideoListItem.swift in Sources */,
 				8D9AE6732D48A7FE00168A2E /* BookmarkCell.swift in Sources */,
 				05D18FC52D3630DB00C06092 /* HomeVM.swift in Sources */,
