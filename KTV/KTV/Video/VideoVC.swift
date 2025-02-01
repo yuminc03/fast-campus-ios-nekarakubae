@@ -15,6 +15,18 @@ final class VideoVC: UIViewController {
   
   private var contentSizeObservation: NSKeyValueObservation?
   
+  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+    super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    
+    self.modalPresentationStyle = .fullScreen
+  }
+  
+  required init?(coder: NSCoder) {
+    super.init(coder: coder)
+    
+    self.modalPresentationStyle = .fullScreen
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
