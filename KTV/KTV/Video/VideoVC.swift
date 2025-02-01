@@ -1,7 +1,6 @@
 import UIKit
 
 final class VideoVC: UIViewController {
-  
   @IBOutlet weak var playButton: UIButton!
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var updateDateLabel: UILabel!

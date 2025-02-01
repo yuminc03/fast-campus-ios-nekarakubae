@@ -84,6 +84,11 @@ final class HomeVC: UIViewController {
       return .init(top: 0, left: 21, bottom: 21, right: 21)
     }
   }
+  
+  private func presentVideoVC() {
+    let vc = VideoVC()
+    present(vc, animated: true)
+  }
 }
 
 // MARK: - UITableViewDelegate
@@ -228,6 +233,25 @@ extension HomeVC: UICollectionViewDelegateFlowLayout {
         width: width,
         height: HomeRecommendContainerCell.height(vm: vm.recommendVM)
       )
+    }
+  }
+  
+  func collectionView(
+    _ collectionView: UICollectionView,
+    didSelectItemAt indexPath: IndexPath
+  ) {
+    guard let section = HomeSection(
+      rawValue: indexPath.section
+    ) else {
+      return
+    }
+    
+    switch section {
+    case .header, .ranking, .recentWatch, .recommend, .footer:
+      return
+      
+    case .video:
+      presentVideoVC()
     }
   }
 }
@@ -384,7 +408,7 @@ extension HomeVC: HomeRecommendContainerCellDelegate {
     cell: HomeRecommendContainerCell,
     didSelectItemAt index: Int
   ) {
-    print("home recommend cell did select item at \(index)")
+    presentVideoVC()
   }
   
   func homeRecommendContainerCellFoldChanged(cell: HomeRecommendContainerCell) {
@@ -392,20 +416,24 @@ extension HomeVC: HomeRecommendContainerCellDelegate {
   }
 }
 
+// MARK: - HomeRankingContainerCellDeleate
+
 extension HomeVC: HomeRankingContainerCellDeleate {
   func homeRankingContainerCell(
     _ cell: HomeRankingContainerCell,
     didSelectItemAt index: Int
   ) {
-    print("home ranking did select at: \(index)")
+    presentVideoVC()
   }
 }
+
+// MARK: - HomeRecentWatchContainerCellDelegate
 
 extension HomeVC: HomeRecentWatchContainerCellDelegate {
   func homeRecentWatchContainerCell(
     _ cell: HomeRecentWatchContainerCell,
     didSelectItemAt index: Int
   ) {
-    print("home recent watch did select at: \(index)")
+    presentVideoVC()
   }
 }
