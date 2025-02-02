@@ -12,7 +12,21 @@ final class VideoVC: UIViewController {
   @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
   @IBOutlet weak var portraitControlPannel: UIView!
   
+  private static let dateFormatter: DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "yyyy.MMdd"
+    
+    return formatter
+  }()
+  
+  private let vm = VideoVM()
+  
   private var contentSizeObservation: NSKeyValueObservation?
+  private var isControlPannelHidden: Bool = true {
+    didSet {
+      portraitControlPannel.isHidden = isControlPannelHidden
+    }
+  }
   
   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
     super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -30,6 +44,8 @@ final class VideoVC: UIViewController {
     super.viewDidLoad()
     
     setupUI()
+    bindVM()
+    vm.request()
   }
   
   private func setupUI() {
@@ -46,6 +62,23 @@ final class VideoVC: UIViewController {
     contentSizeObservation = recommendTableView.observe(\.contentSize) { [weak self] tableView, _ in
       self?.tableViewHeightConstraint.constant = tableView.contentSize.height
     }
+  }
+  
+  private func bindVM() {
+    vm.dataChangeHandler = { [weak self] in
+      self?.setupData($0)
+    }
+  }
+  
+  private func setupData(_ video: Video) {
+    titleLabel.text = video.title
+    channelThumnailImageView.loadImage(url: video.channelImageUrl)
+    channelNameLabel.text = video.channel
+    updateDateLabel.text = Self.dateFormatter.string(from: Date(timeIntervalSince1970: video.uploadTimestamp))
+    playCountLabel.text = "재생수 \(video.playCount)"
+    favoriteButton.setTitle("\(video.favoriteCount)", for: .normal)
+    
+    recommendTableView.reloadData()
   }
   
   @IBAction func didTapComment(_ sender: Any) {
@@ -73,6 +106,7 @@ final class VideoVC: UIViewController {
   }
   
   @IBAction func toggleControlPannel(_ sender: Any) {
+    isControlPannelHidden.toggle()
   }
 }
 
@@ -89,17 +123,24 @@ extension VideoVC:  UITableViewDataSource {
     _ tableView: UITableView,
     numberOfRowsInSection section: Int
   ) -> Int {
-    return 10
+    return vm.video?.recommends.count ?? 0
   }
   
   func tableView(
     _ tableView: UITableView,
     cellForRowAt indexPath: IndexPath
   ) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(
+    guard let cell = tableView.dequeueReusableCell(
       withIdentifier: VideoListItemCell.id,
       for: indexPath
-    )
+    ) as? VideoListItemCell
+    else {
+      return UITableViewCell()
+    }
+    
+    if let data = vm.video?.recommends[indexPath.row] {
+      cell.setData(data, rank: indexPath.row + 1)
+    }
     
     return cell
   }
