@@ -32,6 +32,8 @@
 		8D7B43D02D282A310044ACD2 /* HomeRecentWatchContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7B43CD2D282A310044ACD2 /* HomeRecentWatchContainerCell.swift */; };
 		8D7B43D32D282BBD0044ACD2 /* HomeRecentWatchItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D7B43D22D282BBD0044ACD2 /* HomeRecentWatchItemCell.xib */; };
 		8D7B43D42D282BBD0044ACD2 /* HomeRecentWatchItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7B43D12D282BBD0044ACD2 /* HomeRecentWatchItemCell.swift */; };
+		8D842EE32D4F6210004EBBF2 /* MoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D842EE12D4F6210004EBBF2 /* MoreVC.swift */; };
+		8D842EE42D4F6210004EBBF2 /* MoreVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D842EE22D4F6210004EBBF2 /* MoreVC.xib */; };
 		8D902BC92D2EA26300F4AD80 /* home.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D902BC52D2EA26300F4AD80 /* home.json */; };
 		8D902BCA2D2EA26300F4AD80 /* bookmark.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D902BC32D2EA26300F4AD80 /* bookmark.json */; };
 		8D902BCB2D2EA26300F4AD80 /* favorite.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D902BC42D2EA26300F4AD80 /* favorite.json */; };
@@ -113,6 +115,8 @@
 		8D7B43CE2D282A310044ACD2 /* HomeRecentWatchContainerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeRecentWatchContainerCell.xib; sourceTree = "<group>"; };
 		8D7B43D12D282BBD0044ACD2 /* HomeRecentWatchItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRecentWatchItemCell.swift; sourceTree = "<group>"; };
 		8D7B43D22D282BBD0044ACD2 /* HomeRecentWatchItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeRecentWatchItemCell.xib; sourceTree = "<group>"; };
+		8D842EE12D4F6210004EBBF2 /* MoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreVC.swift; sourceTree = "<group>"; };
+		8D842EE22D4F6210004EBBF2 /* MoreVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreVC.xib; sourceTree = "<group>"; };
 		8D902BC32D2EA26300F4AD80 /* bookmark.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = bookmark.json; sourceTree = "<group>"; };
 		8D902BC42D2EA26300F4AD80 /* favorite.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = favorite.json; sourceTree = "<group>"; };
 		8D902BC52D2EA26300F4AD80 /* home.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = home.json; sourceTree = "<group>"; };
@@ -222,6 +226,7 @@
 			children = (
 				8DAE60342D256B9400FF03BD /* TabBarController.swift */,
 				8D9AE6802D48BD4800168A2E /* NavigationController.swift */,
+				8D842EDE2D4F61B9004EBBF2 /* More */,
 				05E0A3D72D4C9FD500FB05BB /* Video */,
 				8D9AE66F2D48A55E00168A2E /* My */,
 				8D6A97722D30094000B3DA3B /* Util */,
@@ -277,6 +282,15 @@
 				8D6A97732D30094D00B3DA3B /* UIImageView+.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		8D842EDE2D4F61B9004EBBF2 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				8D842EE12D4F6210004EBBF2 /* MoreVC.swift */,
+				8D842EE22D4F6210004EBBF2 /* MoreVC.xib */,
+			);
+			path = More;
 			sourceTree = "<group>";
 		};
 		8D902BC82D2EA26300F4AD80 /* JSON */ = {
@@ -477,6 +491,7 @@
 				8D7B43CB2D2825000044ACD2 /* HomeRankingItemCell.xib in Resources */,
 				8D3636EB2D252755001B465F /* LaunchScreen.storyboard in Resources */,
 				8D7B43CF2D282A310044ACD2 /* HomeRecentWatchContainerCell.xib in Resources */,
+				8D842EE42D4F6210004EBBF2 /* MoreVC.xib in Resources */,
 				8DAA54A62D257892008BF9FA /* VideoListItemCell.xib in Resources */,
 				8DAE60302D252A6D00FF03BD /* HomeVideoCell.xib in Resources */,
 				8D7B43D32D282BBD0044ACD2 /* HomeRecentWatchItemCell.xib in Resources */,
@@ -536,6 +551,7 @@
 				8D3636EE2D252755001B465F /* LoginVC.swift in Sources */,
 				8DF5400E2D46821100339942 /* HomeRankingHeaderView.swift in Sources */,
 				8D9AE67F2D48B59F00168A2E /* Favorite.swift in Sources */,
+				8D842EE32D4F6210004EBBF2 /* MoreVC.swift in Sources */,
 				8DAE60352D256B9800FF03BD /* TabBarController.swift in Sources */,
 				8DD5096E2D41242600BE852A /* HomeRecommendVM.swift in Sources */,
 				8D9AE6792D48A9FD00168A2E /* BookmarkVM.swift in Sources */,
