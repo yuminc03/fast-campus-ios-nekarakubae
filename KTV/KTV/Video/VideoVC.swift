@@ -64,9 +64,12 @@ final class VideoVC: UIViewController {
   }
   
   @IBAction func didTapMore(_ sender: Any) {
+    let vc = MoreVC()
+    present(vc, animated: false)
   }
   
   @IBAction func didTapClose(_ sender: Any) {
+    dismiss(animated: true)
   }
   
   @IBAction func toggleControlPannel(_ sender: Any) {

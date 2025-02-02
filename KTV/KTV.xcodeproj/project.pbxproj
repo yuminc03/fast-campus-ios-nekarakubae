@@ -34,6 +34,9 @@
 		8D7B43D42D282BBD0044ACD2 /* HomeRecentWatchItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7B43D12D282BBD0044ACD2 /* HomeRecentWatchItemCell.swift */; };
 		8D842EE32D4F6210004EBBF2 /* MoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D842EE12D4F6210004EBBF2 /* MoreVC.swift */; };
 		8D842EE42D4F6210004EBBF2 /* MoreVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D842EE22D4F6210004EBBF2 /* MoreVC.xib */; };
+		8D842EE72D4F66C3004EBBF2 /* MoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D842EE52D4F66C3004EBBF2 /* MoreTableViewCell.swift */; };
+		8D842EE82D4F66C3004EBBF2 /* MoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D842EE62D4F66C3004EBBF2 /* MoreTableViewCell.xib */; };
+		8D842EEA2D4F6A06004EBBF2 /* MoreVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D842EE92D4F6A01004EBBF2 /* MoreVM.swift */; };
 		8D902BC92D2EA26300F4AD80 /* home.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D902BC52D2EA26300F4AD80 /* home.json */; };
 		8D902BCA2D2EA26300F4AD80 /* bookmark.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D902BC32D2EA26300F4AD80 /* bookmark.json */; };
 		8D902BCB2D2EA26300F4AD80 /* favorite.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D902BC42D2EA26300F4AD80 /* favorite.json */; };
@@ -117,6 +120,9 @@
 		8D7B43D22D282BBD0044ACD2 /* HomeRecentWatchItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeRecentWatchItemCell.xib; sourceTree = "<group>"; };
 		8D842EE12D4F6210004EBBF2 /* MoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreVC.swift; sourceTree = "<group>"; };
 		8D842EE22D4F6210004EBBF2 /* MoreVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreVC.xib; sourceTree = "<group>"; };
+		8D842EE52D4F66C3004EBBF2 /* MoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewCell.swift; sourceTree = "<group>"; };
+		8D842EE62D4F66C3004EBBF2 /* MoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreTableViewCell.xib; sourceTree = "<group>"; };
+		8D842EE92D4F6A01004EBBF2 /* MoreVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreVM.swift; sourceTree = "<group>"; };
 		8D902BC32D2EA26300F4AD80 /* bookmark.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = bookmark.json; sourceTree = "<group>"; };
 		8D902BC42D2EA26300F4AD80 /* favorite.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = favorite.json; sourceTree = "<group>"; };
 		8D902BC52D2EA26300F4AD80 /* home.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = home.json; sourceTree = "<group>"; };
@@ -287,8 +293,11 @@
 		8D842EDE2D4F61B9004EBBF2 /* More */ = {
 			isa = PBXGroup;
 			children = (
+				8D842EE92D4F6A01004EBBF2 /* MoreVM.swift */,
 				8D842EE12D4F6210004EBBF2 /* MoreVC.swift */,
 				8D842EE22D4F6210004EBBF2 /* MoreVC.xib */,
+				8D842EE52D4F66C3004EBBF2 /* MoreTableViewCell.swift */,
+				8D842EE62D4F66C3004EBBF2 /* MoreTableViewCell.xib */,
 			);
 			path = More;
 			sourceTree = "<group>";
@@ -489,6 +498,7 @@
 				8D3636E92D252755001B465F /* Colors.xcassets in Resources */,
 				8DAA54AA2D257EEA008BF9FA /* HomeFooterView.xib in Resources */,
 				8D7B43CB2D2825000044ACD2 /* HomeRankingItemCell.xib in Resources */,
+				8D842EE82D4F66C3004EBBF2 /* MoreTableViewCell.xib in Resources */,
 				8D3636EB2D252755001B465F /* LaunchScreen.storyboard in Resources */,
 				8D7B43CF2D282A310044ACD2 /* HomeRecentWatchContainerCell.xib in Resources */,
 				8D842EE42D4F6210004EBBF2 /* MoreVC.xib in Resources */,
@@ -541,7 +551,9 @@
 				8D7B43CC2D2825000044ACD2 /* HomeRankingItemCell.swift in Sources */,
 				8D9AE6812D48BD4900168A2E /* NavigationController.swift in Sources */,
 				8DAA54A12D2575A5008BF9FA /* HomeRecommendContainerCell.swift in Sources */,
+				8D842EE72D4F66C3004EBBF2 /* MoreTableViewCell.swift in Sources */,
 				8D7B43C42D2822080044ACD2 /* HomeRankingContainerCell.swift in Sources */,
+				8D842EEA2D4F6A06004EBBF2 /* MoreVM.swift in Sources */,
 				05D18FCA2D3632D500C06092 /* URLDefines.swift in Sources */,
 				8DAA54A52D257892008BF9FA /* VideoListItemCell.swift in Sources */,
 				8DAE60392D25736700FF03BD /* HomeHeaderView.swift in Sources */,
