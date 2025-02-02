@@ -37,15 +37,18 @@ final class MoreVC: UIViewController {
   }
   
   private func setupCornerRadius() {
-    let path = UIBezierPath(
-      roundedRect: headerView.bounds,
-      byRoundingCorners: [.topLeft, .topRight],
-      cornerRadii: CGSize(width: 13, height: 13)
-    )
+//    let path = UIBezierPath(
+//      roundedRect: headerView.bounds,
+//      byRoundingCorners: [.topLeft, .topRight],
+//      cornerRadii: CGSize(width: 13, height: 13)
+//    )
+//    
+//    let maskLayer = CAShapeLayer()
+//    maskLayer.path = path.cgPath
+//    headerView.layer.mask = maskLayer
     
-    let maskLayer = CAShapeLayer()
-    maskLayer.path = path.cgPath
-    headerView.layer.mask = maskLayer
+    headerView.layer.cornerRadius = 13
+    headerView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
   }
   
   @IBAction func didTapClose(_ sender: Any) {
