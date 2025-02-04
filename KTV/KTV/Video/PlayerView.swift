@@ -43,4 +43,39 @@ final class PlayerView: UIView {
       asset: AVURLAsset(url: url)
     ))
   }
+  
+  func play() {
+    player?.play()
+  }
+  
+  func pause() {
+    player?.pause()
+  }
+  
+  func seek(to percent: Double) {
+    guard let currentItem = player?.currentItem?.currentTime().seconds else { return }
+    
+    player?.seek(to: .init(
+      seconds: percent * totalPlayTime,
+      preferredTimescale: 1
+    ))
+  }
+  
+  func forward(to seconds: Double = 10) {
+    guard let currentTime = player?.currentItem?.currentTime().seconds else { return }
+    
+    player?.seek(to: .init(
+      seconds: currentTime + seconds,
+      preferredTimescale: 1
+    ))
+  }
+  
+  func rewind(to seconds: Double = 10) {
+    guard let currentTime = player?.currentItem?.currentTime().seconds else { return }
+    
+    player?.seek(to: .init(
+      seconds: currentTime - seconds,
+      preferredTimescale: 1
+    ))
+  }
 }
