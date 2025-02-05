@@ -52,10 +52,14 @@ final class PlayerView: UIView {
   
   override init(frame: CGRect) {
     super.init(frame: frame)
+    
+    setupNotification()
   }
   
   required init?(coder: NSCoder) {
     super.init(coder: coder)
+    
+    setupNotification()
   }
   
   func set(url: URL) {
@@ -103,7 +107,7 @@ final class PlayerView: UIView {
 extension PlayerView {
   private func setup(player: AVPlayer) {
     playObservation = player.addPeriodicTimeObserver(
-      forInterval: .init(seconds: 0.5, preferredTimescale: 10),
+      forInterval: CMTime(seconds: 0.5, preferredTimescale: 10),
       queue: .main
     ) { [weak self, weak player] time in
       guard let self else { return }

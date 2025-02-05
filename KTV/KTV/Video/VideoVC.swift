@@ -11,6 +11,7 @@ final class VideoVC: UIViewController {
   @IBOutlet weak var recommendTableView: UITableView!
   @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
   @IBOutlet weak var portraitControlPannel: UIView!
+  @IBOutlet weak var playerView: PlayerView!
   
   private static let dateFormatter: DateFormatter = {
     let formatter = DateFormatter()
@@ -49,6 +50,8 @@ final class VideoVC: UIViewController {
   }
   
   private func setupUI() {
+    playerView.delegate = self
+
     channelThumnailImageView.layer.cornerRadius = 14
     
     recommendTableView.delegate = self
@@ -78,6 +81,9 @@ final class VideoVC: UIViewController {
     playCountLabel.text = "재생수 \(video.playCount)"
     favoriteButton.setTitle("\(video.favoriteCount)", for: .normal)
     
+    playerView.set(url: video.videoURL)
+    playerView.play()
+    
     recommendTableView.reloadData()
   }
   
@@ -85,12 +91,21 @@ final class VideoVC: UIViewController {
   }
   
   @IBAction func didTapRewind(_ sender: Any) {
+    playerView.rewind()
   }
   
   @IBAction func didTapPlay(_ sender: Any) {
+    if playerView.isPlaying {
+      playerView.pause()
+    } else {
+      playerView.play()
+    }
+    
+    updatePlayButton(isPlaying: playerView.isPlaying)
   }
   
   @IBAction func didTapFastForward(_ sender: Any) {
+    playerView.forward()
   }
   
   @IBAction func didTapExpand(_ sender: Any) {
@@ -107,6 +122,34 @@ final class VideoVC: UIViewController {
   
   @IBAction func toggleControlPannel(_ sender: Any) {
     isControlPannelHidden.toggle()
+  }
+  
+  private func updatePlayButton(isPlaying: Bool) {
+    playButton.setImage(
+      isPlaying ? .smallPause : .smallPlay,
+      for: .normal
+    )
+  }
+}
+
+// MARK: - PlayerViewDeleagte
+
+extension VideoVC: PlayerviewDelegate {
+  func playerViewReadyToPlay(_ playerView: PlayerView) {
+    updatePlayButton(isPlaying: playerView.isPlaying)
+  }
+  
+  func playerView(
+    _ playerView: PlayerView,
+    didPlay playTime: Double,
+    playableTime: Double
+  ) {
+    
+  }
+  
+  func playerViewDidFinishToPlay(_ playerView: PlayerView) {
+    playerView.seek(to: 0)
+    updatePlayButton(isPlaying: false)
   }
 }
 
