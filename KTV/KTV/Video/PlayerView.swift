@@ -144,4 +144,18 @@ extension PlayerView {
       player.removeTimeObserver(playObservation)
     }
   }
+  
+  private func setupNotification() {
+    NotificationCenter.default.addObserver(
+      self,
+      selector: #selector(didPlayToEnd),
+      name: AVPlayerItem.didPlayToEndTimeNotification,
+      object: nil
+    )
+  }
+  
+  @objc
+  private func didPlayToEnd(_ notification: Notification) {
+    delegate?.playerViewDidFinishToPlay(self)
+  }
 }
