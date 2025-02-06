@@ -26,7 +26,36 @@ final class SeekbarView: UIView {
     setupUI()
   }
   
-  private func setupUI() {
+  func setTotalPlayTime(_ totalPlayTime: Double) {
+    self.totalPlayTime = totalPlayTime
+    update()
+  }
+  
+  func setPlayTime(_ playTime: Double, playableTime: Double) {
+    currentPlayTime = playTime
+    self.playableTime = playableTime
+    update()
+  }
+  
+  private func update() {
+    guard totalPlayTime > 0 else { return }
     
+    playableTimeWidth.constant = widthForTime(playableTime)
+    playTimeWidth.constant = widthForTime(currentPlayTime)
+    
+    UIView.animate(withDuration: 0.2) { [weak self] in
+      self?.layoutIfNeeded()
+    }
+  }
+  
+  private func widthForTime(_ time: Double) -> CGFloat {
+    return min(frame.width, frame.width * time / totalPlayTime)
+  }
+  
+  private func setupUI() {
+    totalPlayTimeView.layer.cornerRadius = 1
+    playablePlayTimeView.layer.cornerRadius
+     = 1
+    currentPlayTimeView.layer.cornerRadius = 1
   }
 }
