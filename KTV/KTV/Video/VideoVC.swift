@@ -13,6 +13,8 @@ final class VideoVC: UIViewController {
   @IBOutlet weak var portraitControlPannel: UIView!
   @IBOutlet weak var playerView: PlayerView!
   
+  @IBOutlet var playerViewBottomConstraint: NSLayoutConstraint!
+  
   private static let dateFormatter: DateFormatter = {
     let formatter = DateFormatter()
     formatter.dateFormat = "yyyy.MMdd"
@@ -47,6 +49,18 @@ final class VideoVC: UIViewController {
     setupUI()
     bindVM()
     vm.request()
+  }
+  
+  override func viewWillTransition(
+    to size: CGSize,
+    with coordinator: any UIViewControllerTransitionCoordinator
+  ) {
+    playerViewBottomConstraint.isActive = isLandscape(size: size)
+    super.viewWillTransition(to: size, with: coordinator)
+  }
+  
+  private func isLandscape(size: CGSize) -> Bool {
+    return size.width > size.height
   }
   
   private func setupUI() {
