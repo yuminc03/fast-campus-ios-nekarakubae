@@ -11,8 +11,12 @@ final class VideoVC: UIViewController {
   @IBOutlet weak var recommendTableView: UITableView!
   @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
   @IBOutlet weak var portraitControlPannel: UIView!
-  @IBOutlet weak var playerView: PlayerView!
   
+  @IBOutlet var landscapeControlPannel: UIView!
+  @IBOutlet var landscapePlayButton: UIButton!
+  @IBOutlet var landscapeTitleLabel: UILabel!
+  
+  @IBOutlet weak var playerView: PlayerView!
   @IBOutlet var playerViewBottomConstraint: NSLayoutConstraint!
   
   private static let dateFormatter: DateFormatter = {
@@ -89,6 +93,8 @@ final class VideoVC: UIViewController {
   
   private func setupData(_ video: Video) {
     titleLabel.text = video.title
+    landscapeTitleLabel.text = video.title
+    
     channelThumnailImageView.loadImage(url: video.channelImageUrl)
     channelNameLabel.text = video.channel
     updateDateLabel.text = Self.dateFormatter.string(from: Date(timeIntervalSince1970: video.uploadTimestamp))
@@ -123,6 +129,11 @@ final class VideoVC: UIViewController {
   }
   
   @IBAction func didTapExpand(_ sender: Any) {
+    
+  }
+  
+  @IBAction func didTapShrink(_ sender: Any) {
+    
   }
   
   @IBAction func didTapMore(_ sender: Any) {
@@ -141,6 +152,11 @@ final class VideoVC: UIViewController {
   private func updatePlayButton(isPlaying: Bool) {
     playButton.setImage(
       isPlaying ? .smallPause : .smallPlay,
+      for: .normal
+    )
+    
+    landscapePlayButton.setImage(
+      isPlaying ? .bigPause : .bigPlay,
       for: .normal
     )
   }

@@ -14,6 +14,9 @@
                 <outlet property="channelNameLabel" destination="AWa-MT-kzc" id="ZmW-GU-B73"/>
                 <outlet property="channelThumnailImageView" destination="4vO-4f-7Kb" id="e5b-2o-rrq"/>
                 <outlet property="favoriteButton" destination="eXs-gW-P07" id="wyz-ym-glO"/>
+                <outlet property="landscapeControlPannel" destination="5gJ-3h-iNE" id="NnQ-2S-DjK"/>
+                <outlet property="landscapePlayButton" destination="5sF-Lu-Lz2" id="aEF-TH-cUB"/>
+                <outlet property="landscapeTitleLabel" destination="C4m-GN-hUK" id="XaF-Um-DC4"/>
                 <outlet property="playButton" destination="nFW-e1-03B" id="Ok3-4x-ucf"/>
                 <outlet property="playCountLabel" destination="sXG-tG-e99" id="CiC-7m-KpU"/>
                 <outlet property="playerView" destination="mwY-uH-6Pg" id="x0m-Wl-Ruy"/>
@@ -159,6 +162,9 @@
                                             </constraints>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" image="more"/>
+                                            <connections>
+                                                <action selector="didTapMore:" destination="-1" eventType="touchUpInside" id="Gb4-Zo-idE"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" name="bg-landscape-controlpannel-title"/>
@@ -177,6 +183,9 @@
                                     <rect key="frame" x="156.66666666666666" y="70.666666666666657" width="80" height="80"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" image="big_play"/>
+                                    <connections>
+                                        <action selector="didTapPlay:" destination="-1" eventType="touchUpInside" id="Ujz-06-Q4j"/>
+                                    </connections>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bza-Wb-Ui6" customClass="SeekbarView" customModule="KTV" customModuleProvider="target">
                                     <rect key="frame" x="32" y="173" width="329" height="38"/>
@@ -233,6 +242,9 @@
                                     <rect key="frame" x="341" y="151" width="20" height="22"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" image="shrink"/>
+                                    <connections>
+                                        <action selector="didTapShrink:" destination="-1" eventType="touchUpInside" id="uKL-aw-ial"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <viewLayoutGuide key="safeArea" id="28T-by-AzO"/>

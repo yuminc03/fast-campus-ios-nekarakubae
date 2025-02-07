@@ -44,6 +44,7 @@ final class SeekbarView: UIView {
     playTimeWidth.constant = widthForTime(currentPlayTime)
     
     UIView.animate(withDuration: 0.2) { [weak self] in
+      // layout을 다음 cycle을 기다리지 않고 바로 처리함
       self?.layoutIfNeeded()
     }
   }
