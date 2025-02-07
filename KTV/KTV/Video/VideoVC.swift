@@ -31,7 +31,11 @@ final class VideoVC: UIViewController {
   private var contentSizeObservation: NSKeyValueObservation?
   private var isControlPannelHidden: Bool = true {
     didSet {
-      portraitControlPannel.isHidden = isControlPannelHidden
+      if isLandscape(size: view.frame.size) {
+        landscapeControlPannel.isHidden = isControlPannelHidden
+      } else {
+        portraitControlPannel.isHidden = isControlPannelHidden
+      }
     }
   }
   
