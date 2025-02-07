@@ -160,6 +160,13 @@ final class VideoVC: UIViewController {
       for: .normal
     )
   }
+  
+  private func switchControlPannel(size: CGSize) {
+    guard isControlPannelHidden == false else { return }
+    
+    landscapeControlPannel.isHidden = isLandscape(size: size) == false
+    portraitControlPannel.isHidden = isLandscape(size: size)
+  }
 }
 
 // MARK: - PlayerViewDeleagte
