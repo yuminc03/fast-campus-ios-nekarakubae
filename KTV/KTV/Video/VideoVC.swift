@@ -15,6 +15,9 @@ final class VideoVC: UIViewController {
   @IBOutlet var landscapeControlPannel: UIView!
   @IBOutlet var landscapePlayButton: UIButton!
   @IBOutlet var landscapeTitleLabel: UILabel!
+  @IBOutlet var landscapePlayTimeLabel: UILabel!
+  
+  @IBOutlet var seekbar: SeekbarView!
   
   @IBOutlet weak var playerView: PlayerView!
   @IBOutlet var playerViewBottomConstraint: NSLayoutConstraint!
@@ -63,6 +66,7 @@ final class VideoVC: UIViewController {
     to size: CGSize,
     with coordinator: any UIViewControllerTransitionCoordinator
   ) {
+    switchControlPannel(size: size)
     playerViewBottomConstraint.isActive = isLandscape(size: size)
     super.viewWillTransition(to: size, with: coordinator)
   }
@@ -185,12 +189,27 @@ extension VideoVC: PlayerviewDelegate {
     didPlay playTime: Double,
     playableTime: Double
   ) {
-    
+    seekbar.setPlayTime(playTime, playableTime: playableTime)
+    updatePlayTime(playTime, totalPlayTime: playerView.totalPlayTime)
   }
   
   func playerViewDidFinishToPlay(_ playerView: PlayerView) {
     playerView.seek(to: 0)
     updatePlayButton(isPlaying: false)
+  }
+  
+  private func updatePlayTime(
+    _ playTime: Double,
+    totalPlayTime: Double
+  ) {
+    guard let playTimeText = DateComponentsFormatter.playTimeFormatter.string(from: playTime),
+          let totalPlayTimeText = DateComponentsFormatter.playTimeFormatter.string(from: totalPlayTime)
+    else {
+      landscapePlayTimeLabel.text = nil
+      return
+    }
+    
+    landscapePlayTimeLabel.text = "\(playTimeText) / \(totalPlayTimeText)"
   }
 }
 
