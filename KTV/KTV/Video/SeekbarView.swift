@@ -26,6 +26,46 @@ final class SeekbarView: UIView {
     setupUI()
   }
   
+  override func touchesBegan(
+    _ touches: Set<UITouch>,
+    with event: UIEvent?
+  ) {
+    super.touchesBegan(touches, with: event)
+    guard let touch = touches.first else { return }
+    
+    updatePlayedWidth(touch: touch)
+  }
+  
+  override func touchesMoved(
+    _ touches: Set<UITouch>,
+    with event: UIEvent?
+  ) {
+    super.touchesMoved(touches, with: event)
+    guard let touch = touches.first else { return }
+    
+    updatePlayedWidth(touch: touch)
+  }
+  
+  override func touchesEnded(
+    _ touches: Set<UITouch>,
+    with event: UIEvent?
+  ) {
+    super.touchesEnded(touches, with: event)
+    guard let touch = touches.first else { return }
+    
+    updatePlayedWidth(touch: touch)
+  }
+  
+  override func touchesCancelled(
+    _ touches: Set<UITouch>,
+    with event: UIEvent?
+  ) {
+    super.touchesCancelled(touches, with: event)
+    guard let touch = touches.first else { return }
+    
+    updatePlayedWidth(touch: touch)
+  }
+  
   func setTotalPlayTime(_ totalPlayTime: Double) {
     self.totalPlayTime = totalPlayTime
     update()
@@ -49,8 +89,21 @@ final class SeekbarView: UIView {
     }
   }
   
+  private func updatePlayedWidth(touch: UITouch) {
+    let xPosition = widthForTouch(touch)
+    playTimeWidth.constant = xPosition
+    delegate?.seekbar(self, seekToPercent: xPosition / frame.width)
+  }
+  
   private func widthForTime(_ time: Double) -> CGFloat {
     return min(frame.width, frame.width * time / totalPlayTime)
+  }
+  
+  private func widthForTouch(_ touch: UITouch) -> CGFloat {
+    return min(
+      touch.location(in: self).x,
+      playableTimeWidth.constant
+    )
   }
   
   private func setupUI() {

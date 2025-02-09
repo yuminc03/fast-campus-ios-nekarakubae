@@ -77,6 +77,7 @@ final class VideoVC: UIViewController {
   
   private func setupUI() {
     playerView.delegate = self
+    seekbar.delegate = self
 
     channelThumnailImageView.layer.cornerRadius = 14
     
@@ -210,6 +211,17 @@ extension VideoVC: PlayerviewDelegate {
     }
     
     landscapePlayTimeLabel.text = "\(playTimeText) / \(totalPlayTimeText)"
+  }
+}
+
+// MARK: - SeekBarViewDelegate
+
+extension VideoVC: SeekBarViewDelegate {
+  func seekbar(
+    _ seekbar: SeekbarView,
+    seekToPercent percent: Double
+  ) {
+    playerView.seek(to: percent)
   }
 }
 
