@@ -100,18 +100,16 @@ final class VideoVC: UIViewController {
   }
   
   private func setupData(_ video: Video) {
+    playerView.set(url: video.videoURL)
+    playerView.play()
+    
     titleLabel.text = video.title
     landscapeTitleLabel.text = video.title
-    
     channelThumnailImageView.loadImage(url: video.channelImageUrl)
     channelNameLabel.text = video.channel
     updateDateLabel.text = Self.dateFormatter.string(from: Date(timeIntervalSince1970: video.uploadTimestamp))
     playCountLabel.text = "재생수 \(video.playCount)"
     favoriteButton.setTitle("\(video.favoriteCount)", for: .normal)
-    
-    playerView.set(url: video.videoURL)
-    playerView.play()
-    
     recommendTableView.reloadData()
   }
   
@@ -181,7 +179,9 @@ final class VideoVC: UIViewController {
 
 extension VideoVC: PlayerviewDelegate {
   func playerViewReadyToPlay(_ playerView: PlayerView) {
+    seekbar.setTotalPlayTime(playerView.totalPlayTime)
     updatePlayButton(isPlaying: playerView.isPlaying)
+    updatePlayTime(0, totalPlayTime: playerView.totalPlayTime)
   }
   
   func playerView(
