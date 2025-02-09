@@ -136,11 +136,11 @@ final class VideoVC: UIViewController {
   }
   
   @IBAction func didTapExpand(_ sender: Any) {
-    
+    rotateScene(landscape: true)
   }
   
   @IBAction func didTapShrink(_ sender: Any) {
-    
+    rotateScene(landscape: false)
   }
   
   @IBAction func didTapMore(_ sender: Any) {
@@ -173,6 +173,20 @@ final class VideoVC: UIViewController {
     
     landscapeControlPannel.isHidden = isLandscape(size: size) == false
     portraitControlPannel.isHidden = isLandscape(size: size)
+  }
+  
+  private func rotateScene(landscape: Bool) {
+    if #available(iOS 16.0, *) {
+      view.window?.windowScene?.requestGeometryUpdate(
+        .iOS(interfaceOrientations: landscape ? .landscapeRight : .portrait)
+      )
+    } else {
+      // iOS 16 이전까지는 기기의 orientation 상태를 강제로 set해서 바꾸었음
+      let orientation: UIInterfaceOrientation = landscape ? .landscapeRight : .portrait
+      UIDevice.current.setValue(orientation.rawValue, forKey: "orientation")
+      // device orientation에 맞춰서 화면을 돌림
+      UIViewController.attemptRotationToDeviceOrientation()
+    }
   }
 }
 
