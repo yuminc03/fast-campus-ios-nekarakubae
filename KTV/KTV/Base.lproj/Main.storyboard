@@ -59,10 +59,10 @@
             </objects>
             <point key="canvasLocation" x="176" y="-13"/>
         </scene>
-        <!--View Controller-->
+        <!--LiveVC-->
         <scene sceneID="M2K-UQ-Aq4">
             <objects>
-                <viewController id="fzc-gs-XIa" sceneMemberID="viewController">
+                <viewController id="fzc-gs-XIa" customClass="LiveVC" customModule="KTV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cIY-Wm-NNN">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,6 +90,9 @@
                                                 <state key="selected">
                                                     <color key="titleColor" name="main-wh"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="didTapSort:" destination="fzc-gs-XIa" eventType="touchUpInside" id="uuA-Ns-D0b"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dGv-CX-Va5">
                                                 <rect key="frame" x="264" y="6" width="1" height="11"/>
@@ -109,6 +112,9 @@
                                                 <state key="selected">
                                                     <color key="titleColor" name="main-wh"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="didTapSort:" destination="fzc-gs-XIa" eventType="touchUpInside" id="Px9-DR-LNe"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -162,6 +168,12 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="tabIcon_live" selectedImage="tabIcon_live_selected" id="Rui-ai-Cn5"/>
+                    <connections>
+                        <outlet property="collectionView" destination="zFe-1O-TZ1" id="36H-Jb-TFr"/>
+                        <outlet property="containerView" destination="4nw-hP-uEP" id="u6H-Vm-c4C"/>
+                        <outlet property="favoriteButton" destination="F9z-Uv-Bdk" id="VnV-Sx-ng0"/>
+                        <outlet property="startTimeButton" destination="xCK-DC-vyl" id="44X-5n-9mZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Owj-vx-JMj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
