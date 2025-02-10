@@ -66,8 +66,100 @@
                     <view key="view" contentMode="scaleToFill" id="cIY-Wm-NNN">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="라이브 채널" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OAT-Xa-r1y">
+                                <rect key="frame" x="30" y="79" width="333" height="22"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" name="main-wh"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4nw-hP-uEP">
+                                <rect key="frame" x="16" y="146" width="361" height="587"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rir-Yg-tg9">
+                                        <rect key="frame" x="14" y="23" width="333" height="22"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="255" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCK-DC-vyl">
+                                                <rect key="frame" x="268" y="0.0" width="65" height="22"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="방송 시작순">
+                                                    <color key="titleColor" name="gray-2"/>
+                                                </state>
+                                                <state key="selected">
+                                                    <color key="titleColor" name="main-wh"/>
+                                                </state>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dGv-CX-Va5">
+                                                <rect key="frame" x="264" y="6" width="1" height="11"/>
+                                                <color key="backgroundColor" name="gray-2"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="1" id="zaI-jL-v90"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9z-Uv-Bdk">
+                                                <rect key="frame" x="224" y="0.0" width="37" height="22"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="인기순">
+                                                    <color key="titleColor" name="gray-2"/>
+                                                </state>
+                                                <state key="selected">
+                                                    <color key="titleColor" name="main-wh"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="xCK-DC-vyl" firstAttribute="top" secondItem="rir-Yg-tg9" secondAttribute="top" id="09k-Io-5Fn"/>
+                                            <constraint firstItem="xCK-DC-vyl" firstAttribute="leading" secondItem="dGv-CX-Va5" secondAttribute="trailing" constant="3" id="Lxg-E5-TsP"/>
+                                            <constraint firstItem="dGv-CX-Va5" firstAttribute="top" secondItem="rir-Yg-tg9" secondAttribute="top" constant="6" id="OBF-CQ-052"/>
+                                            <constraint firstItem="F9z-Uv-Bdk" firstAttribute="top" secondItem="rir-Yg-tg9" secondAttribute="top" id="OnK-Pc-igk"/>
+                                            <constraint firstAttribute="leading" relation="lessThanOrEqual" secondItem="F9z-Uv-Bdk" secondAttribute="leading" id="TYP-zl-eul"/>
+                                            <constraint firstAttribute="height" constant="22" id="YPa-1r-G5a"/>
+                                            <constraint firstAttribute="trailing" secondItem="xCK-DC-vyl" secondAttribute="trailing" id="h3K-8Y-crg"/>
+                                            <constraint firstItem="dGv-CX-Va5" firstAttribute="leading" secondItem="F9z-Uv-Bdk" secondAttribute="trailing" constant="3" id="iAQ-JZ-ygK"/>
+                                            <constraint firstAttribute="bottom" secondItem="F9z-Uv-Bdk" secondAttribute="bottom" id="iql-dG-oT8"/>
+                                            <constraint firstAttribute="bottom" secondItem="xCK-DC-vyl" secondAttribute="bottom" id="q56-Uh-6ik"/>
+                                            <constraint firstAttribute="bottom" secondItem="dGv-CX-Va5" secondAttribute="bottom" constant="5" id="xqA-1b-bZU"/>
+                                        </constraints>
+                                    </view>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zFe-1O-TZ1">
+                                        <rect key="frame" x="14" y="78" width="333" height="490"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="5" minimumInteritemSpacing="0.0" id="K2M-9R-M2N">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" name="bk-origin"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="rir-Yg-tg9" secondAttribute="trailing" constant="14" id="2kF-ip-okn"/>
+                                    <constraint firstItem="zFe-1O-TZ1" firstAttribute="top" secondItem="rir-Yg-tg9" secondAttribute="bottom" constant="33" id="3uM-82-t7O"/>
+                                    <constraint firstItem="rir-Yg-tg9" firstAttribute="top" secondItem="4nw-hP-uEP" secondAttribute="top" constant="23" id="Du7-Zd-tfc"/>
+                                    <constraint firstItem="rir-Yg-tg9" firstAttribute="leading" secondItem="4nw-hP-uEP" secondAttribute="leading" constant="14" id="RSP-WR-ZhF"/>
+                                    <constraint firstAttribute="bottom" secondItem="zFe-1O-TZ1" secondAttribute="bottom" constant="19" id="V60-px-dDN"/>
+                                    <constraint firstItem="zFe-1O-TZ1" firstAttribute="leading" secondItem="4nw-hP-uEP" secondAttribute="leading" constant="14" id="a87-aA-FUO"/>
+                                    <constraint firstAttribute="trailing" secondItem="zFe-1O-TZ1" secondAttribute="trailing" constant="14" id="lbd-tE-Edn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dBw-jG-zI7"/>
                         <color key="backgroundColor" name="bg"/>
+                        <constraints>
+                            <constraint firstItem="4nw-hP-uEP" firstAttribute="top" secondItem="OAT-Xa-r1y" secondAttribute="bottom" constant="45" id="2Ry-sX-pUe"/>
+                            <constraint firstItem="dBw-jG-zI7" firstAttribute="trailing" secondItem="4nw-hP-uEP" secondAttribute="trailing" constant="16" id="Agk-Nk-bTz"/>
+                            <constraint firstItem="dBw-jG-zI7" firstAttribute="trailing" secondItem="OAT-Xa-r1y" secondAttribute="trailing" constant="30" id="Ais-1I-qZg"/>
+                            <constraint firstItem="OAT-Xa-r1y" firstAttribute="leading" secondItem="cIY-Wm-NNN" secondAttribute="leading" constant="30" id="EZJ-bu-bjL"/>
+                            <constraint firstItem="OAT-Xa-r1y" firstAttribute="top" secondItem="dBw-jG-zI7" secondAttribute="top" constant="20" id="fzL-aU-xXI"/>
+                            <constraint firstItem="dBw-jG-zI7" firstAttribute="bottom" secondItem="4nw-hP-uEP" secondAttribute="bottom" constant="36" id="nl5-Ay-MMI"/>
+                            <constraint firstItem="4nw-hP-uEP" firstAttribute="leading" secondItem="dBw-jG-zI7" secondAttribute="leading" constant="16" id="q8C-Ub-Pfc"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="tabIcon_live" selectedImage="tabIcon_live_selected" id="Rui-ai-Cn5"/>
                 </viewController>
@@ -357,6 +449,12 @@
         <image name="user" width="14" height="14"/>
         <namedColor name="bg">
             <color red="0.10588235294117647" green="0.10588235294117647" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="bk-origin">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="gray-2">
+            <color red="0.65490196078431373" green="0.65490196078431373" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="icon-on">
             <color red="0.36862745098039218" green="0.36862745098039218" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
