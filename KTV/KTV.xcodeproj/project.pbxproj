@@ -13,6 +13,8 @@
 		05D18FCA2D3632D500C06092 /* URLDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D18FC92D3632D300C06092 /* URLDefines.swift */; };
 		05E0A3DA2D4C9FE700FB05BB /* VideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E0A3D82D4C9FE700FB05BB /* VideoVC.swift */; };
 		05E0A3DB2D4C9FE700FB05BB /* VideoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05E0A3D92D4C9FE700FB05BB /* VideoVC.xib */; };
+		05FBC82F2D5AFFA00059F369 /* LiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FBC82D2D5AFFA00059F369 /* LiveCell.swift */; };
+		05FBC8302D5AFFA00059F369 /* LiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05FBC82E2D5AFFA00059F369 /* LiveCell.xib */; };
 		8D3636DC2D25274B001B465F /* KTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3636DA2D25274B001B465F /* KTVTests.swift */; };
 		8D3636E82D252755001B465F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D3636DE2D252755001B465F /* Assets.xcassets */; };
 		8D3636E92D252755001B465F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D3636DF2D252755001B465F /* Colors.xcassets */; };
@@ -104,6 +106,8 @@
 		05FBBC322D1D3D2E0051BAF9 /* KTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05FBBC482D1D3D300051BAF9 /* KTVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KTVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05FBBC522D1D3D300051BAF9 /* KTVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KTVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		05FBC82D2D5AFFA00059F369 /* LiveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCell.swift; sourceTree = "<group>"; };
+		05FBC82E2D5AFFA00059F369 /* LiveCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiveCell.xib; sourceTree = "<group>"; };
 		8D3636DA2D25274B001B465F /* KTVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVTests.swift; sourceTree = "<group>"; };
 		8D3636DD2D252755001B465F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D3636DE2D252755001B465F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -198,6 +202,8 @@
 			isa = PBXGroup;
 			children = (
 				051B90272D59B04100745E84 /* LiveVC.swift */,
+				05FBC82D2D5AFFA00059F369 /* LiveCell.swift */,
+				05FBC82E2D5AFFA00059F369 /* LiveCell.xib */,
 			);
 			path = Live;
 			sourceTree = "<group>";
@@ -540,6 +546,7 @@
 				8DAE60302D252A6D00FF03BD /* HomeVideoCell.xib in Resources */,
 				8D7B43D32D282BBD0044ACD2 /* HomeRecentWatchItemCell.xib in Resources */,
 				8D3636EC2D252755001B465F /* Main.storyboard in Resources */,
+				05FBC8302D5AFFA00059F369 /* LiveCell.xib in Resources */,
 				8D9AE6752D48A80600168A2E /* BookmarkCell.xib in Resources */,
 				8DAE60382D25736700FF03BD /* HomeHeaderView.xib in Resources */,
 				8DF540122D46828B00339942 /* HomeRankingHeaderView.xib in Resources */,
@@ -608,6 +615,7 @@
 				8DAE60312D252A6D00FF03BD /* HomeVideoCell.swift in Sources */,
 				8D902BD02D2EA2C900F4AD80 /* Home.swift in Sources */,
 				8D9AE6712D48A76000168A2E /* BookmarkVC.swift in Sources */,
+				05FBC82F2D5AFFA00059F369 /* LiveCell.swift in Sources */,
 				8D842EEC2D4F7780004EBBF2 /* VideoVM.swift in Sources */,
 				05E0A3DA2D4C9FE700FB05BB /* VideoVC.swift in Sources */,
 				8D3C271F2D52470B006C4511 /* PlayerView.swift in Sources */,
