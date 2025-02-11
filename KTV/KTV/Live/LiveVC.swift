@@ -26,8 +26,8 @@ final class LiveVC: UIViewController {
   }
   
   private func setupUI() {
-    
+    containerView.layer.cornerRadius = 15
+    containerView.layer.borderColor = UIColor(resource: .gray2).cgColor
+    containerView.layer.borderWidth = 1
   }
-  
-  
 }
