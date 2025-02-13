@@ -15,6 +15,7 @@
 		05E0A3DB2D4C9FE700FB05BB /* VideoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05E0A3D92D4C9FE700FB05BB /* VideoVC.xib */; };
 		05FBC82F2D5AFFA00059F369 /* LiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FBC82D2D5AFFA00059F369 /* LiveCell.swift */; };
 		05FBC8302D5AFFA00059F369 /* LiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05FBC82E2D5AFFA00059F369 /* LiveCell.xib */; };
+		8D03D1D32D5E315600143ADB /* Live.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D03D1D22D5E315500143ADB /* Live.swift */; };
 		8D3636DC2D25274B001B465F /* KTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3636DA2D25274B001B465F /* KTVTests.swift */; };
 		8D3636E82D252755001B465F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D3636DE2D252755001B465F /* Assets.xcassets */; };
 		8D3636E92D252755001B465F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D3636DF2D252755001B465F /* Colors.xcassets */; };
@@ -108,6 +109,7 @@
 		05FBBC522D1D3D300051BAF9 /* KTVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KTVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05FBC82D2D5AFFA00059F369 /* LiveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCell.swift; sourceTree = "<group>"; };
 		05FBC82E2D5AFFA00059F369 /* LiveCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiveCell.xib; sourceTree = "<group>"; };
+		8D03D1D22D5E315500143ADB /* Live.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Live.swift; sourceTree = "<group>"; };
 		8D3636DA2D25274B001B465F /* KTVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVTests.swift; sourceTree = "<group>"; };
 		8D3636DD2D252755001B465F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D3636DE2D252755001B465F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -348,6 +350,7 @@
 		8D902BCE2D2EA2B500F4AD80 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8D03D1D22D5E315500143ADB /* Live.swift */,
 				8D9AE67E2D48B59F00168A2E /* Favorite.swift */,
 				8D9AE6762D48A91B00168A2E /* Bookmark.swift */,
 				8D902BCF2D2EA2C400F4AD80 /* Home.swift */,
@@ -606,6 +609,7 @@
 				8D3636EE2D252755001B465F /* LoginVC.swift in Sources */,
 				8DF5400E2D46821100339942 /* HomeRankingHeaderView.swift in Sources */,
 				051B90282D59B04200745E84 /* LiveVC.swift in Sources */,
+				8D03D1D32D5E315600143ADB /* Live.swift in Sources */,
 				8D9AE67F2D48B59F00168A2E /* Favorite.swift in Sources */,
 				8D842EE32D4F6210004EBBF2 /* MoreVC.swift in Sources */,
 				8DAE60352D256B9800FF03BD /* TabBarController.swift in Sources */,

@@ -22,6 +22,11 @@ final class LiveCell: UICollectionViewCell {
     resetUI()
   }
   
+  func setData(_ data: Live.Item) {
+    titleLabel.text = data.title
+    descriptionLabel.text = data.channel
+    imageTask = imageView.loadImage(url: data.thumbnailUrl)
+  }
   
   private func setupUI() {
     liveLabel.layer.cornerRadius = 5
