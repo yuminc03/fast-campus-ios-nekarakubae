@@ -16,7 +16,23 @@ final class LiveCell: UICollectionViewCell {
     setupUI()
   }
   
-  private func setupUI() {
+  override func prepareForReuse() {
+    super.prepareForReuse()
     
+    resetUI()
+  }
+  
+  
+  private func setupUI() {
+    liveLabel.layer.cornerRadius = 5
+    liveLabel.clipsToBounds = true
+    imageView.layer.cornerRadius = 5
+  }
+  
+  private func resetUI() {
+    imageTask?.cancel()
+    imageTask = nil
+    titleLabel.text = nil
+    descriptionLabel.text = nil
   }
 }
