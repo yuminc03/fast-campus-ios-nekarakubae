@@ -21,8 +21,11 @@ final class LiveVC: UIViewController {
     setupUI()
   }
   
-  @IBAction func didTapSort(_ sender: Any) {
+  @IBAction func didTapSort(_ sender: UIButton) {
+    guard sender.isSelected == false else { return }
     
+    favoriteButton.isSelected = sender == favoriteButton
+    startTimeButton.isSelected = sender == startTimeButton
   }
   
   private func setupUI() {
