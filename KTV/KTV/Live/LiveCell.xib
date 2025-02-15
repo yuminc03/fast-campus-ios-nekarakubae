@@ -18,8 +18,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="400" height="76"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uzr-Dt-VDW">
+                    <view contentMode="scaleToFill" id="Uzr-Dt-VDW">
                         <rect key="frame" x="0.0" y="0.0" width="400" height="76"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xZp-Vi-z5S">
                                 <rect key="frame" x="0.0" y="0.0" width="135" height="76"/>
