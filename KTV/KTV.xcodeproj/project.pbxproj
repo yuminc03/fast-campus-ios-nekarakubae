@@ -51,6 +51,7 @@
 		8D902BCD2D2EA26300F4AD80 /* live.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D902BC62D2EA26300F4AD80 /* live.json */; };
 		8D902BD02D2EA2C900F4AD80 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D902BCF2D2EA2C400F4AD80 /* Home.swift */; };
 		8D902BD22D2EA39A00F4AD80 /* VideoListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D902BD12D2EA39600F4AD80 /* VideoListItem.swift */; };
+		8D94E7FF2D60C8EB004A0F9E /* LiveVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D94E7FE2D60C8E7004A0F9E /* LiveVM.swift */; };
 		8D9AE66E2D48A55900168A2E /* MyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9AE66D2D48A55600168A2E /* MyVC.swift */; };
 		8D9AE6712D48A76000168A2E /* BookmarkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9AE6702D48A75D00168A2E /* BookmarkVC.swift */; };
 		8D9AE6732D48A7FE00168A2E /* BookmarkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9AE6722D48A7FC00168A2E /* BookmarkCell.swift */; };
@@ -146,6 +147,7 @@
 		8D902BC72D2EA26300F4AD80 /* video.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = video.json; sourceTree = "<group>"; };
 		8D902BCF2D2EA2C400F4AD80 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		8D902BD12D2EA39600F4AD80 /* VideoListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListItem.swift; sourceTree = "<group>"; };
+		8D94E7FE2D60C8E7004A0F9E /* LiveVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveVM.swift; sourceTree = "<group>"; };
 		8D9AE66D2D48A55600168A2E /* MyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyVC.swift; sourceTree = "<group>"; };
 		8D9AE6702D48A75D00168A2E /* BookmarkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkVC.swift; sourceTree = "<group>"; };
 		8D9AE6722D48A7FC00168A2E /* BookmarkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCell.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 		051B90262D59B02300745E84 /* Live */ = {
 			isa = PBXGroup;
 			children = (
+				8D94E7FE2D60C8E7004A0F9E /* LiveVM.swift */,
 				051B90272D59B04100745E84 /* LiveVC.swift */,
 				05FBC82D2D5AFFA00059F369 /* LiveCell.swift */,
 				05FBC82E2D5AFFA00059F369 /* LiveCell.xib */,
@@ -605,6 +608,7 @@
 				8DAE60392D25736700FF03BD /* HomeHeaderView.swift in Sources */,
 				8D3636F82D2527EA001B465F /* HomeVC.swift in Sources */,
 				8D7B43D42D282BBD0044ACD2 /* HomeRecentWatchItemCell.swift in Sources */,
+				8D94E7FF2D60C8EB004A0F9E /* LiveVM.swift in Sources */,
 				8DAE60332D25602B00FF03BD /* HomeSection.swift in Sources */,
 				8D3636EE2D252755001B465F /* LoginVC.swift in Sources */,
 				8DF5400E2D46821100339942 /* HomeRankingHeaderView.swift in Sources */,
