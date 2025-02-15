@@ -32,5 +32,54 @@ final class LiveVC: UIViewController {
     containerView.layer.cornerRadius = 15
     containerView.layer.borderColor = UIColor(resource: .gray2).cgColor
     containerView.layer.borderWidth = 1
+    
+    collectionView.delegate = self
+    collectionView.dataSource = self
+    collectionView.register(
+      UINib(nibName: LiveCell.id, bundle: nil),
+      forCellWithReuseIdentifier: LiveCell.id
+    )
+    
+    
+  }
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+
+extension LiveVC: UICollectionViewDelegateFlowLayout {
+  func collectionView(
+    _ collectionView: UICollectionView,
+    layout collectionViewLayout: UICollectionViewLayout,
+    sizeForItemAt indexPath: IndexPath
+  ) -> CGSize {
+    return .init(
+      width: collectionView.frame.width,
+      height: LiveCell.height
+    )
+  }
+}
+
+// MARK: - UICollectionViewDataSource
+
+extension LiveVC: UICollectionViewDataSource {
+  func collectionView(
+    _ collectionView: UICollectionView,
+    numberOfItemsInSection section: Int
+  ) -> Int {
+    return 10
+  }
+  
+  func collectionView(
+    _ collectionView: UICollectionView,
+    cellForItemAt indexPath: IndexPath
+  ) -> UICollectionViewCell {
+    guard let cell = collectionView.dequeueReusableCell(
+      withReuseIdentifier: LiveCell.id,
+      for: indexPath
+    ) as? LiveCell else {
+      return UICollectionViewCell()
+    }
+    
+    return cell
   }
 }
