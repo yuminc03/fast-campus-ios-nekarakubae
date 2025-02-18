@@ -7,6 +7,8 @@ final class LiveVC: UIViewController {
   @IBOutlet weak var favoriteButton: UIButton!
   @IBOutlet weak var startTimeButton: UIButton!
   
+  private let vm = LiveVM()
+  
   override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
     return .portrait
   }
@@ -19,6 +21,7 @@ final class LiveVC: UIViewController {
     super.viewDidLoad()
     
     setupUI()
+    bind()
   }
   
   @IBAction func didTapSort(_ sender: UIButton) {
@@ -26,6 +29,8 @@ final class LiveVC: UIViewController {
     
     favoriteButton.isSelected = sender == favoriteButton
     startTimeButton.isSelected = sender == startTimeButton
+    
+    vm.request(sort: favoriteButton.isSelected ? .favorite : .start)
   }
   
   private func setupUI() {
@@ -39,8 +44,15 @@ final class LiveVC: UIViewController {
       UINib(nibName: LiveCell.id, bundle: nil),
       forCellWithReuseIdentifier: LiveCell.id
     )
+  }
+  
+  private func bind() {
+    vm.dataChanged = { [weak self] _ in
+      self?.collectionView.reloadData()
+      self?.collectionView.setContentOffset(.zero, animated: true) // scroll을 맨 위로 올리기
+    }
     
-    
+    vm.request(sort: .favorite)
   }
 }
 
@@ -66,7 +78,7 @@ extension LiveVC: UICollectionViewDataSource {
     _ collectionView: UICollectionView,
     numberOfItemsInSection section: Int
   ) -> Int {
-    return 10
+    return vm.items?.count ?? 0
   }
   
   func collectionView(
@@ -78,6 +90,10 @@ extension LiveVC: UICollectionViewDataSource {
       for: indexPath
     ) as? LiveCell else {
       return UICollectionViewCell()
+    }
+    
+    if let data = vm.items?[indexPath.item] {
+      cell.setData(data)
     }
     
     return cell
