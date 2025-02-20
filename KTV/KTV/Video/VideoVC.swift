@@ -22,6 +22,8 @@ final class VideoVC: UIViewController {
   @IBOutlet weak var playerView: PlayerView!
   @IBOutlet var playerViewBottomConstraint: NSLayoutConstraint!
   
+  @IBOutlet var chattingView: ChattingView!
+  
   private static let dateFormatter: DateFormatter = {
     let formatter = DateFormatter()
     formatter.dateFormat = "yyyy.MMdd"

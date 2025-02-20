@@ -29,6 +29,7 @@
 		8D3636F82D2527EA001B465F /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3636F72D2527E8001B465F /* HomeVC.swift */; };
 		8D3C271F2D52470B006C4511 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3C271E2D524708006C4511 /* PlayerView.swift */; };
 		8D6A97742D30095700B3DA3B /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6A97732D30094D00B3DA3B /* UIImageView+.swift */; };
+		8D73DFD92D6765E8001D52C2 /* ChattingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D73DFD82D6765E8001D52C2 /* ChattingView.swift */; };
 		8D7B43C32D2822080044ACD2 /* HomeRankingContainerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D7B43C22D2822080044ACD2 /* HomeRankingContainerCell.xib */; };
 		8D7B43C42D2822080044ACD2 /* HomeRankingContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7B43C12D2822080044ACD2 /* HomeRankingContainerCell.swift */; };
 		8D7B43CB2D2825000044ACD2 /* HomeRankingItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D7B43CA2D2825000044ACD2 /* HomeRankingItemCell.xib */; };
@@ -125,6 +126,7 @@
 		8D3636F72D2527E8001B465F /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		8D3C271E2D524708006C4511 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		8D6A97732D30094D00B3DA3B /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
+		8D73DFD82D6765E8001D52C2 /* ChattingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingView.swift; sourceTree = "<group>"; };
 		8D7B43C12D2822080044ACD2 /* HomeRankingContainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRankingContainerCell.swift; sourceTree = "<group>"; };
 		8D7B43C22D2822080044ACD2 /* HomeRankingContainerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeRankingContainerCell.xib; sourceTree = "<group>"; };
 		8D7B43C92D2825000044ACD2 /* HomeRankingItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRankingItemCell.swift; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				8DBCEECA2D57A3EF005B4DD6 /* Extensions */,
 				8DAE60342D256B9400FF03BD /* TabBarController.swift */,
 				8D9AE6802D48BD4800168A2E /* NavigationController.swift */,
+				8D73DFD72D6765C6001D52C2 /* LiveChatting */,
 				051B90262D59B02300745E84 /* Live */,
 				8D842EDE2D4F61B9004EBBF2 /* More */,
 				05E0A3D72D4C9FD500FB05BB /* Video */,
@@ -324,6 +327,14 @@
 				8D6A97732D30094D00B3DA3B /* UIImageView+.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		8D73DFD72D6765C6001D52C2 /* LiveChatting */ = {
+			isa = PBXGroup;
+			children = (
+				8D73DFD82D6765E8001D52C2 /* ChattingView.swift */,
+			);
+			path = LiveChatting;
 			sourceTree = "<group>";
 		};
 		8D842EDE2D4F61B9004EBBF2 /* More */ = {
@@ -621,6 +632,7 @@
 				8D9AE6792D48A9FD00168A2E /* BookmarkVM.swift in Sources */,
 				8D9FBA9F2D54EC3500BA8A0A /* SeekbarView.swift in Sources */,
 				8DAE60312D252A6D00FF03BD /* HomeVideoCell.swift in Sources */,
+				8D73DFD92D6765E8001D52C2 /* ChattingView.swift in Sources */,
 				8D902BD02D2EA2C900F4AD80 /* Home.swift in Sources */,
 				8D9AE6712D48A76000168A2E /* BookmarkVC.swift in Sources */,
 				05FBC82F2D5AFFA00059F369 /* LiveCell.swift in Sources */,
