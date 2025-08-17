@@ -69,6 +69,15 @@ extension LiveVC: UICollectionViewDelegateFlowLayout {
       height: LiveCell.height
     )
   }
+  
+  func collectionView(
+    _ collectionView: UICollectionView,
+    didSelectItemAt indexPath: IndexPath
+  ) {
+    let vc = VideoVC()
+    vc.isLiveMode = true
+    present(vc, animated: true)
+  }
 }
 
 // MARK: - UICollectionViewDataSource
