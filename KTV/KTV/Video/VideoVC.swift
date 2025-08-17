@@ -24,6 +24,8 @@ final class VideoVC: UIViewController {
   
   @IBOutlet var chattingView: ChattingView!
   
+  var isLiveMode = false
+  
   private static let dateFormatter: DateFormatter = {
     let formatter = DateFormatter()
     formatter.dateFormat = "yyyy.MMdd"
@@ -62,6 +64,7 @@ final class VideoVC: UIViewController {
     setupUI()
     bindVM()
     vm.request()
+    chattingView.isHidden = isLiveMode == false
   }
   
   override func viewWillTransition(
@@ -117,6 +120,9 @@ final class VideoVC: UIViewController {
   }
   
   @IBAction func didTapComment(_ sender: Any) {
+    guard isLiveMode else { return }
+    
+    chattingView.isHidden = false
   }
   
   @IBAction func didTapRewind(_ sender: Any) {
