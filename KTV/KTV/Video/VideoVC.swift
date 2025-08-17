@@ -1,6 +1,8 @@
 import UIKit
 
 final class VideoVC: UIViewController {
+  private let chattingLandscapeConstraint: CGFloat = -500
+  
   @IBOutlet weak var playButton: UIButton!
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var updateDateLabel: UILabel!
@@ -21,6 +23,7 @@ final class VideoVC: UIViewController {
   
   @IBOutlet weak var playerView: PlayerView!
   @IBOutlet var playerViewBottomConstraint: NSLayoutConstraint!
+  @IBOutlet weak var chattingViewBottomConstraint: NSLayoutConstraint!
   
   @IBOutlet var chattingView: ChattingView!
   
@@ -73,6 +76,18 @@ final class VideoVC: UIViewController {
   ) {
     switchControlPannel(size: size)
     playerViewBottomConstraint.isActive = isLandscape(size: size)
+    chattingView.textField.resignFirstResponder()
+    
+    if isLandscape(size: size) {
+      chattingViewBottomConstraint.constant = chattingLandscapeConstraint
+    } else {
+      chattingViewBottomConstraint.constant = 0
+    }
+    
+    coordinator.animate { _ in
+      self.chattingView.collectionView.collectionViewLayout.invalidateLayout()
+    }
+    
     super.viewWillTransition(to: size, with: coordinator)
   }
   
