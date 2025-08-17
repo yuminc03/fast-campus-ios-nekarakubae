@@ -78,6 +78,7 @@
 		8DAE60392D25736700FF03BD /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAE60362D25736700FF03BD /* HomeHeaderView.swift */; };
 		8DBCEECB2D57A3EF005B4DD6 /* DateComponentsFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBCEEC92D57A3EF005B4DD6 /* DateComponentsFormatterExtension.swift */; };
 		8DD5096E2D41242600BE852A /* HomeRecommendVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5096D2D41242100BE852A /* HomeRecommendVM.swift */; };
+		8DD778582E1FF81800B274E8 /* ChattingVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD778572E1FF81100B274E8 /* ChattingVM.swift */; };
 		8DD7785A2E1FF86600B274E8 /* ChatSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD778592E1FF85D00B274E8 /* ChatSimulator.swift */; };
 		8DF5400E2D46821100339942 /* HomeRankingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF5400D2D46820300339942 /* HomeRankingHeaderView.swift */; };
 		8DF540122D46828B00339942 /* HomeRankingHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DF540112D46828B00339942 /* HomeRankingHeaderView.xib */; };
@@ -176,6 +177,7 @@
 		8DAE60372D25736700FF03BD /* HomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderView.xib; sourceTree = "<group>"; };
 		8DBCEEC92D57A3EF005B4DD6 /* DateComponentsFormatterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateComponentsFormatterExtension.swift; sourceTree = "<group>"; };
 		8DD5096D2D41242100BE852A /* HomeRecommendVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRecommendVM.swift; sourceTree = "<group>"; };
+		8DD778572E1FF81100B274E8 /* ChattingVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingVM.swift; sourceTree = "<group>"; };
 		8DD778592E1FF85D00B274E8 /* ChatSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSimulator.swift; sourceTree = "<group>"; };
 		8DF5400D2D46820300339942 /* HomeRankingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRankingHeaderView.swift; sourceTree = "<group>"; };
 		8DF540112D46828B00339942 /* HomeRankingHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeRankingHeaderView.xib; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 			children = (
 				8DD778592E1FF85D00B274E8 /* ChatSimulator.swift */,
 				8D73DFD82D6765E8001D52C2 /* ChattingView.swift */,
+				8DD778572E1FF81100B274E8 /* ChattingVM.swift */,
 			);
 			path = LiveChatting;
 			sourceTree = "<group>";
@@ -647,6 +650,7 @@
 				8D9AE6732D48A7FE00168A2E /* BookmarkCell.swift in Sources */,
 				05D18FC52D3630DB00C06092 /* HomeVM.swift in Sources */,
 				8D3636EF2D252755001B465F /* SceneDelegate.swift in Sources */,
+				8DD778582E1FF81800B274E8 /* ChattingVM.swift in Sources */,
 				8D9AE6772D48A91B00168A2E /* Bookmark.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
