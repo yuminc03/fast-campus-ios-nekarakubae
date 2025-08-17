@@ -11,6 +11,8 @@ final class ChattingView: UIView {
   
   weak var delegate: ChattingViewDelegate?
   
+  private let vm = ChattingVM()
+  
   override func awakeFromNib() {
     super.awakeFromNib()
     
@@ -44,7 +46,20 @@ final class ChattingView: UIView {
 // MARK: - UICollectionViewDelegateFlowLayout
 
 extension ChattingView: UICollectionViewDelegateFlowLayout {
-  
+  func collectionView(
+    _ collectionView: UICollectionView,
+    layout collectionViewLayout: UICollectionViewLayout,
+    sizeForItemAt indexPath: IndexPath
+  ) -> CGSize {
+    let item = vm.messages[indexPath.item]
+    let width = collectionView.frame.width - 32
+    
+    if item.isMine {
+      return LiveChattingMyMessageCollectionViewCell.size(width: width, text: item.text)
+    } else {
+      return LiveChattingMessageCollectionViewCell.size(width: width, text: item.text)
+    }
+  }
 }
 
 // MARK: - UICollectionViewDataSource
@@ -54,15 +69,37 @@ extension ChattingView: UICollectionViewDataSource {
     _ collectionView: UICollectionView,
     numberOfItemsInSection section: Int
   ) -> Int {
-    return 10
+    return vm.messages.count
   }
   
   func collectionView(
     _ collectionView: UICollectionView,
     cellForItemAt indexPath: IndexPath
   ) -> UICollectionViewCell {
-    return UICollectionViewCell()
+    let item = vm.messages[indexPath.item]
+    
+    if item.isMine {
+      guard let cell = collectionView.dequeueReusableCell(
+        withReuseIdentifier: LiveChattingMyMessageCollectionViewCell.identifier,
+        for: indexPath
+      ) as? LiveChattingMyMessageCollectionViewCell else {
+        return UICollectionViewCell()
+      }
+      
+      cell.setText(item.text)
+      
+      return cell
+    } else {
+      guard let cell = collectionView.dequeueReusableCell(
+        withReuseIdentifier: LiveChattingMessageCollectionViewCell.identifier,
+        for: indexPath
+      ) as? LiveChattingMessageCollectionViewCell else {
+        return UICollectionViewCell()
+      }
+      
+      cell.setText(item.text)
+      
+      return cell
+    }
   }
-  
-  
 }
