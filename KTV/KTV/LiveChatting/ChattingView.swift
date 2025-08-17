@@ -20,6 +20,15 @@ final class ChattingView: UIView {
   private func setupUI() {
     collectionView.delegate = self
     collectionView.dataSource = self
+    collectionView.register(
+      UINib(nibName: LiveChattingMessageCollectionViewCell.identifier, bundle: nil),
+      forCellWithReuseIdentifier: LiveChattingMessageCollectionViewCell.identifier
+    )
+    
+    collectionView.register(
+      UINib(nibName: LiveChattingMyMessageCollectionViewCell.identifier, bundle: nil),
+      forCellWithReuseIdentifier: LiveChattingMyMessageCollectionViewCell.identifier
+    )
   }
   
   @IBAction func didTapClose(_ sender: Any) {
