@@ -83,6 +83,7 @@ final class VideoVC: UIViewController {
   private func setupUI() {
     playerView.delegate = self
     seekbar.delegate = self
+    chattingView.delegate = self
 
     channelThumnailImageView.layer.cornerRadius = 14
     
@@ -244,6 +245,15 @@ extension VideoVC: SeekBarViewDelegate {
     seekToPercent percent: Double
   ) {
     playerView.seek(to: percent)
+  }
+}
+
+// MARK: - ChattingViewDelegate
+
+extension VideoVC: ChattingViewDelegate {
+  func liveChattingViewdidTapClose(_ chattingView: ChattingView) {
+    setEditing(false, animated: true)
+    chattingView.isHidden = true
   }
 }
 
