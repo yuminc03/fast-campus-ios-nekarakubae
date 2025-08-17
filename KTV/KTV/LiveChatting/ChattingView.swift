@@ -13,10 +13,17 @@ final class ChattingView: UIView {
   
   private let vm = ChattingVM()
   
+  override var isHidden: Bool {
+    didSet {
+      toggleVM()
+    }
+  }
+  
   override func awakeFromNib() {
     super.awakeFromNib()
     
     setupUI()
+    toggleVM()
     bind()
   }
   
@@ -49,6 +56,15 @@ final class ChattingView: UIView {
       self?.scrollToLatestIfNeeded()
     }
   }
+  
+  private func toggleVM() {
+    if isHidden {
+      vm.stop()
+    } else {
+      vm.start()
+    }
+  }
+  
   private func scrollToLatestIfNeeded() {
     let isBottomOffset = collectionView.bounds.maxY >= collectionView.contentSize.height - 200
     let isLastMessageMine = vm.messages.last?.isMine == true
