@@ -31,6 +31,15 @@ final class ChattingView: UIView {
       UINib(nibName: LiveChattingMyMessageCollectionViewCell.identifier, bundle: nil),
       forCellWithReuseIdentifier: LiveChattingMyMessageCollectionViewCell.identifier
     )
+    
+    textField.delegate = self
+    textField.attributedPlaceholder = NSAttributedString(
+      string: "채팅에 참여하세요!",
+      attributes: [
+        .foregroundColor: UIColor(named: "chat-text") ?? .clear,
+        .font: UIFont.systemFont(ofSize: 12, weight: .medium)
+      ]
+    )
   }
   
   @IBAction func didTapClose(_ sender: Any) {
@@ -101,5 +110,20 @@ extension ChattingView: UICollectionViewDataSource {
       
       return cell
     }
+  }
+}
+
+// MARK: - UITextFieldDelegate
+
+extension ChattingView: UITextFieldDelegate {
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    guard let text = textField.text, text.isEmpty == false else {
+      return false
+    }
+    
+    vm.sendMessage(text)
+    textField.text = nil
+    
+    return true
   }
 }
