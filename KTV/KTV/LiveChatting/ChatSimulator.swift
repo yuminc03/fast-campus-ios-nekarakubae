@@ -50,14 +50,34 @@ final class ChatSimulator {
   }
   
   func start() {
-    
+    task = Task { [weak self] in
+      guard let self else { return }
+      
+      while true {
+        do {
+          try Task.checkCancellation()
+          
+          let randomSeconds = UInt64.random(in: 10...20)
+          try await Task.sleep(nanoseconds: 1_000_000_000 / 10 * randomSeconds)
+          let message = randomMessage
+          callback?(.init(isMine: false, text: message))
+        } catch {
+          break
+        }
+      }
+    }
   }
   
   func stop() {
-    
+    task?.cancel()
+    task = nil
+  }
+  
+  func sendMessage(_ message: String) {
+    callback?(.init(isMine: true, text: message))
   }
   
   func setMessageHandler(_ handler: MessageHandler?) {
-    
+    callback = handler
   }
 }
