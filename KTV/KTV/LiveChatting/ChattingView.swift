@@ -17,6 +17,7 @@ final class ChattingView: UIView {
     super.awakeFromNib()
     
     setupUI()
+    bind()
   }
   
   private func setupUI() {
@@ -40,6 +41,25 @@ final class ChattingView: UIView {
         .font: UIFont.systemFont(ofSize: 12, weight: .medium)
       ]
     )
+  }
+  
+  private func bind() {
+    vm.chatReceived = { [weak self] in
+      self?.collectionView.reloadData()
+      self?.scrollToLatestIfNeeded()
+    }
+  }
+  private func scrollToLatestIfNeeded() {
+    let isBottomOffset = collectionView.bounds.maxY >= collectionView.contentSize.height - 200
+    let isLastMessageMine = vm.messages.last?.isMine == true
+    
+    if isBottomOffset || isLastMessageMine {
+      collectionView.scrollToItem(
+        at: IndexPath(item: vm.messages.count - 1, section: 0),
+        at: .bottom,
+        animated: true
+      )
+    }
   }
   
   @IBAction func didTapClose(_ sender: Any) {
