@@ -48,14 +48,24 @@ final class HomeVC: UIViewController {
       forCellWithReuseIdentifier: HomeRecommendContainerCell.id
     )
     
+//    collectionView.register(
+//      UINib(nibName: HomeRankingContainerCell.id, bundle: nil),
+//      forCellWithReuseIdentifier: HomeRankingContainerCell.id
+//    )
+    
+//    collectionView.register(
+//      UINib(nibName: HomeRecentWatchContainerCell.id, bundle: .main),
+//      forCellWithReuseIdentifier: HomeRecentWatchContainerCell.id
+//    )
+    
     collectionView.register(
-      UINib(nibName: HomeRankingContainerCell.id, bundle: nil),
-      forCellWithReuseIdentifier: HomeRankingContainerCell.id
+      UINib(nibName: HomeRankingItemCell.id, bundle: nil),
+      forCellWithReuseIdentifier: HomeRankingItemCell.id
     )
     
     collectionView.register(
-      UINib(nibName: HomeRecentWatchContainerCell.id, bundle: .main),
-      forCellWithReuseIdentifier: HomeRecentWatchContainerCell.id
+      UINib(nibName: HomeRecentWatchItemCell.id, bundle: nil),
+      forCellWithReuseIdentifier: HomeRecentWatchItemCell.id
     )
     
     collectionView.register(
