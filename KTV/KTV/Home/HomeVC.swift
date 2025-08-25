@@ -75,6 +75,10 @@ final class HomeVC: UIViewController {
     
     collectionView.delegate = self
     collectionView.dataSource = self
+    
+    collectionView.collectionViewLayout = UICollectionViewCompositionalLayout(sectionProvider: { [weak self] section, _ in
+      self?.makeSection(section)
+    })
     collectionView.isHidden = true
   }
   
@@ -83,6 +87,10 @@ final class HomeVC: UIViewController {
       self?.collectionView.isHidden = false
       self?.collectionView.reloadData()
     }
+  }
+  
+  private func makeSection(_ section: Int) -> NSCollectionLayoutSection? {
+    return nil
   }
   
   private func insetForSection(_ section: HomeSection) -> UIEdgeInsets {
