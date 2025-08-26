@@ -571,6 +571,9 @@
                             <constraints>
                                 <constraint firstAttribute="width" constant="110" id="g0a-bh-VVK"/>
                             </constraints>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="IDO-Vd-QqX" appends="YES" id="1mA-Of-Ia8"/>
+                            </connections>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smo-zR-CmA">
                             <rect key="frame" x="122" y="13" width="178" height="15"/>
@@ -666,6 +669,11 @@
         <tapGestureRecognizer id="WVr-Nm-tg1">
             <connections>
                 <action selector="dismissKeyboard:" destination="vFU-1a-iEL" id="2CB-6g-sP5"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="IDO-Vd-QqX">
+            <connections>
+                <action selector="maximize:" destination="-1" id="rc5-6Z-UtE"/>
             </connections>
         </tapGestureRecognizer>
     </objects>

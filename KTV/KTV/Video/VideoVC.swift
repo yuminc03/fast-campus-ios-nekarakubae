@@ -171,6 +171,9 @@ final class VideoVC: UIViewController {
     recommendTableView.reloadData()
   }
   
+  @IBAction func maximize(_ sender: Any) {
+    
+  }
   
   @IBAction func didTapCloseMinimizeView(_ sender: Any) {
     
