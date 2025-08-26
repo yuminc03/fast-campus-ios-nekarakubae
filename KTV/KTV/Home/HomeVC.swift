@@ -91,6 +91,56 @@ final class HomeVC: UIViewController {
   
   private func makeSection(_ section: Int) -> NSCollectionLayoutSection? {
     return nil
+    guard let section = HomeSection(rawValue: section) else {
+      return nil
+    }
+    
+    let itemSpace: CGFloat = 21
+    let inset = NSDirectionalEdgeInsets(top: 0, leading: 21, bottom: 21, trailing: 21)
+    
+    switch section {
+    case .header:
+      return makeHeaderSection()
+      
+    case .video:
+      return nil
+    case .ranking:
+      return nil
+    case .recentWatch:
+      return nil
+    case .recommend:
+      return nil
+    case .footer:
+      return nil
+    }
+  }
+  
+  private func makeHeaderSection() -> NSCollectionLayoutSection {
+    let layoutSize = NSCollectionLayoutSize(
+      widthDimension: .fractionalWidth(1.0),
+      heightDimension: .absolute(HomeHeaderView.height)
+    )
+    
+    let group = NSCollectionLayoutGroup.vertical(
+      layoutSize: layoutSize,
+      subitems: [
+        .init(layoutSize: .init(
+          widthDimension: .absolute(0.1),
+          heightDimension: .absolute(0.1)
+        ))
+      ]
+    )
+    
+    let section = NSCollectionLayoutSection(group: group)
+    section.boundarySupplementaryItems = [
+      NSCollectionLayoutBoundarySupplementaryItem(
+        layoutSize: layoutSize,
+        elementKind: UICollectionView.elementKindSectionHeader,
+        alignment: .top
+      )
+    ]
+    
+    return section
   }
   
   private func insetForSection(_ section: HomeSection) -> UIEdgeInsets {
