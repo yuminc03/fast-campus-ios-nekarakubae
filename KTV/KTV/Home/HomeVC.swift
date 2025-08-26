@@ -423,13 +423,14 @@ extension HomeVC: UICollectionViewDataSource {
       
     case .ranking:
       let cell = collectionView.dequeueReusableCell(
-        withReuseIdentifier: HomeRankingContainerCell.id,
+        withReuseIdentifier: HomeRankingItemCell.id,
         for: indexPath
       )
       
-      if let cell = cell as? HomeRankingContainerCell, let data = vm.home?.rankings {
-        cell.delegate = self
-        cell.setData(data)
+      if let cell = cell as? HomeRankingItemCell,
+         let data = vm.home?.rankings[indexPath.item]
+      {
+        cell.setData(data, rank: indexPath.item + 1)
       }
       
       return cell
