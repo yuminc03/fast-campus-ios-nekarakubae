@@ -339,7 +339,7 @@ extension HomeVC: UICollectionViewDataSource {
       return vm.home?.rankings.count ?? 0
       
     case .recentWatch:
-      return 1
+      return vm.home?.recents.count ?? 0
       
     case .recommend:
       return 1
