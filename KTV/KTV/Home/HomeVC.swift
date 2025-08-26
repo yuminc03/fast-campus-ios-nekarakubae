@@ -437,12 +437,13 @@ extension HomeVC: UICollectionViewDataSource {
       
     case .recentWatch:
       let cell = collectionView.dequeueReusableCell(
-        withReuseIdentifier: HomeRecentWatchContainerCell.id,
+        withReuseIdentifier: HomeRecentWatchItemCell.id,
         for: indexPath
       )
       
-      if let cell = cell as? HomeRecentWatchContainerCell, let data = vm.home?.recents {
-        cell.delegate = self
+      if let cell = cell as? HomeRecentWatchItemCell,
+         let data = vm.home?.recents[indexPath.item]
+      {
         cell.setData(data)
       }
       
