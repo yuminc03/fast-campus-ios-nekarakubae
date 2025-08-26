@@ -211,15 +211,12 @@ final class VideoVC: UIViewController {
   }
   
   private func updatePlayButton(isPlaying: Bool) {
-    playButton.setImage(
-      isPlaying ? .smallPause : .smallPlay,
-      for: .normal
-    )
+    let playImage = UIImage(resource: isPlaying ? .smallPause : .smallPlay)
+    playButton.setImage(playImage, for: .normal)
+    minimizePlayButton.setImage(playImage, for: .normal)
     
-    landscapePlayButton.setImage(
-      isPlaying ? .bigPause : .bigPlay,
-      for: .normal
-    )
+    let landscapePlayImage = UIImage(resource: isPlaying ? .bigPause : .bigPlay)
+    landscapePlayButton.setImage(landscapePlayImage, for: .normal)
   }
   
   private func switchControlPannel(size: CGSize) {
