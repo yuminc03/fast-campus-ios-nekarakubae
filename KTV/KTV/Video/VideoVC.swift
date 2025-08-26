@@ -48,6 +48,7 @@ final class VideoVC: UIViewController {
   @IBOutlet weak var minimizeViewBottomConstraint: NSLayoutConstraint!
   
   var isLiveMode = false
+  private var isMinimizeMode = false
   
   private var pipController: AVPictureInPictureController?
   
@@ -217,6 +218,8 @@ final class VideoVC: UIViewController {
   }
   
   @IBAction func didTapClose(_ sender: Any) {
+    isMinimizeMode = true
+    rotateScene(landscape: false)
     dismiss(animated: true)
   }
   
