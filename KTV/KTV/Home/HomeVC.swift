@@ -309,10 +309,10 @@ extension HomeVC: UICollectionViewDelegateFlowLayout {
     }
     
     switch section {
-    case .header, .ranking, .recentWatch, .recommend, .footer:
+    case .header, .recommend, .footer:
       return
       
-    case .video:
+    case .video, .ranking, .recentWatch:
       presentVideoVC()
     }
   }
