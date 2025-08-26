@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="KXn-k1-vRG" customClass="HomeRankingHeaderView" customModule="KTV" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="393" height="113"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="63"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vSB-cc-UxW">
-                    <rect key="frame" x="0.0" y="0.0" width="393" height="113"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="63"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="랭킹 리스트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWV-5o-66a">
-                            <rect key="frame" x="21" y="21" width="83" height="71"/>
+                            <rect key="frame" x="0.0" y="21" width="83" height="21"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                             <color key="textColor" name="main-wh"/>
                             <nil key="highlightedColor"/>
@@ -29,18 +28,17 @@
                     <constraints>
                         <constraint firstItem="TWV-5o-66a" firstAttribute="top" secondItem="vSB-cc-UxW" secondAttribute="top" constant="21" id="WBf-NA-8ja"/>
                         <constraint firstAttribute="bottom" secondItem="TWV-5o-66a" secondAttribute="bottom" constant="21" id="cH9-ni-haQ"/>
-                        <constraint firstItem="TWV-5o-66a" firstAttribute="leading" secondItem="vSB-cc-UxW" secondAttribute="leading" constant="21" id="unb-0J-Fwy"/>
+                        <constraint firstItem="TWV-5o-66a" firstAttribute="leading" secondItem="vSB-cc-UxW" secondAttribute="leading" id="unb-0J-Fwy"/>
                     </constraints>
                 </view>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="6yV-IO-Z9Q"/>
             <constraints>
-                <constraint firstItem="6yV-IO-Z9Q" firstAttribute="trailing" secondItem="vSB-cc-UxW" secondAttribute="trailing" id="LbM-4y-quu"/>
-                <constraint firstItem="vSB-cc-UxW" firstAttribute="leading" secondItem="6yV-IO-Z9Q" secondAttribute="leading" id="Nzj-wt-x1e"/>
+                <constraint firstAttribute="trailing" secondItem="vSB-cc-UxW" secondAttribute="trailing" id="LbM-4y-quu"/>
+                <constraint firstItem="vSB-cc-UxW" firstAttribute="leading" secondItem="KXn-k1-vRG" secondAttribute="leading" id="Nzj-wt-x1e"/>
                 <constraint firstItem="vSB-cc-UxW" firstAttribute="top" secondItem="KXn-k1-vRG" secondAttribute="top" id="XLB-Og-W6G"/>
                 <constraint firstAttribute="bottom" secondItem="vSB-cc-UxW" secondAttribute="bottom" id="ca5-mb-jec"/>
             </constraints>
-            <point key="canvasLocation" x="124.42748091603053" y="194.71830985915494"/>
+            <point key="canvasLocation" x="-90.07633587786259" y="44.718309859154935"/>
         </collectionReusableView>
     </objects>
     <resources>
