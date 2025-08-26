@@ -20,6 +20,7 @@
                 <outlet property="landscapePlayButton" destination="5sF-Lu-Lz2" id="aEF-TH-cUB"/>
                 <outlet property="landscapePlayTimeLabel" destination="Lrl-Ht-cVH" id="ERW-wu-52Q"/>
                 <outlet property="landscapeTitleLabel" destination="C4m-GN-hUK" id="XaF-Um-DC4"/>
+                <outlet property="minimizeChannelLabel" destination="EMW-5K-gkt" id="JP7-GA-BJp"/>
                 <outlet property="minimizePlayerView" destination="iEC-MH-Szz" id="n7G-vO-MAs"/>
                 <outlet property="minimizeView" destination="8Tb-Rh-qMw" id="Cyi-Wk-GFl"/>
                 <outlet property="minimizeViewBottomConstraint" destination="PKz-bG-FZV" id="Nci-JD-U46"/>
