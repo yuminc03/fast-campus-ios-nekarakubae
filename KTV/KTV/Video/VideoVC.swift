@@ -75,13 +75,15 @@ final class VideoVC: UIViewController {
   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
     super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     
-    self.modalPresentationStyle = .fullScreen
+    self.modalPresentationStyle = .custom
+    self.transitioningDelegate = self
   }
   
   required init?(coder: NSCoder) {
     super.init(coder: coder)
     
-    self.modalPresentationStyle = .fullScreen
+    self.modalPresentationStyle = .custom
+    self.transitioningDelegate = self
   }
   
   override func viewDidLoad() {
@@ -297,6 +299,23 @@ extension VideoVC: PlayerviewDelegate {
   }
 }
 
+// MARK: - UIViewControllerTransitioningDelegate
+
+extension VideoVC: UIViewControllerTransitioningDelegate {
+  func animationController(
+    forPresented presented: UIViewController,
+    presenting: UIViewController,
+    source: UIViewController
+  ) -> (any UIViewControllerAnimatedTransitioning)? {
+    return self
+  }
+  
+  func animationController(
+    forDismissed dismissed: UIViewController
+  ) -> (any UIViewControllerAnimatedTransitioning)? {
+    return self
+  }
+}
 // MARK: - SeekBarViewDelegate
 
 extension VideoVC: SeekBarViewDelegate {
