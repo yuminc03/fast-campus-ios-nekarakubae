@@ -106,7 +106,8 @@ final class HomeVC: UIViewController {
       return makeVideoSection(itemSpace, inset)
       
     case .ranking:
-      return nil
+      return makeRankingSection(itemSpace, inset)
+      
     case .recentWatch:
       return nil
     case .recommend:
@@ -160,6 +161,44 @@ final class HomeVC: UIViewController {
     
     section.contentInsets = inset
     section.interGroupSpacing = itemSpace
+    
+    return section
+  }
+  
+  private func makeRankingSection(
+    _ itemSpace: CGFloat,
+    _ inset: NSDirectionalEdgeInsets
+  ) -> NSCollectionLayoutSection? {
+    let headerLayoutSize = NSCollectionLayoutSize(
+      widthDimension: .fractionalWidth(1.0),
+      heightDimension: .absolute(HomeRankingHeaderView.height)
+    )
+    
+    let cellSize = HomeRankingItemCell.size
+    let itemSize = NSCollectionLayoutSize(
+      widthDimension: .absolute(cellSize.width),
+      heightDimension: .absolute(cellSize.height)
+    )
+    
+    let item = NSCollectionLayoutItem(layoutSize: itemSize)
+    let group = NSCollectionLayoutGroup.horizontal(
+      layoutSize: .init(
+        widthDimension: .absolute(cellSize.width),
+        heightDimension: .absolute(265)),
+      subitems: [item]
+    )
+    
+    let section = NSCollectionLayoutSection(group: group)
+    section.interGroupSpacing = itemSpace
+    section.contentInsets = inset
+    section.orthogonalScrollingBehavior = .continuous
+    section.boundarySupplementaryItems = [
+      NSCollectionLayoutBoundarySupplementaryItem(
+        layoutSize: headerLayoutSize,
+        elementKind: UICollectionView.elementKindSectionHeader,
+        alignment: .top
+      )
+    ]
     
     return section
   }
