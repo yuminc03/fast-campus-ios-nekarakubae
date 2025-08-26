@@ -156,6 +156,11 @@ final class VideoVC: UIViewController {
     recommendTableView.reloadData()
   }
   
+  
+  @IBAction func didTapCloseMinimizeView(_ sender: Any) {
+    
+  }
+  
   @IBAction func didTapComment(_ sender: Any) {
     guard isLiveMode else { return }
     
