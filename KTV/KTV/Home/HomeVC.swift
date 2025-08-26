@@ -109,150 +109,150 @@ final class HomeVC: UIViewController {
   }
 }
 
-// MARK: - UITableViewDelegate
+// MARK: - UICollectionViewDelegateFlowLayout
 
 extension HomeVC: UICollectionViewDelegateFlowLayout {
   
-  func collectionView(
-    _ collectionView: UICollectionView,
-    layout collectionViewLayout: UICollectionViewLayout,
-    referenceSizeForHeaderInSection section: Int
-  ) -> CGSize {
-    guard let section = HomeSection(rawValue: section) else {
-      return .zero
-    }
-    
-    switch section {
-    case .header:
-      return .init(
-        width: collectionView.frame.width,
-        height: HomeHeaderView.height
-      )
-      
-    case .video:
-      return .zero
-      
-    case .ranking:
-      return .init(
-        width: collectionView.frame.width,
-        height: HomeRankingHeaderView.height
-      )
-      
-    case .recentWatch:
-      return .zero
-      
-    case .recommend:
-      return .zero
-      
-    case .footer:
-      return .zero
-    }
-  }
-  
-  func collectionView(
-    _ collectionView: UICollectionView,
-    layout collectionViewLayout: UICollectionViewLayout,
-    referenceSizeForFooterInSection section: Int
-  ) -> CGSize {
-    guard let section = HomeSection(rawValue: section) else {
-      return .zero
-    }
-    
-    switch section {
-    case .header:
-      return .zero
-      
-    case .video:
-      return .zero
-      
-    case .ranking:
-      return .zero
-      
-    case .recentWatch:
-      return .zero
-      
-    case .recommend:
-      return .zero
-      
-    case .footer:
-      return .init(
-        width: collectionView.frame.width,
-        height: HomeFooterView.height
-      )
-    }
-  }
-  
-  func collectionView(
-    _ collectionView: UICollectionView,
-    layout collectionViewLayout: UICollectionViewLayout,
-    insetForSectionAt section: Int
-  ) -> UIEdgeInsets {
-    guard let section = HomeSection(rawValue: section) else {
-      return .zero
-    }
-    
-    return insetForSection(section)
-  }
-  
-  func collectionView(
-    _ collectionView: UICollectionView,
-    layout collectionViewLayout: UICollectionViewLayout,
-    minimumLineSpacingForSectionAt section: Int
-  ) -> CGFloat {
-    guard let section = HomeSection(rawValue: section) else {
-      return 0
-    }
-    
-    switch section {
-    case .header, .footer:
-      return 0
-      
-    case .video, .ranking, .recentWatch, .recommend:
-      return 21
-    }
-  }
-  
-  func collectionView(
-    _ collectionView: UICollectionView,
-    layout collectionViewLayout: UICollectionViewLayout,
-    sizeForItemAt indexPath: IndexPath
-  ) -> CGSize {
-    guard let section = HomeSection(rawValue: indexPath.section) else {
-      return .zero
-    }
-    
-    let inset = insetForSection(section)
-    let width = collectionView.frame.width - inset.left - inset.right
-    
-    switch section {
-    case .header, .footer:
-      return .zero
-      
-    case .video:
-      return .init(
-        width: width,
-        height: HomeVideoCell.height
-      )
-      
-    case .ranking:
-      return .init(
-        width: width,
-        height: HomeRankingContainerCell.height
-      )
-      
-    case .recentWatch:
-      return .init(
-        width: width,
-        height: HomeRecentWatchContainerCell.height
-      )
-      
-    case .recommend:
-      return .init(
-        width: width,
-        height: HomeRecommendContainerCell.height(vm: vm.recommendVM)
-      )
-    }
-  }
+//  func collectionView(
+//    _ collectionView: UICollectionView,
+//    layout collectionViewLayout: UICollectionViewLayout,
+//    referenceSizeForHeaderInSection section: Int
+//  ) -> CGSize {
+//    guard let section = HomeSection(rawValue: section) else {
+//      return .zero
+//    }
+//    
+//    switch section {
+//    case .header:
+//      return .init(
+//        width: collectionView.frame.width,
+//        height: HomeHeaderView.height
+//      )
+//      
+//    case .video:
+//      return .zero
+//      
+//    case .ranking:
+//      return .init(
+//        width: collectionView.frame.width,
+//        height: HomeRankingHeaderView.height
+//      )
+//      
+//    case .recentWatch:
+//      return .zero
+//      
+//    case .recommend:
+//      return .zero
+//      
+//    case .footer:
+//      return .zero
+//    }
+//  }
+//  
+//  func collectionView(
+//    _ collectionView: UICollectionView,
+//    layout collectionViewLayout: UICollectionViewLayout,
+//    referenceSizeForFooterInSection section: Int
+//  ) -> CGSize {
+//    guard let section = HomeSection(rawValue: section) else {
+//      return .zero
+//    }
+//    
+//    switch section {
+//    case .header:
+//      return .zero
+//      
+//    case .video:
+//      return .zero
+//      
+//    case .ranking:
+//      return .zero
+//      
+//    case .recentWatch:
+//      return .zero
+//      
+//    case .recommend:
+//      return .zero
+//      
+//    case .footer:
+//      return .init(
+//        width: collectionView.frame.width,
+//        height: HomeFooterView.height
+//      )
+//    }
+//  }
+//  
+//  func collectionView(
+//    _ collectionView: UICollectionView,
+//    layout collectionViewLayout: UICollectionViewLayout,
+//    insetForSectionAt section: Int
+//  ) -> UIEdgeInsets {
+//    guard let section = HomeSection(rawValue: section) else {
+//      return .zero
+//    }
+//    
+//    return insetForSection(section)
+//  }
+//  
+//  func collectionView(
+//    _ collectionView: UICollectionView,
+//    layout collectionViewLayout: UICollectionViewLayout,
+//    minimumLineSpacingForSectionAt section: Int
+//  ) -> CGFloat {
+//    guard let section = HomeSection(rawValue: section) else {
+//      return 0
+//    }
+//    
+//    switch section {
+//    case .header, .footer:
+//      return 0
+//      
+//    case .video, .ranking, .recentWatch, .recommend:
+//      return 21
+//    }
+//  }
+//  
+//  func collectionView(
+//    _ collectionView: UICollectionView,
+//    layout collectionViewLayout: UICollectionViewLayout,
+//    sizeForItemAt indexPath: IndexPath
+//  ) -> CGSize {
+//    guard let section = HomeSection(rawValue: indexPath.section) else {
+//      return .zero
+//    }
+//    
+//    let inset = insetForSection(section)
+//    let width = collectionView.frame.width - inset.left - inset.right
+//    
+//    switch section {
+//    case .header, .footer:
+//      return .zero
+//      
+//    case .video:
+//      return .init(
+//        width: width,
+//        height: HomeVideoCell.height
+//      )
+//      
+//    case .ranking:
+//      return .init(
+//        width: width,
+//        height: HomeRankingContainerCell.height
+//      )
+//      
+//    case .recentWatch:
+//      return .init(
+//        width: width,
+//        height: HomeRecentWatchContainerCell.height
+//      )
+//      
+//    case .recommend:
+//      return .init(
+//        width: width,
+//        height: HomeRecommendContainerCell.height(vm: vm.recommendVM)
+//      )
+//    }
+//  }
   
   func collectionView(
     _ collectionView: UICollectionView,
