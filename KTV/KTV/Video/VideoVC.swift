@@ -28,6 +28,10 @@ final class VideoVC: UIViewController {
   
   @IBOutlet var chattingView: ChattingView!
   
+  @IBOutlet weak var minimizePlayerView: PlayerView!
+  @IBOutlet weak var minimizeView: UIView!
+  @IBOutlet weak var minimizeViewBottomConstraint: NSLayoutConstraint!
+  
   var isLiveMode = false
   
   private var pipController: AVPictureInPictureController?
