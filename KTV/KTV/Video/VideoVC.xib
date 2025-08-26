@@ -22,6 +22,7 @@
                 <outlet property="landscapeTitleLabel" destination="C4m-GN-hUK" id="XaF-Um-DC4"/>
                 <outlet property="minimizeChannelLabel" destination="EMW-5K-gkt" id="JP7-GA-BJp"/>
                 <outlet property="minimizePlayerView" destination="iEC-MH-Szz" id="n7G-vO-MAs"/>
+                <outlet property="minimizeTitleLabel" destination="smo-zR-CmA" id="X5a-DW-pKW"/>
                 <outlet property="minimizeView" destination="8Tb-Rh-qMw" id="Cyi-Wk-GFl"/>
                 <outlet property="minimizeViewBottomConstraint" destination="PKz-bG-FZV" id="Nci-JD-U46"/>
                 <outlet property="playButton" destination="nFW-e1-03B" id="Ok3-4x-ucf"/>

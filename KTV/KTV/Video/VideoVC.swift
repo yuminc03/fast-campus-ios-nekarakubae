@@ -28,6 +28,8 @@ final class VideoVC: UIViewController {
   
   @IBOutlet var chattingView: ChattingView!
   
+  
+  @IBOutlet weak var minimizeTitleLabel: UILabel!
   @IBOutlet weak var minimizeChannelLabel: UILabel!
   @IBOutlet weak var minimizePlayerView: PlayerView!
   @IBOutlet weak var minimizeView: UIView!
