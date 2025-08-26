@@ -109,7 +109,8 @@ final class HomeVC: UIViewController {
       return makeRankingSection(itemSpace, inset)
       
     case .recentWatch:
-      return nil
+      return makeRecentWatchSection(itemSpace, inset)
+      
     case .recommend:
       return nil
     case .footer:
@@ -199,6 +200,33 @@ final class HomeVC: UIViewController {
         alignment: .top
       )
     ]
+    
+    return section
+  }
+  
+  private func makeRecentWatchSection(
+    _ itemSpace: CGFloat,
+    _ inset: NSDirectionalEdgeInsets
+  ) -> NSCollectionLayoutSection? {
+    let cellSize = HomeRecentWatchItemCell.itemSize
+    let itemSize = NSCollectionLayoutSize(
+      widthDimension: .absolute(cellSize.width),
+      heightDimension: .absolute(cellSize.height)
+    )
+    
+    let item = NSCollectionLayoutItem(layoutSize: itemSize)
+    let group = NSCollectionLayoutGroup.horizontal(
+      layoutSize: .init(
+        widthDimension: .absolute(cellSize.width),
+        heightDimension: .absolute(189)
+      ),
+      subitems: [item]
+    )
+    
+    let section = NSCollectionLayoutSection(group: group)
+    section.interGroupSpacing = itemSpace
+    section.contentInsets = inset
+    section.orthogonalScrollingBehavior = .continuous
     
     return section
   }

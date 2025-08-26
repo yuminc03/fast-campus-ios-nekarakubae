@@ -2,6 +2,7 @@ import UIKit
 
 final class HomeRecentWatchItemCell: UICollectionViewCell {
   static let id = "HomeRecentWatchItemCell"
+  static let itemSize = CGSize(width: 84, height: 148)
   
   @IBOutlet weak var thumbnailImageView: UIImageView!
   @IBOutlet weak var titleLabel: UILabel!
