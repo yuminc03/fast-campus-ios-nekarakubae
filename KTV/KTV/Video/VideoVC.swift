@@ -133,6 +133,7 @@ final class VideoVC: UIViewController {
   }
   
   private func setupUI() {
+    minimizePlayerView.delegate = self
     playerView.delegate = self
     seekbar.delegate = self
     chattingView.delegate = self
