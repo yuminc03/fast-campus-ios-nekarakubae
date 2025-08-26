@@ -48,6 +48,7 @@ final class VideoVC: UIViewController {
   @IBOutlet weak var minimizeViewBottomConstraint: NSLayoutConstraint!
   
   var isLiveMode = false
+  weak var delegate: VideoVCDelegate?
   private var isMinimizeMode = false
   
   private var pipController: AVPictureInPictureController?
@@ -316,6 +317,49 @@ extension VideoVC: UIViewControllerTransitioningDelegate {
     return self
   }
 }
+
+extension VideoVC: UIViewControllerAnimatedTransitioning {
+  /// 애니메이션이 몇 초동안 일어날 것인지 결정
+  func transitionDuration(
+    using transitionContext: (any UIViewControllerContextTransitioning)?
+  ) -> TimeInterval {
+    return 0.3
+  }
+  
+  /// 애니메이션이 present, dismiss될 때를 구분해서 확인
+  func animateTransition(
+    using transitionContext: any UIViewControllerContextTransitioning
+  ) {
+    if isBeingPresented {
+      // present 될 때
+    } else {
+      // dismiss 될 때
+      
+      // 여기서 .view(forKey: .from)은 dismiss될 화면(지금 이 VodeoVC의 view)
+      guard let view = transitionContext.view(forKey: .from) else {
+        return
+      }
+      
+      if isMinimizeMode, let yPosition = delegate?.videoVC(
+          self, yPositionForMinizeView:
+            minimizeView.frame.height
+      ) {
+        minimizePlayerView.player = playerView.player
+        isControlPannelHidden = true
+        chattingViewBottomConstraint.constant = chattingLandscapeConstraint
+        playerViewBottomConstraint.isActive = true
+        playerView.isHidden = true
+        
+        view.frame.origin.y = view.safeAreaInsets.top
+        
+        
+      } else {
+        
+      }
+    }
+  }
+}
+
 // MARK: - SeekBarViewDelegate
 
 extension VideoVC: SeekBarViewDelegate {
