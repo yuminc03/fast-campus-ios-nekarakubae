@@ -90,7 +90,6 @@ final class HomeVC: UIViewController {
   }
   
   private func makeSection(_ section: Int) -> NSCollectionLayoutSection? {
-    return nil
     guard let section = HomeSection(rawValue: section) else {
       return nil
     }
@@ -115,7 +114,7 @@ final class HomeVC: UIViewController {
       return makeRecommendSection(inset)
       
     case .footer:
-      return nil
+      return makeFooterSection()
     }
   }
   
@@ -250,6 +249,32 @@ final class HomeVC: UIViewController {
     
     let section = NSCollectionLayoutSection(group: group)
     section.contentInsets = inset
+    
+    return section
+  }
+  
+  private func makeFooterSection() -> NSCollectionLayoutSection? {
+    let layoutSize = NSCollectionLayoutSize(
+      widthDimension: .fractionalWidth(1.0),
+      heightDimension: .absolute(HomeFooterView.height)
+    )
+    
+    let group = NSCollectionLayoutGroup.vertical(
+      layoutSize: layoutSize,
+      subitems: [.init(layoutSize: .init(
+        widthDimension: .absolute(0.1),
+        heightDimension: .absolute(0.1)
+      ))]
+    )
+    
+    let section = NSCollectionLayoutSection(group: group)
+    section.boundarySupplementaryItems = [
+      NSCollectionLayoutBoundarySupplementaryItem(
+        layoutSize: layoutSize,
+        elementKind: UICollectionView.elementKindSectionFooter,
+        alignment: .bottom
+      )
+    ]
     
     return section
   }
