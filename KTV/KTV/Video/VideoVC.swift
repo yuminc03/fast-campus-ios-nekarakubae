@@ -1,4 +1,5 @@
 import UIKit
+import AVKit
 
 final class VideoVC: UIViewController {
   private let chattingLandscapeConstraint: CGFloat = -500
@@ -28,6 +29,8 @@ final class VideoVC: UIViewController {
   @IBOutlet var chattingView: ChattingView!
   
   var isLiveMode = false
+  
+  private var pipController: AVPictureInPictureController?
   
   private static let dateFormatter: DateFormatter = {
     let formatter = DateFormatter()
@@ -68,6 +71,7 @@ final class VideoVC: UIViewController {
     bindVM()
     vm.request()
     chattingView.isHidden = isLiveMode == false
+    setupPIPController()
   }
   
   override func viewWillTransition(
@@ -89,6 +93,19 @@ final class VideoVC: UIViewController {
     }
     
     super.viewWillTransition(to: size, with: coordinator)
+  }
+  
+  private func setupPIPController() {
+    // isPictureInPictureSupported() == true일 때, 제대로 동작 가능함
+    guard AVPictureInPictureController.isPictureInPictureSupported(),
+          let playerLayer = playerView.avPlayerLayer else {
+      return
+    }
+    
+    let pipController = AVPictureInPictureController(playerLayer: playerLayer)
+    pipController?.canStartPictureInPictureAutomaticallyFromInline = true
+    
+    self.pipController = pipController
   }
   
   private func isLandscape(size: CGSize) -> Bool {
