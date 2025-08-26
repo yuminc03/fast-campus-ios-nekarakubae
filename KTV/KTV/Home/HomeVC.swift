@@ -103,7 +103,8 @@ final class HomeVC: UIViewController {
       return makeHeaderSection()
       
     case .video:
-      return nil
+      return makeVideoSection(itemSpace, inset)
+      
     case .ranking:
       return nil
     case .recentWatch:
@@ -139,6 +140,26 @@ final class HomeVC: UIViewController {
         alignment: .top
       )
     ]
+    
+    return section
+  }
+  
+  private func makeVideoSection(
+    _ itemSpace: CGFloat,
+    _ inset: NSDirectionalEdgeInsets
+  ) -> NSCollectionLayoutSection? {
+    let layoutSize = NSCollectionLayoutSize(
+      widthDimension: .fractionalWidth(1.0),
+      heightDimension: .absolute(HomeVideoCell.height)
+    )
+    
+    let item = NSCollectionLayoutItem(layoutSize: layoutSize)
+    // item이 아주 많아져도 item에 맞춰서 VideoSection의 layout이 맞춰짐
+    let group = NSCollectionLayoutGroup.vertical(layoutSize: layoutSize, subitems: [item])
+    let section = NSCollectionLayoutSection(group: group)
+    
+    section.contentInsets = inset
+    section.interGroupSpacing = itemSpace
     
     return section
   }
