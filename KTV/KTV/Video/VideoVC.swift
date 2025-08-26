@@ -1,6 +1,17 @@
 import UIKit
 import AVKit
 
+protocol VideoVCDelegate: AnyObject {
+  func videoVC(
+    _ vc: VideoVC,
+    yPositionForMinizeView height: CGFloat
+  ) -> CGFloat
+  
+  func videoVCDidMinimize(_ vc: VideoVC)
+  func videoVCNeedsMaximize(_ vc: VideoVC)
+  func videoVCDidTapClose(_ vc: VideoVC)
+}
+
 final class VideoVC: UIViewController {
   private let chattingLandscapeConstraint: CGFloat = -500
   
