@@ -49,7 +49,11 @@ final class VideoVC: UIViewController {
   
   var isLiveMode = false
   weak var delegate: VideoVCDelegate?
-  private var isMinimizeMode = false
+  private var isMinimizeMode = false {
+    didSet {
+      minimizeView.isHidden = isMinimizeMode == false
+    }
+  }
   
   private var pipController: AVPictureInPictureController?
   
