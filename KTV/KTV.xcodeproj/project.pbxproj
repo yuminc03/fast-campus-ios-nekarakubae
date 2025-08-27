@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		051B90282D59B04200745E84 /* LiveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051B90272D59B04100745E84 /* LiveVC.swift */; };
+		0549D1E62E5EDCCB00D05425 /* VideoVCContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0549D1E52E5EDCC400D05425 /* VideoVCContainerProtocol.swift */; };
 		05D18FC52D3630DB00C06092 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D18FC42D3630D600C06092 /* HomeVM.swift */; };
 		05D18FC72D36317A00C06092 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D18FC62D36317700C06092 /* DataLoader.swift */; };
 		05D18FCA2D3632D500C06092 /* URLDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D18FC92D3632D300C06092 /* URLDefines.swift */; };
@@ -107,6 +108,7 @@
 
 /* Begin PBXFileReference section */
 		051B90272D59B04100745E84 /* LiveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveVC.swift; sourceTree = "<group>"; };
+		0549D1E52E5EDCC400D05425 /* VideoVCContainerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoVCContainerProtocol.swift; sourceTree = "<group>"; };
 		05D18FC42D3630D600C06092 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		05D18FC62D36317700C06092 /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		05D18FC92D3632D300C06092 /* URLDefines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLDefines.swift; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 			children = (
 				8DBCEECA2D57A3EF005B4DD6 /* Extensions */,
 				8DAE60342D256B9400FF03BD /* TabBarController.swift */,
+				0549D1E52E5EDCC400D05425 /* VideoVCContainerProtocol.swift */,
 				8D9AE6802D48BD4800168A2E /* NavigationController.swift */,
 				8D73DFD72D6765C6001D52C2 /* LiveChatting */,
 				051B90262D59B02300745E84 /* Live */,
@@ -626,6 +629,7 @@
 				8D7B43D02D282A310044ACD2 /* HomeRecentWatchContainerCell.swift in Sources */,
 				8DAA54A92D257EEA008BF9FA /* HomeFooterView.swift in Sources */,
 				8D9AE66E2D48A55900168A2E /* MyVC.swift in Sources */,
+				0549D1E62E5EDCCB00D05425 /* VideoVCContainerProtocol.swift in Sources */,
 				8D7B43CC2D2825000044ACD2 /* HomeRankingItemCell.swift in Sources */,
 				8D9AE6812D48BD4900168A2E /* NavigationController.swift in Sources */,
 				8DAA54A12D2575A5008BF9FA /* HomeRecommendContainerCell.swift in Sources */,

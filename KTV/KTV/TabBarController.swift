@@ -1,6 +1,7 @@
 import UIKit
 
-final class TabBarController: UITabBarController, VideoVCDelegate {
+final class TabBarController: UITabBarController {
+  
   weak var videoVC: VideoVC?
   
   // 휴대폰 방향 세로로 고정
@@ -11,7 +12,11 @@ final class TabBarController: UITabBarController, VideoVCDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
   }
-  
+}
+
+// MARK: - VideoVCDelegate
+
+extension TabBarController: VideoVCDelegate {
   func videoVC(
     _ vc: VideoVC,
     yPositionForMinizeView height: CGFloat
@@ -40,5 +45,19 @@ final class TabBarController: UITabBarController, VideoVCDelegate {
     vc.view.removeFromSuperview()
     vc.removeFromParent()
     videoVC = nil
+  }
+}
+
+// MARK: - VideoVCContainerProtocol
+
+extension TabBarController: VideoVCContainerProtocol {
+  func presentCurrentVC() {
+    guard let videoVC else { return }
+    
+    videoVC.willMove(toParent: nil)
+    videoVC.view.removeFromSuperview()
+    videoVC.removeFromParent()
+    present(videoVC, animated: true)
+    self.videoVC = nil
   }
 }
