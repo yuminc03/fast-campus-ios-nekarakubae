@@ -101,6 +101,22 @@ final class VideoVC: UIViewController {
     setupPIPController()
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    guard isBeingPresented else { return }
+    
+    setupPIPController()
+  }
+  
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    
+    guard isBeingDismissed else { return }
+    
+    pipController = nil
+  }
+  
   override func viewWillTransition(
     to size: CGSize,
     with coordinator: any UIViewControllerTransitionCoordinator
