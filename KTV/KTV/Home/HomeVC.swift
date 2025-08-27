@@ -290,8 +290,13 @@ final class HomeVC: UIViewController {
   }
   
   private func presentVideoVC() {
-    let vc = VideoVC()
-    present(vc, animated: true)
+    if let _ = (tabBarController as? TabBarController)?.videoVC {
+      (tabBarController as? VideoVCContainerProtocol)?.presentCurrentVC()
+    } else {
+      let vc = VideoVC()
+      vc.delegate = tabBarController as? VideoVCDelegate
+      present(vc, animated: true)
+    }
   }
 }
 
