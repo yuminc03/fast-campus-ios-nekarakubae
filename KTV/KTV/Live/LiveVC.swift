@@ -74,9 +74,14 @@ extension LiveVC: UICollectionViewDelegateFlowLayout {
     _ collectionView: UICollectionView,
     didSelectItemAt indexPath: IndexPath
   ) {
-    let vc = VideoVC()
-    vc.isLiveMode = true
-    present(vc, animated: true)
+    if let _ = (tabBarController as? VideoVCContainerProtocol)?.videoVC {
+      (tabBarController as? VideoVCContainerProtocol)?.presentCurrentVC()
+    } else {
+      let vc = VideoVC()
+      vc.isLiveMode = true
+      vc.delegate = tabBarController as? VideoVCDelegate
+      present(vc, animated: true)
+    }
   }
 }
 
