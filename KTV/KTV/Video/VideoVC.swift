@@ -335,10 +335,8 @@ extension VideoVC: UIViewControllerAnimatedTransitioning {
     } else {
       // dismiss 될 때
       
-      // 여기서 .view(forKey: .from)은 dismiss될 화면(지금 이 VodeoVC의 view)
-      guard let view = transitionContext.view(forKey: .from) else {
-        return
-      }
+      // 여기서 .view(forKey: .from)은 dismiss될 화면(지금 이 VideoVC의 view)
+      guard let view = transitionContext.view(forKey: .from) else { return }
       
       if isMinimizeMode, let yPosition = delegate?.videoVC(
         self,
