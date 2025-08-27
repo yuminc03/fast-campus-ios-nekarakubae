@@ -371,7 +371,16 @@ extension VideoVC: UIViewControllerAnimatedTransitioning {
           self.delegate?.videoVCDidMinimize(self)
         }
       } else {
-        
+        UIView.animate(
+          withDuration: transitionDuration(using: transitionContext)
+        ) { [weak self] in
+          guard let self else { return }
+          
+          view.alpha = 0
+        } completion: { _ in
+          transitionContext.completeTransition(transitionContext.transitionWasCancelled == false)
+          view.alpha = 1
+        }
       }
     }
   }
