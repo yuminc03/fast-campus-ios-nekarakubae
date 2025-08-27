@@ -341,18 +341,35 @@ extension VideoVC: UIViewControllerAnimatedTransitioning {
       }
       
       if isMinimizeMode, let yPosition = delegate?.videoVC(
-          self, yPositionForMinizeView:
-            minimizeView.frame.height
+        self,
+        yPositionForMinizeView: minimizeView.frame.height
       ) {
+        // 재생 일시정지일 때 영상 player를 최소화 playerView로 control할 수 있게 연결
         minimizePlayerView.player = playerView.player
-        isControlPannelHidden = true
+        isControlPannelHidden = true // 제어 패널 숨김
+        // 채팅 bottomConstraint를 조정해서 playerView만 잘보이게 설정
         chattingViewBottomConstraint.constant = chattingLandscapeConstraint
         playerViewBottomConstraint.isActive = true
         playerView.isHidden = true
         
+        // playerView가 위에서 자연스럽게 내려오도록 처리
+        
         view.frame.origin.y = view.safeAreaInsets.top
         
-        
+        UIView.animate(
+          withDuration: transitionDuration(using: transitionContext)
+        ) { [weak self] in
+          guard let self else { return }
+          
+          view.frame.origin.y = yPosition
+          view.frame.size.height = minimizeView.frame.height
+        } completion: { _ in
+          // transition이 끝났음을 알려줌
+          
+          transitionContext.completeTransition(transitionContext.transitionWasCancelled == false)
+          self.minimizeViewBottomConstraint.isActive = true
+          self.delegate?.videoVCDidMinimize(self)
+        }
       } else {
         
       }
