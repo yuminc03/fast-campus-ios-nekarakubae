@@ -182,11 +182,11 @@ final class VideoVC: UIViewController {
   }
   
   @IBAction func maximize(_ sender: Any) {
-    
+    delegate?.videoVCNeedsMaximize(self)
   }
   
   @IBAction func didTapCloseMinimizeView(_ sender: Any) {
-    
+    delegate?.videoVCDidTapClose(self)
   }
   
   @IBAction func didTapComment(_ sender: Any) {
