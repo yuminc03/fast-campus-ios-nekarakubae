@@ -169,7 +169,8 @@ final class VideoVC: UIViewController {
   private func setupData(_ video: Video) {
     playerView.set(url: video.videoURL)
     playerView.play()
-    
+    minimizeTitleLabel.text = video.title
+    minimizeChannelLabel.text = video.channel
     titleLabel.text = video.title
     landscapeTitleLabel.text = video.title
     channelThumnailImageView.loadImage(url: video.channelImageUrl)
