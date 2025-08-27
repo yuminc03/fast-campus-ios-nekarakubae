@@ -332,6 +332,46 @@ extension VideoVC: UIViewControllerAnimatedTransitioning {
   ) {
     if isBeingPresented {
       // present 될 때
+      
+      // 전환이 일어날 view
+      guard let view = transitionContext.view(forKey: .to) else { return }
+      
+      // 전환이 일어날 view를 보여줌
+      transitionContext.containerView.addSubview(view)
+      
+      if isMinimizeMode {
+        chattingViewBottomConstraint.constant = 0
+        playerViewBottomConstraint.isActive = false
+        playerView.isHidden = false
+        minimizeViewBottomConstraint.isActive = false
+        isMinimizeMode = false
+        
+        UIView.animate(
+          withDuration: transitionDuration(using: transitionContext)
+        ) { [weak self] in
+          guard let self else { return }
+          
+          // view의 top까지 animation 넣기
+          view.frame = .init(
+            origin: .init(x: 0, y: view.safeAreaInsets.top),
+            size: view.window?.frame.size ?? view.frame.size
+          )
+        } completion: { _ in
+          view.frame.origin = .zero
+          transitionContext.completeTransition(transitionContext.transitionWasCancelled == false)
+        }
+      } else {
+        view.alpha = 0
+        UIView.animate(
+          withDuration: transitionDuration(using: transitionContext)
+        ) { [weak self] in
+          guard let self else { return }
+          
+          view.alpha = 1
+        } completion: { _ in
+          transitionContext.completeTransition(transitionContext.transitionWasCancelled == false)
+        }
+      }
     } else {
       // dismiss 될 때
       
