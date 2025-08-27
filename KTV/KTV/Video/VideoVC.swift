@@ -348,9 +348,7 @@ extension VideoVC: UIViewControllerAnimatedTransitioning {
         
         UIView.animate(
           withDuration: transitionDuration(using: transitionContext)
-        ) { [weak self] in
-          guard let self else { return }
-          
+        ) {
           // view의 top까지 animation 넣기
           view.frame = .init(
             origin: .init(x: 0, y: view.safeAreaInsets.top),
@@ -364,9 +362,7 @@ extension VideoVC: UIViewControllerAnimatedTransitioning {
         view.alpha = 0
         UIView.animate(
           withDuration: transitionDuration(using: transitionContext)
-        ) { [weak self] in
-          guard let self else { return }
-          
+        ) {
           view.alpha = 1
         } completion: { _ in
           transitionContext.completeTransition(transitionContext.transitionWasCancelled == false)
@@ -411,9 +407,7 @@ extension VideoVC: UIViewControllerAnimatedTransitioning {
       } else {
         UIView.animate(
           withDuration: transitionDuration(using: transitionContext)
-        ) { [weak self] in
-          guard let self else { return }
-          
+        ) {
           view.alpha = 0
         } completion: { _ in
           transitionContext.completeTransition(transitionContext.transitionWasCancelled == false)
