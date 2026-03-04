@@ -94,10 +94,9 @@
 		8DDF7DB82F57CFFB005F9340 /* LMessenger */ = {
 			isa = PBXGroup;
 			children = (
-				8DDF7DB52F57CFFB005F9340 /* Assets.xcassets */,
+				8DDF7DC62F57D159005F9340 /* Resource */,
 				8DDF7DB62F57CFFB005F9340 /* ContentView.swift */,
 				8DDF7DB72F57CFFB005F9340 /* LMessengerApp.swift */,
-				8DDF7DC42F57D0FC005F9340 /* Colors.xcassets */,
 			);
 			path = LMessenger;
 			sourceTree = "<group>";
@@ -117,6 +116,15 @@
 				8DDF7DC02F57CFFB005F9340 /* LMessengerUITestsLaunchTests.swift */,
 			);
 			path = LMessengerUITests;
+			sourceTree = "<group>";
+		};
+		8DDF7DC62F57D159005F9340 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				8DDF7DB52F57CFFB005F9340 /* Assets.xcassets */,
+				8DDF7DC42F57D0FC005F9340 /* Colors.xcassets */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
