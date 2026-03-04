@@ -18,6 +18,7 @@
 		8DDF7DCC2F57D378005F9340 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DDF7DCB2F57D378005F9340 /* LaunchScreen.storyboard */; };
 		8DDF7DCF2F57D492005F9340 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDF7DCE2F57D48F005F9340 /* DIContainer.swift */; };
 		8DDF7DD22F57D500005F9340 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDF7DD12F57D4FE005F9340 /* Services.swift */; };
+		8DDF7DD52F57D75B005F9340 /* AuthenticationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDF7DD42F57D74C005F9340 /* AuthenticationVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		8DDF7DCB2F57D378005F9340 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DDF7DCE2F57D48F005F9340 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		8DDF7DD12F57D4FE005F9340 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		8DDF7DD42F57D74C005F9340 /* AuthenticationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				8DDF7DB72F57CFFB005F9340 /* LMessengerApp.swift */,
-				8DDF7DB62F57CFFB005F9340 /* AuthenticatedView.swift */,
+				8DDF7DD32F57D746005F9340 /* View */,
 				8DDF7DCD2F57D485005F9340 /* General */,
 				8DDF7DD02F57D4F7005F9340 /* Service */,
 				8DDF7DC82F57D1E4005F9340 /* Extension */,
@@ -161,6 +163,15 @@
 				8DDF7DD12F57D4FE005F9340 /* Services.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		8DDF7DD32F57D746005F9340 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8DDF7DD42F57D74C005F9340 /* AuthenticationVM.swift */,
+				8DDF7DB62F57CFFB005F9340 /* AuthenticatedView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +316,7 @@
 				8DDF7DBA2F57CFFB005F9340 /* AuthenticatedView.swift in Sources */,
 				8DDF7DD22F57D500005F9340 /* Services.swift in Sources */,
 				8DDF7DCA2F57D25F005F9340 /* Color+Extension.swift in Sources */,
+				8DDF7DD52F57D75B005F9340 /* AuthenticationVM.swift in Sources */,
 				8DDF7DBB2F57CFFB005F9340 /* LMessengerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
