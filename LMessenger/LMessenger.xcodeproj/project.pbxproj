@@ -16,6 +16,8 @@
 		8DDF7DC52F57D0FC005F9340 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DDF7DC42F57D0FC005F9340 /* Colors.xcassets */; };
 		8DDF7DCA2F57D25F005F9340 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDF7DC92F57D25F005F9340 /* Color+Extension.swift */; };
 		8DDF7DCC2F57D378005F9340 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DDF7DCB2F57D378005F9340 /* LaunchScreen.storyboard */; };
+		8DDF7DCF2F57D492005F9340 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDF7DCE2F57D48F005F9340 /* DIContainer.swift */; };
+		8DDF7DD22F57D500005F9340 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDF7DD12F57D4FE005F9340 /* Services.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		8DDF7DC42F57D0FC005F9340 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		8DDF7DC92F57D25F005F9340 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		8DDF7DCB2F57D378005F9340 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8DDF7DCE2F57D48F005F9340 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		8DDF7DD12F57D4FE005F9340 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 		8DDF7DB82F57CFFB005F9340 /* LMessenger */ = {
 			isa = PBXGroup;
 			children = (
+				8DDF7DD02F57D4F7005F9340 /* Service */,
+				8DDF7DCD2F57D485005F9340 /* General */,
 				8DDF7DC82F57D1E4005F9340 /* Extension */,
 				8DDF7DC62F57D159005F9340 /* Resource */,
 				8DDF7DB62F57CFFB005F9340 /* ContentView.swift */,
@@ -139,6 +145,22 @@
 				8DDF7DC92F57D25F005F9340 /* Color+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		8DDF7DCD2F57D485005F9340 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				8DDF7DCE2F57D48F005F9340 /* DIContainer.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		8DDF7DD02F57D4F7005F9340 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				8DDF7DD12F57D4FE005F9340 /* Services.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,7 +301,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DDF7DCF2F57D492005F9340 /* DIContainer.swift in Sources */,
 				8DDF7DBA2F57CFFB005F9340 /* ContentView.swift in Sources */,
+				8DDF7DD22F57D500005F9340 /* Services.swift in Sources */,
 				8DDF7DCA2F57D25F005F9340 /* Color+Extension.swift in Sources */,
 				8DDF7DBB2F57CFFB005F9340 /* LMessengerApp.swift in Sources */,
 			);
