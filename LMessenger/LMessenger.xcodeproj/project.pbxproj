@@ -15,6 +15,7 @@
 		8DDF7DC32F57CFFB005F9340 /* LMessengerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDF7DC02F57CFFB005F9340 /* LMessengerUITestsLaunchTests.swift */; };
 		8DDF7DC52F57D0FC005F9340 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DDF7DC42F57D0FC005F9340 /* Colors.xcassets */; };
 		8DDF7DCA2F57D25F005F9340 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDF7DC92F57D25F005F9340 /* Color+Extension.swift */; };
+		8DDF7DCC2F57D378005F9340 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DDF7DCB2F57D378005F9340 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		8DDF7DC02F57CFFB005F9340 /* LMessengerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LMessengerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8DDF7DC42F57D0FC005F9340 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		8DDF7DC92F57D25F005F9340 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		8DDF7DCB2F57D378005F9340 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 		8DDF7DC62F57D159005F9340 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				8DDF7DCB2F57D378005F9340 /* LaunchScreen.storyboard */,
 				8DDF7DB52F57CFFB005F9340 /* Assets.xcassets */,
 				8DDF7DC42F57D0FC005F9340 /* Colors.xcassets */,
 			);
@@ -249,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DDF7DCC2F57D378005F9340 /* LaunchScreen.storyboard in Resources */,
 				8DDF7DB92F57CFFB005F9340 /* Assets.xcassets in Resources */,
 				8DDF7DC52F57D0FC005F9340 /* Colors.xcassets in Resources */,
 			);
@@ -447,7 +451,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -479,7 +483,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
