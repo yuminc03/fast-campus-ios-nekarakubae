@@ -13,6 +13,7 @@
 		8DDF7DBE2F57CFFB005F9340 /* LMessengerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDF7DBC2F57CFFB005F9340 /* LMessengerTests.swift */; };
 		8DDF7DC22F57CFFB005F9340 /* LMessengerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDF7DBF2F57CFFB005F9340 /* LMessengerUITests.swift */; };
 		8DDF7DC32F57CFFB005F9340 /* LMessengerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDF7DC02F57CFFB005F9340 /* LMessengerUITestsLaunchTests.swift */; };
+		8DDF7DC52F57D0FC005F9340 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DDF7DC42F57D0FC005F9340 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		8DDF7DBC2F57CFFB005F9340 /* LMessengerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LMessengerTests.swift; sourceTree = "<group>"; };
 		8DDF7DBF2F57CFFB005F9340 /* LMessengerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LMessengerUITests.swift; sourceTree = "<group>"; };
 		8DDF7DC02F57CFFB005F9340 /* LMessengerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LMessengerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8DDF7DC42F57D0FC005F9340 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				8DDF7DB52F57CFFB005F9340 /* Assets.xcassets */,
 				8DDF7DB62F57CFFB005F9340 /* ContentView.swift */,
 				8DDF7DB72F57CFFB005F9340 /* LMessengerApp.swift */,
+				8DDF7DC42F57D0FC005F9340 /* Colors.xcassets */,
 			);
 			path = LMessenger;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DDF7DB92F57CFFB005F9340 /* Assets.xcassets in Resources */,
+				8DDF7DC52F57D0FC005F9340 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
