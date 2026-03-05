@@ -15,5 +15,5 @@ struct AuthenticatedView: View {
 }
 
 #Preview {
-  AuthenticatedView(vm: .init())
+  AuthenticatedView(vm: .init(container: .init(services: StubService())))
 }
