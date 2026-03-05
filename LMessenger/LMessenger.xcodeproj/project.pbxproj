@@ -10,6 +10,7 @@
 		8D4950862F594B5800B46F8A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8D4950852F594B5800B46F8A /* FirebaseAuth */; };
 		8D4950882F594B9E00B46F8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4950872F594B9B00B46F8A /* AppDelegate.swift */; };
 		8D49508A2F594CF100B46F8A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D4950892F594CF100B46F8A /* GoogleService-Info.plist */; };
+		8D49508D2F594DA100B46F8A /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D49508C2F594D9B00B46F8A /* AuthenticationService.swift */; };
 		8DDF7DB92F57CFFB005F9340 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DDF7DB52F57CFFB005F9340 /* Assets.xcassets */; };
 		8DDF7DBA2F57CFFB005F9340 /* AuthenticatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDF7DB62F57CFFB005F9340 /* AuthenticatedView.swift */; };
 		8DDF7DBB2F57CFFB005F9340 /* LMessengerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDF7DB72F57CFFB005F9340 /* LMessengerApp.swift */; };
@@ -45,6 +46,7 @@
 		8D4950872F594B9B00B46F8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D4950892F594CF100B46F8A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8D49508B2F594D3500B46F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D49508C2F594D9B00B46F8A /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		8DDF7D8B2F57CFEE005F9340 /* LMessenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LMessenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DDF7D982F57CFEF005F9340 /* LMessengerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LMessengerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DDF7DA22F57CFEF005F9340 /* LMessengerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LMessengerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,6 +172,7 @@
 		8DDF7DD02F57D4F7005F9340 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				8D49508C2F594D9B00B46F8A /* AuthenticationService.swift */,
 				8DDF7DD12F57D4FE005F9340 /* Services.swift */,
 			);
 			path = Service;
@@ -334,6 +337,7 @@
 				8D4950882F594B9E00B46F8A /* AppDelegate.swift in Sources */,
 				8DDF7DD52F57D75B005F9340 /* AuthenticationVM.swift in Sources */,
 				8DDF7DBB2F57CFFB005F9340 /* LMessengerApp.swift in Sources */,
+				8D49508D2F594DA100B46F8A /* AuthenticationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
