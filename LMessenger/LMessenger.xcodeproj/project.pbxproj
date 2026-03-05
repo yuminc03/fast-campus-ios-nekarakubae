@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D4950862F594B5800B46F8A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8D4950852F594B5800B46F8A /* FirebaseAuth */; };
+		8D4950882F594B9E00B46F8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4950872F594B9B00B46F8A /* AppDelegate.swift */; };
+		8D49508A2F594CF100B46F8A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D4950892F594CF100B46F8A /* GoogleService-Info.plist */; };
 		8DDF7DB92F57CFFB005F9340 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DDF7DB52F57CFFB005F9340 /* Assets.xcassets */; };
 		8DDF7DBA2F57CFFB005F9340 /* AuthenticatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDF7DB62F57CFFB005F9340 /* AuthenticatedView.swift */; };
 		8DDF7DBB2F57CFFB005F9340 /* LMessengerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDF7DB72F57CFFB005F9340 /* LMessengerApp.swift */; };
@@ -39,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D4950872F594B9B00B46F8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8D4950892F594CF100B46F8A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8D49508B2F594D3500B46F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8DDF7D8B2F57CFEE005F9340 /* LMessenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LMessenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DDF7D982F57CFEF005F9340 /* LMessengerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LMessengerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DDF7DA22F57CFEF005F9340 /* LMessengerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LMessengerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D4950862F594B5800B46F8A /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +111,9 @@
 		8DDF7DB82F57CFFB005F9340 /* LMessenger */ = {
 			isa = PBXGroup;
 			children = (
+				8D49508B2F594D3500B46F8A /* Info.plist */,
+				8D4950892F594CF100B46F8A /* GoogleService-Info.plist */,
+				8D4950872F594B9B00B46F8A /* AppDelegate.swift */,
 				8DDF7DB72F57CFFB005F9340 /* LMessengerApp.swift */,
 				8DDF7DD32F57D746005F9340 /* View */,
 				8DDF7DCD2F57D485005F9340 /* General */,
@@ -191,6 +201,7 @@
 			);
 			name = LMessenger;
 			packageProductDependencies = (
+				8D4950852F594B5800B46F8A /* FirebaseAuth */,
 			);
 			productName = LMessenger;
 			productReference = 8DDF7D8B2F57CFEE005F9340 /* LMessenger.app */;
@@ -268,6 +279,9 @@
 			);
 			mainGroup = 8DDF7D822F57CFEE005F9340;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				8D4950842F594B5800B46F8A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8DDF7D8C2F57CFEE005F9340 /* Products */;
 			projectDirPath = "";
@@ -286,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DDF7DCC2F57D378005F9340 /* LaunchScreen.storyboard in Resources */,
+				8D49508A2F594CF100B46F8A /* GoogleService-Info.plist in Resources */,
 				8DDF7DB92F57CFFB005F9340 /* Assets.xcassets in Resources */,
 				8DDF7DC52F57D0FC005F9340 /* Colors.xcassets in Resources */,
 			);
@@ -316,6 +331,7 @@
 				8DDF7DBA2F57CFFB005F9340 /* AuthenticatedView.swift in Sources */,
 				8DDF7DD22F57D500005F9340 /* Services.swift in Sources */,
 				8DDF7DCA2F57D25F005F9340 /* Color+Extension.swift in Sources */,
+				8D4950882F594B9E00B46F8A /* AppDelegate.swift in Sources */,
 				8DDF7DD52F57D75B005F9340 /* AuthenticationVM.swift in Sources */,
 				8DDF7DBB2F57CFFB005F9340 /* LMessengerApp.swift in Sources */,
 			);
@@ -485,6 +501,7 @@
 				DEVELOPMENT_TEAM = GMHUACJXLZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LMessenger/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -517,6 +534,7 @@
 				DEVELOPMENT_TEAM = GMHUACJXLZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LMessenger/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -663,6 +681,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8D4950842F594B5800B46F8A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8D4950852F594B5800B46F8A /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D4950842F594B5800B46F8A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8DDF7D832F57CFEE005F9340 /* Project object */;
 }
