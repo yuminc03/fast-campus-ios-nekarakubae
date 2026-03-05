@@ -90,6 +90,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D49508E2F59525E00B46F8A /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				8DDF7DD42F57D74C005F9340 /* AuthenticationVM.swift */,
+				8DDF7DB62F57CFFB005F9340 /* AuthenticatedView.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		8D49508F2F59527600B46F8A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		8D4950902F59527A00B46F8A /* MainTab */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MainTab;
+			sourceTree = "<group>";
+		};
 		8DDF7D822F57CFEE005F9340 = {
 			isa = PBXGroup;
 			children = (
@@ -181,8 +204,9 @@
 		8DDF7DD32F57D746005F9340 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8DDF7DD42F57D74C005F9340 /* AuthenticationVM.swift */,
-				8DDF7DB62F57CFFB005F9340 /* AuthenticatedView.swift */,
+				8D49508E2F59525E00B46F8A /* Authentication */,
+				8D49508F2F59527600B46F8A /* Login */,
+				8D4950902F59527A00B46F8A /* MainTab */,
 			);
 			path = View;
 			sourceTree = "<group>";

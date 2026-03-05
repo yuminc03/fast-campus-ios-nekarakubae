@@ -4,13 +4,14 @@ struct AuthenticatedView: View {
   @StateObject var vm: AuthenticationVM
   
   var body: some View {
-    VStack {
-      Image(systemName: "globe")
-        .imageScale(.large)
-        .foregroundStyle(.tint)
-      Text("Hello, world!")
+    switch vm.authenticationState {
+    case .unauthenticated:
+      // login
+      EmptyView()
+    case .authenticated:
+      // mainTab
+      EmptyView()
     }
-    .padding()
   }
 }
 
