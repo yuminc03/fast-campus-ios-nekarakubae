@@ -19,7 +19,7 @@ struct LoginIntroView: View {
         Spacer()
         
         Button {
-          // TODO:
+          isPresentedLogin = true
         } label: {
           Text("로그인")
         }
