@@ -6,11 +6,10 @@ struct AuthenticatedView: View {
   var body: some View {
     switch vm.authenticationState {
     case .unauthenticated:
-      // login
-      EmptyView()
+      LoginIntroView()
+      
     case .authenticated:
-      // mainTab
-      EmptyView()
+      MainTabView()
     }
   }
 }
