@@ -23,7 +23,7 @@ struct LoginIntroView: View {
         } label: {
           Text("로그인")
         }
-        .buttonStyle(LoginButtonStyle())
+        .buttonStyle(LoginButtonStyle(textColor: .lineApp))
       }
       .navigationDestination(isPresented: $isPresentedLogin) {
         LoginView()
