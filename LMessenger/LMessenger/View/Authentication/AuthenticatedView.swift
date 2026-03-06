@@ -7,6 +7,7 @@ struct AuthenticatedView: View {
     switch vm.authenticationState {
     case .unauthenticated:
       LoginIntroView()
+        .environmentObject(vm)
       
     case .authenticated:
       MainTabView()
