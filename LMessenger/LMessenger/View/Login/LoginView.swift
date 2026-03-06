@@ -21,7 +21,7 @@ struct LoginView: View {
       Spacer()
       
       Button {
-        
+        authVM.send(action: .googleLogin)
       } label: {
         Text("Google로 로그인")
       }
