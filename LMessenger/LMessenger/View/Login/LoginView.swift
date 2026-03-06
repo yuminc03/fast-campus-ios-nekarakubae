@@ -2,6 +2,7 @@ import SwiftUI
 
 struct LoginView: View {
   @Environment(\.dismiss) var dismiss
+  @EnvironmentObject var authVM: AuthenticationVM
   
   var body: some View {
     VStack(alignment: .leading) {
