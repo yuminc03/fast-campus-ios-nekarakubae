@@ -13,7 +13,10 @@ final class AuthenticationVM: ObservableObject {
   
   @Published private(set) var authenticationState: AuthenticationState = .unauthenticated
   
+  var userID: String?
+  
   private var container: DIContainer
+  private var cancelBag = Set<AnyCancellable>()
   
   init(container: DIContainer) {
     self.container = container
@@ -22,10 +25,14 @@ final class AuthenticationVM: ObservableObject {
   func send(action: Action) {
     switch action {
     case .googleLogin:
-      // TODO: - 
-      return
-      
-      
+      container.services.authService.signInWithGoogle()
+        .sink { completion in
+          // TODO: -
+        } receiveValue: { [weak self] user in
+          self?.userID = user.id
+        }
+        .store(in: &cancelBag)
+
     }
   }
 }
